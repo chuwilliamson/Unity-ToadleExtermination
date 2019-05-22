@@ -3,3 +3,13 @@
 3. add things
 4. commit
 5. push your branch
+
+
+# Updating your branch after a pull request
+
+1. switch the current branch to master 
+2. hit the topright button "fetch"
+3. hit the topright button "pull"
+4. switch the current branch to your branch
+5. merge with master
+6. win
