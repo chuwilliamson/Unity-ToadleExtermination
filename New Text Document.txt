@@ -1,3 +1,4 @@
+# Cloning Repository
 1. clone the repo
 2. checkout your branch
 3. add things
@@ -11,5 +12,7 @@
 2. hit the topright button "fetch"
 3. hit the topright button "pull"
 4. switch the current branch to your branch
-5. merge with master
-6. win
+5. click the currentbranch 
+6. click the bottom button "Choose a branch to merge "into your name branch"
+7. select master
+8. win
