@@ -5,6 +5,10 @@
 4. commit
 5. push your branch
 
+# Adding Content
+1. add your content
+2. commit your work
+3. push to the internets
 
 # Updating your branch after a pull request
 
