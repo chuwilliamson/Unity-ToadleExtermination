@@ -1,8 +1,11 @@
-﻿namespace Emmanuel
+﻿using UnityEngine;
+
+namespace Emmanuel
 {
+    [CreateAssetMenu(menuName = "Data/Player")]
     public class PlayerData : Entity
     {
-        public override float Attack(object other)
+        public override float Attack(Entity other)
         {
             return base.Attack(other);
         }
@@ -12,7 +15,7 @@
             return base.TakeDamage(dmg);
         }
 
-        public PlayerData(float health, float damage) : base(health, damage)
+        public PlayerData(string name, float health, float damage) : base(name, health, damage)
         {
         }
     }
