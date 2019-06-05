@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Emmanuel;
+using UnityEngine;
 
 namespace Steffan
 {
@@ -15,6 +16,12 @@ namespace Steffan
 		// Update is called once per frame
 		void Update () {
 		
+		}
+
+		public float TakeDamage(float dmgTaken)
+		{
+			pd.TakeDamage(dmgTaken);
+			return dmgTaken;
 		}
 		
 	}
