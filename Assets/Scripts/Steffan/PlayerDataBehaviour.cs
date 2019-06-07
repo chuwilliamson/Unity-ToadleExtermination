@@ -23,6 +23,9 @@ namespace Steffan
 			pd.TakeDamage(dmgTaken);
 			return dmgTaken;
 		}
-		
+		public void CallTakeDamage(float dmgTaken)
+		{
+			TakeDamage(dmgTaken);
+		}
 	}
 }
