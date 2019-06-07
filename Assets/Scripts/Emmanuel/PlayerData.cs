@@ -6,7 +6,7 @@ namespace Emmanuel
     public class PlayerData : Entity
     {
         private int _currency = 0;
-
+        [SerializeField] private Waypoint _position;
         public int Currency
         {
             get { return _currency; }
