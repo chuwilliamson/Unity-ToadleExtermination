@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Emmanuel
 {
     [CreateAssetMenu(menuName = "Variables/string")]
-    public class stringVariable : ScriptableObject
+    public class stringVariable : MyScriptableObject
     {
 
         [SerializeField] private string value;
