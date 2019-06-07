@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd8df61d7e72bad47b55a7f4bb72c824, type: 3}
   m_Name: TestEnemy
   m_EditorClassIdentifier: 
-  _health: {fileID: 0}
+  _health: {fileID: 11400000, guid: 2199b9f630c1dae4bb8eb4821a5bda35, type: 2}
