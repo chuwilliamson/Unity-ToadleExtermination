@@ -11,11 +11,11 @@ namespace Emmanuel
             Health = health;
             Damage = damage;
         }
-
+        
         public string Name { get; set; }
-        protected float Damage { get; set; }
+        public float Damage { get; set; }
 
-        protected float Health { get; set; }
+        public float Health { get; set; }
 
         public virtual float TakeDamage(float dmg)
         {
