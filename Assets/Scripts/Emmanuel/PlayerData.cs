@@ -21,7 +21,7 @@ namespace Emmanuel
         public override float TakeDamage(float dmgTaken)
         {
             Health -= dmgTaken;
-            return Damage;
+            return dmgTaken;
         }
 
         public int GainCurrency(int amountGained)
