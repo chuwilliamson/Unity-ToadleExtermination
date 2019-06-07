@@ -5,6 +5,8 @@ namespace Emmanuel
 {
     public class Entity : ScriptableObject, IAttackable, ITakeDamageable
     {
+        [SerializeField] private FloatVar _health;
+
         public Entity(string name, float health, float damage)
         {
             Name = name;
@@ -15,7 +17,11 @@ namespace Emmanuel
         public string Name { get; set; }
         public float Damage { get; set; }
 
-        public float Health { get; set; }
+        public float Health
+        {
+            get { return _health.Value; }
+            set { _health.Value = value; }
+        }
 
         public virtual float TakeDamage(float dmg)
         {
