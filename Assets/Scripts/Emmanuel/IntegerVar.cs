@@ -1,7 +1,8 @@
-﻿using UnityEngine;
+﻿using Emmanuel;
+using UnityEngine;
 
 [CreateAssetMenu(menuName = "Variables/int")]
-public class intVariable : ScriptableObject
+public class intVariable : MyScriptableObject
 {
 
 	[SerializeField] private int value;
