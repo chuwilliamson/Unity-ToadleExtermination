@@ -3,7 +3,8 @@ using UnityEngine;
 
 namespace Emmanuel
 {
-    public class Entity : ScriptableObject, IAttackable, ITakeDamageable
+    [CreateAssetMenu(menuName = "Data/Entity")]
+    public class Entity : MyScriptableObject, IAttackable, ITakeDamageable
     {
         [SerializeField] private FloatVar _health;
 
