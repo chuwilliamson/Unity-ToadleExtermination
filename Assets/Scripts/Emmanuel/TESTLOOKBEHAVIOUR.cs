@@ -35,8 +35,6 @@ public class TESTLOOKBEHAVIOUR : MonoBehaviour
 			if (movePrefab && prefab)
 				prefab.transform.position = targetPos;
 		}
-		Debug.DrawLine(transform.position, mousePositionInWorld, Color.red);
-		Debug.DrawLine(transform.position, targetPos, Color.yellow);
 	}
 
 	void CalculateTargetPosition(Vector3 hit)
@@ -49,3 +47,4 @@ public class TESTLOOKBEHAVIOUR : MonoBehaviour
 		targetPos = mouse_ScreenToWorld + ((hit - mouse_ScreenToWorld) * factor);
 	}
 }
+
