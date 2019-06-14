@@ -155,11 +155,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 0}
   sourceObject: {fileID: 1981990423}
-  response:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &53522129
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,9 +390,94 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &678221048 stripped
+--- !u!1 &656429251
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1668236533176052, guid: d4745c27fd491414e8e26907b8dcbdb8,
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 656429252}
+  - component: {fileID: 656429255}
+  - component: {fileID: 656429254}
+  - component: {fileID: 656429253}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &656429252
+Transform:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656429251}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 771458612}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656429253
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656429251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 1
+  m_FollowOffset: {x: 0, y: 6.58, z: -10}
+  m_XDamping: 1
+  m_YDamping: 1
+  m_ZDamping: 1
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+--- !u!114 &656429254
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656429251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 10
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0.1
+  m_DeadZoneHeight: 0.1
+  m_SoftZoneWidth: 0.8
+  m_SoftZoneHeight: 0.8
+  m_BiasX: 0
+  m_BiasY: 0
+--- !u!114 &656429255
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 656429251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &678221049 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8,
     type: 2}
   m_PrefabInternal: {fileID: 688354885}
 --- !u!1001 &688354885
@@ -5062,6 +5142,61 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &771458610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 771458612}
+  - component: {fileID: 771458611}
+  m_Layer: 0
+  m_Name: CM vcam1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &771458611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771458610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 10
+  m_LookAt: {fileID: 208216028}
+  m_Follow: {fileID: 208216028}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+  m_ComponentOwner: {fileID: 656429252}
+--- !u!4 &771458612
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771458610}
+  m_LocalRotation: {x: 0.28690004, y: 0, z: 0, w: 0.95796055}
+  m_LocalPosition: {x: 16.61, y: 8.042022, z: -19.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 656429252}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1019852890
 GameObject:
   m_ObjectHideFlags: 0
@@ -5330,9 +5465,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaypointsToFollow:
-  - {fileID: 1019852890}
+  - {fileID: 0}
   WaypointsPassed: []
-  Teleporter: {fileID: 0}
+  Teleporter: {fileID: 1880950607}
   speed: 5
   movement: 1
   loop: 0
@@ -5613,11 +5748,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPosition: {fileID: 0}
   sourceObject: {fileID: 208216028}
-  response:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &1957365098
 Prefab:
   m_ObjectHideFlags: 0
@@ -5625,6 +5755,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4148690181511518, guid: ab84e9b01df27644a84ca96c7dc49349, type: 2}
       propertyPath: m_LocalPosition.x
       value: 16.61
@@ -5661,41 +5796,85 @@ Prefab:
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[0]
       value: 
-      objectReference: {fileID: 1019852890}
+      objectReference: {fileID: 1019852891}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[1]
       value: 
-      objectReference: {fileID: 678221048}
+      objectReference: {fileID: 678221049}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[2]
       value: 
-      objectReference: {fileID: 623487401}
+      objectReference: {fileID: 623487402}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[3]
       value: 
-      objectReference: {fileID: 2006266220}
+      objectReference: {fileID: 2006266221}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[4]
       value: 
-      objectReference: {fileID: 129130615}
+      objectReference: {fileID: 129130616}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[5]
       value: 
-      objectReference: {fileID: 495061333}
+      objectReference: {fileID: 495061334}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: WaypointsToFollow.Array.data[6]
       value: 
-      objectReference: {fileID: 375947471}
+      objectReference: {fileID: 375947472}
     - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
         type: 2}
       propertyPath: Teleporter
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[7]
+      value: 
+      objectReference: {fileID: 1019852891}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[8]
+      value: 
+      objectReference: {fileID: 678221049}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[9]
+      value: 
+      objectReference: {fileID: 623487402}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[10]
+      value: 
+      objectReference: {fileID: 2006266221}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[11]
+      value: 
+      objectReference: {fileID: 129130616}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[12]
+      value: 
+      objectReference: {fileID: 495061334}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: WaypointsToFollow.Array.data[13]
+      value: 
+      objectReference: {fileID: 375947472}
+    - target: {fileID: 1740011375281374, guid: ab84e9b01df27644a84ca96c7dc49349, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114655201097498250, guid: ab84e9b01df27644a84ca96c7dc49349,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab84e9b01df27644a84ca96c7dc49349, type: 2}
@@ -5762,15 +5941,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaypointsToFollow:
-  - {fileID: 1019852890}
-  - {fileID: 678221048}
-  - {fileID: 623487401}
-  - {fileID: 2006266220}
-  - {fileID: 129130615}
-  - {fileID: 495061333}
-  - {fileID: 375947471}
+  - {fileID: 1019852891}
+  - {fileID: 678221049}
+  - {fileID: 623487402}
+  - {fileID: 2006266221}
+  - {fileID: 129130616}
+  - {fileID: 495061334}
+  - {fileID: 375947472}
   WaypointsPassed: []
-  Teleporter: {fileID: 0}
+  Teleporter: {fileID: 35280164}
   speed: 30
   movement: 1
   loop: 1
@@ -5959,6 +6138,7 @@ GameObject:
   - component: {fileID: 2088780930}
   - component: {fileID: 2088780929}
   - component: {fileID: 2088780928}
+  - component: {fileID: 2088780931}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5993,11 +6173,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 0
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -6019,10 +6199,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2088780927}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.88, y: 10.72, z: -40.58}
+  m_LocalRotation: {x: 0.28690004, y: 0, z: 0, w: 0.95796055}
+  m_LocalPosition: {x: 16.61, y: 8.042022, z: -19.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2088780931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2088780927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Cinemachine.CinemachineBrain+BrainEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Cinemachine.CinemachineBrain+VcamEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
