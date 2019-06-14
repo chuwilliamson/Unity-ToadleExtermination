@@ -1,18 +1,19 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyDataBehaviour : MonoBehaviour
+namespace Steffan
 {
-	public Emmanuel.EnemyData ed;
-	// Use this for initialization
-	void Start ()
+	public class EnemyDataBehaviour : MonoBehaviour
 	{
-		ed = Instantiate(ed);
-	}
+		public Emmanuel.EnemyData ed;
+		// Use this for initialization
+		void Start ()
+		{
+			ed = Instantiate(ed);
+		}
 	
-	// Update is called once per frame
-	void Update () {
+		// Update is called once per frame
+		void Update () {
 		
+		}
 	}
 }

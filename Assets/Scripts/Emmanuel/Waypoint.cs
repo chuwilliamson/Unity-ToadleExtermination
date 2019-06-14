@@ -3,9 +3,10 @@ using UnityEngine;
 
 namespace Emmanuel
 {
-    public class Waypoint : ScriptableObject
+    [CreateAssetMenu]
+    public class Waypoint : MyScriptableObject
     {
-        private Vector3 _point;
+        [SerializeField] private Vector3 _point;
 
         public Vector3 Point
         {
