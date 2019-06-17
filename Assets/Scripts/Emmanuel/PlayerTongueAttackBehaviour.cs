@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
+using UnityEngine.XR.WSA.Input;
 
 namespace Emmanuel
 {
@@ -22,6 +23,8 @@ namespace Emmanuel
 
 		private string motionState;
 		
+		public string collisionTargetTag;
+		public string cursorTag;
 		// Use this for initialization
 		void Start()
 		{
@@ -41,20 +44,19 @@ namespace Emmanuel
 		//extends the tongue out
 		void Extend()
 		{
-			Debug.Log("now extending");
-			transform.localScale.Set(transform.localScale.x, transform.localScale.y, transform.localScale.z + extendSpeed);
-			Debug.Log("set the local scale");
+			transform.localScale += new Vector3(0,0, extendSpeed * Time.deltaTime);
 		}
 
 		//retracts the tongue in
 		void Retract()
 		{
-			transform.localScale.Set(transform.localScale.x, transform.localScale.y, transform.localScale.z - retractSpeed);
+			transform.localScale += new Vector3(0,0, -(retractSpeed * Time.deltaTime));
 		}
 		
 		//controls how the tongue will behave
 		void Move(string state)
 		{
+			
 			if (state == "Extending")
 			{
 				Extend();
@@ -68,30 +70,39 @@ namespace Emmanuel
 		//controls the state of the tongue
 		string StateCheck()
 		{
+
 			if (motionState == "Idle")
 			{
 				if (Input.GetMouseButtonDown(0))
 				{
-					Debug.Log("Mouse Click Recognized");
-					Debug.Log("StateChange:: Now Extending");
-
 					motionState = "Extending";
 				}
 			}
 			else if (transform.localScale.z >= maximumZScale)
 			{
-				Debug.Log("StateChange:: Now Retracting");
 				motionState = "Retracting";
 			}
 			else if (transform.localScale.z < minimumZScale)
 			{
 				transform.localScale.Set(transform.localScale.x, transform.localScale.y, minimumZScale);
-				Debug.Log("StateChange:: Now Idle");
 
 				motionState = "Idle";
 			}
 
 			return motionState;
 		}
+		private void OnTriggerEnter(Collider other)
+		{
+			if ( other.gameObject.CompareTag(collisionTargetTag) )
+				motionState = "Retracting";	
+			if ( other.gameObject.CompareTag(cursorTag))
+				Debug.Log("hit the cursor");
+
+				motionState = "Retracting";
+			if ( other.gameObject.CompareTag("Player") )
+				return;
+			
+		}
 	}
+
 }
