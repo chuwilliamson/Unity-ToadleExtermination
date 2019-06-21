@@ -25,13 +25,17 @@ namespace Emmanuel
 		
 		public string collisionTargetTag;
 		public string cursorTag;
+
+		private bool hasHitSomething;
 		// Use this for initialization
 		void Start()
 		{
 			resetTransform = transform;
+			
 			maximumZScale = 6.3f;
-			minimumZScale = resetTransform.localScale.z;
+			minimumZScale = 0.2f;
 
+			transform.localScale.Set(transform.localScale.x, transform.localScale.y, minimumZScale); //reset scale
 			motionState = "Idle";
 		}
 
@@ -71,37 +75,42 @@ namespace Emmanuel
 		string StateCheck()
 		{
 
-			if (motionState == "Idle")
+			if (motionState == "Idle")//if in idle state
 			{
-				if (Input.GetMouseButtonDown(0))
+				hasHitSomething = false;//it hasn't hit anything
+				if (Input.GetMouseButtonDown(0))//click to set the motionState to extending
 				{
 					motionState = "Extending";
 				}
 			}
-			else if (transform.localScale.z >= maximumZScale)
+			else if (hasHitSomething)//if it hit something
 			{
 				motionState = "Retracting";
 			}
-			else if (transform.localScale.z < minimumZScale)
+			else //if not idle, and hasn't hit anything
 			{
-				transform.localScale.Set(transform.localScale.x, transform.localScale.y, minimumZScale);
+				if ( transform.localScale.z >= maximumZScale ) //if past max z scale
+				{
+					motionState = "Retracting";
+				}
+			}
 
+			if ( transform.localScale.z < minimumZScale ) //if past min Z scale
+			{
+				transform.localScale += new Vector3(0,0, 0.2f);
+				
 				motionState = "Idle";
 			}
 
 			return motionState;
 		}
-		private void OnTriggerEnter(Collider other)
+		void OnTriggerEnter(Collider other)
 		{
 			if ( other.gameObject.CompareTag(collisionTargetTag) )
-				motionState = "Retracting";	
-			if ( other.gameObject.CompareTag(cursorTag))
-				Debug.Log("hit the cursor");
-
-				motionState = "Retracting";
-			if ( other.gameObject.CompareTag("Player") )
-				return;
+				hasHitSomething = true;
 			
+			if ( other.gameObject.CompareTag(cursorTag) )
+				hasHitSomething = true;
 		}
 	}
 
