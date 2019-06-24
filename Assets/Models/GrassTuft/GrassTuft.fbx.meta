@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1f3e20a329edbb479fc9fef658df449
+guid: e4eaea7e3a43ee347bcb06e9b734cb1e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ ModelImporter:
     2100000: Grass_Tuft_Texture
     2300000: //RootNode
     3300000: //RootNode
-    4300000: TallGrass
+    4300000: GrassTuft_Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
