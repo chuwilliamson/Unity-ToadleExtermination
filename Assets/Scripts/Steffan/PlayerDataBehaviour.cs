@@ -17,15 +17,14 @@ namespace Steffan
 		void Update () {
 		
 		}
-
-		public float TakeDamage(float dmgTaken)
+		public void Attack(EnemyDataBehaviour other)
+		{
+			other.TakeDamage(pd.Damage);
+		}
+		
+		public void TakeDamage(float dmgTaken)
 		{
 			pd.TakeDamage(dmgTaken);
-			return dmgTaken;
-		}
-		public void CallTakeDamage(float dmgTaken)
-		{
-			TakeDamage(dmgTaken);
 		}
 	}
 }
