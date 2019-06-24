@@ -33,6 +33,11 @@ ModelImporter:
     100054: transform7
     100056: transform8
     100058: transform9
+    100060: CatTail_Mesh
+    100062: Cattail_Mesh
+    100064: polySurface10
+    100066: polySurface7
+    100068: polySurface8
     400000: //RootNode
     400002: Cattails
     400004: polySurface11
@@ -63,11 +68,22 @@ ModelImporter:
     400054: transform7
     400056: transform8
     400058: transform9
+    400060: CatTail_Mesh
+    400062: Cattail_Mesh
+    400064: polySurface10
+    400066: polySurface7
+    400068: polySurface8
     2100000: lambert3
     2100002: lambert2
     2300000: Cattails
+    2300002: //RootNode
+    2300004: CatTail_Mesh
     3300000: Cattails
+    3300002: //RootNode
+    3300004: CatTail_Mesh
     4300000: Cattails
+    4300002: Cattail_Mesh
+    4300004: CatTail_Mesh
   externalObjects: {}
   materials:
     importMaterials: 1
