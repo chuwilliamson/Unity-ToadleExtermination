@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 00f29a1d70194c54182802fc6949caee
+guid: 491878a04dd39204399d51c32f3d5ab8
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,25 +8,25 @@ ModelImporter:
     100004: polySurface3
     100006: polySurface4
     100008: pSphere3
-    100010: //RootNode
-    100012: tadpole_core_AuxSHJnt
-    100014: tadpole_head_JawEndSHJnt
-    100016: tadpole_head_JawSHJnt
-    100018: tadpole_head_TopSHJnt
-    100020: tadpole_l_eye_01SHJnt
-    100022: tadpole_l_leg_AnkleSHJnt
-    100024: tadpole_l_leg_BallSHJnt
-    100026: tadpole_l_leg_HipSHJnt
-    100028: tadpole_l_leg_KneeSHJnt
-    100030: tadpole_l_leg_ToeSHJnt
-    100032: tadpole_r_eye_01SHJnt
-    100034: tadpole_r_leg_AnkleSHJnt
-    100036: tadpole_r_leg_BallSHJnt
-    100038: tadpole_r_leg_HipSHJnt
-    100040: tadpole_r_leg_KneeSHJnt
-    100042: tadpole_r_leg_ToeSHJnt
-    100044: tadpole_ROOTSHJnt
-    100046: tadpole_SHJntGrp
+    100010: tadpole_core_AuxSHJnt
+    100012: tadpole_head_JawEndSHJnt
+    100014: tadpole_head_JawSHJnt
+    100016: tadpole_head_TopSHJnt
+    100018: tadpole_l_eye_01SHJnt
+    100020: tadpole_l_leg_AnkleSHJnt
+    100022: tadpole_l_leg_BallSHJnt
+    100024: tadpole_l_leg_HipSHJnt
+    100026: tadpole_l_leg_KneeSHJnt
+    100028: tadpole_l_leg_ToeSHJnt
+    100030: tadpole_r_eye_01SHJnt
+    100032: tadpole_r_leg_AnkleSHJnt
+    100034: tadpole_r_leg_BallSHJnt
+    100036: tadpole_r_leg_HipSHJnt
+    100038: tadpole_r_leg_KneeSHJnt
+    100040: tadpole_r_leg_ToeSHJnt
+    100042: tadpole_ROOTSHJnt
+    100044: tadpole_SHJntGrp
+    100046: //RootNode
     100048: tadpole_spine1_AuxSHJnt
     100050: tadpole_tail_01_01SHJnt
     100052: tadpole_tail_01_02SHJnt
@@ -38,25 +38,25 @@ ModelImporter:
     400004: polySurface3
     400006: polySurface4
     400008: pSphere3
-    400010: //RootNode
-    400012: tadpole_core_AuxSHJnt
-    400014: tadpole_head_JawEndSHJnt
-    400016: tadpole_head_JawSHJnt
-    400018: tadpole_head_TopSHJnt
-    400020: tadpole_l_eye_01SHJnt
-    400022: tadpole_l_leg_AnkleSHJnt
-    400024: tadpole_l_leg_BallSHJnt
-    400026: tadpole_l_leg_HipSHJnt
-    400028: tadpole_l_leg_KneeSHJnt
-    400030: tadpole_l_leg_ToeSHJnt
-    400032: tadpole_r_eye_01SHJnt
-    400034: tadpole_r_leg_AnkleSHJnt
-    400036: tadpole_r_leg_BallSHJnt
-    400038: tadpole_r_leg_HipSHJnt
-    400040: tadpole_r_leg_KneeSHJnt
-    400042: tadpole_r_leg_ToeSHJnt
-    400044: tadpole_ROOTSHJnt
-    400046: tadpole_SHJntGrp
+    400010: tadpole_core_AuxSHJnt
+    400012: tadpole_head_JawEndSHJnt
+    400014: tadpole_head_JawSHJnt
+    400016: tadpole_head_TopSHJnt
+    400018: tadpole_l_eye_01SHJnt
+    400020: tadpole_l_leg_AnkleSHJnt
+    400022: tadpole_l_leg_BallSHJnt
+    400024: tadpole_l_leg_HipSHJnt
+    400026: tadpole_l_leg_KneeSHJnt
+    400028: tadpole_l_leg_ToeSHJnt
+    400030: tadpole_r_eye_01SHJnt
+    400032: tadpole_r_leg_AnkleSHJnt
+    400034: tadpole_r_leg_BallSHJnt
+    400036: tadpole_r_leg_HipSHJnt
+    400038: tadpole_r_leg_KneeSHJnt
+    400040: tadpole_r_leg_ToeSHJnt
+    400042: tadpole_ROOTSHJnt
+    400044: tadpole_SHJntGrp
+    400046: //RootNode
     400048: tadpole_spine1_AuxSHJnt
     400050: tadpole_tail_01_01SHJnt
     400052: tadpole_tail_01_02SHJnt
@@ -69,7 +69,6 @@ ModelImporter:
     4300004: tail:polySurface1
     4300006: polySurface3
     4300008: polySurface4
-    7400000: Summon
     9500000: //RootNode
     13700000: polySurface1
     13700002: polySurface2
@@ -103,35 +102,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Summon
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 40
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -163,7 +134,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 1
+  copyAvatar: 0
   humanDescription:
     serializedVersion: 2
     human: []
@@ -180,8 +151,7 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: aec666dff0675e4408dc2e303a3e824e,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
