@@ -38,7 +38,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4309817807387922}
   m_Layer: 0
-  m_Name: SmallMush_prefab
+  m_Name: SmallMush
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
