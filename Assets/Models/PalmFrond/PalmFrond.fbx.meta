@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: c1f3e20a329edbb479fc9fef658df449
+guid: 400eac6c79180a241b73ef90592e48a6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Grass_Tuft_Texture
+    2100000: lambert2
     2300000: //RootNode
     3300000: //RootNode
-    4300000: TallGrass
+    4300000: PalmFrondMesh
   externalObjects: {}
   materials:
     importMaterials: 1

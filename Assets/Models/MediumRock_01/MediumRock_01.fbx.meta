@@ -6,9 +6,11 @@ ModelImporter:
     100000: //RootNode
     400000: //RootNode
     2100000: medium_rock_lopoly_02_StingrayPBS2
+    2100002: medium_rock_texture_01
     2300000: //RootNode
     3300000: //RootNode
     4300000: medium_rock_lopoly_02:Group40990
+    4300002: medium_rock_lopoly:Group17602
   externalObjects: {}
   materials:
     importMaterials: 1
