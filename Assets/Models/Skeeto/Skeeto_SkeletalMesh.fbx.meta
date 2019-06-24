@@ -72,6 +72,32 @@ ModelImporter:
     100132: spine1_AuxSHJnt
     100134: tailbase_AuxSHJnt
     100136: transform1
+    100138: l_armback_HandSHJnt
+    100140: l_armfront_HandSHJnt
+    100142: l_armmiddle_ElbowSHJnt
+    100144: l_armmiddle_HandSHJnt
+    100146: l_armmiddle_ShoulderSHJnt
+    100148: l_armmiddle_WristSHJnt
+    100150: r_armback_ElbowSHJnt
+    100152: r_armback_HandSHJnt
+    100154: r_armback_ShoulderSHJnt
+    100156: r_armback_WristSHJnt
+    100158: r_armfront_HandSHJnt
+    100160: r_armmiddle_HandSHJnt
+    100162: Skeeto_Body
+    100164: Skeeto_l_Antenna
+    100166: Skeeto_l_Arm_Back
+    100168: Skeeto_l_Arm_Front
+    100170: Skeeto_l_Arm_Middle
+    100172: Skeeto_l_Eye
+    100174: Skeeto_l_Wing
+    100176: Skeeto_Proboscis
+    100178: Skeeto_r_Antenna
+    100180: Skeeto_r_Arm_Back
+    100182: Skeeto_r_Arm_Front
+    100184: Skeeto_r_Arm_Middle
+    100186: Skeeto_r_Eye
+    100188: Skeeto_r_Wing
     400000: buttchain_01_01SHJnt
     400002: buttchain_01_02SHJnt
     400004: buttchain_01_03SHJnt
@@ -141,6 +167,32 @@ ModelImporter:
     400132: spine1_AuxSHJnt
     400134: tailbase_AuxSHJnt
     400136: transform1
+    400138: l_armback_HandSHJnt
+    400140: l_armfront_HandSHJnt
+    400142: l_armmiddle_ElbowSHJnt
+    400144: l_armmiddle_HandSHJnt
+    400146: l_armmiddle_ShoulderSHJnt
+    400148: l_armmiddle_WristSHJnt
+    400150: r_armback_ElbowSHJnt
+    400152: r_armback_HandSHJnt
+    400154: r_armback_ShoulderSHJnt
+    400156: r_armback_WristSHJnt
+    400158: r_armfront_HandSHJnt
+    400160: r_armmiddle_HandSHJnt
+    400162: Skeeto_Body
+    400164: Skeeto_l_Antenna
+    400166: Skeeto_l_Arm_Back
+    400168: Skeeto_l_Arm_Front
+    400170: Skeeto_l_Arm_Middle
+    400172: Skeeto_l_Eye
+    400174: Skeeto_l_Wing
+    400176: Skeeto_Proboscis
+    400178: Skeeto_r_Antenna
+    400180: Skeeto_r_Arm_Back
+    400182: Skeeto_r_Arm_Front
+    400184: Skeeto_r_Arm_Middle
+    400186: Skeeto_r_Eye
+    400188: Skeeto_r_Wing
     2100000: lambert2
     4300000: Skeeto_l_eye
     4300002: Skeeto_r_eye
@@ -156,6 +208,20 @@ ModelImporter:
     4300022: Skeeto_r_antenna
     4300024: Skeeto_l_antenna
     4300026: Skeeto_probuscis
+    4300028: Skeeto_l_Eye
+    4300030: Skeeto_r_Eye
+    4300032: Skeeto_r_Wing
+    4300034: Skeeto_l_Wing
+    4300036: Skeeto_r_Arm_Back
+    4300038: Skeeto_r_Arm_Middle
+    4300040: Skeeto_r_Arm_Front
+    4300042: Skeeto_l_Arm_Back
+    4300044: Skeeto_l_Arm_Middle
+    4300046: Skeeto_l_Arm_Front
+    4300048: Skeeto_Body
+    4300050: Skeeto_r_Antenna
+    4300052: Skeeto_l_Antenna
+    4300054: Skeeto_Proboscis
     9500000: //RootNode
     13700000: Skeeto_body
     13700002: Skeeto_l_antenna
@@ -171,6 +237,20 @@ ModelImporter:
     13700022: Skeeto_r_eye
     13700024: Skeeto_r_front_arm
     13700026: Skeeto_r_wing
+    13700028: Skeeto_Body
+    13700030: Skeeto_l_Antenna
+    13700032: Skeeto_l_Arm_Back
+    13700034: Skeeto_l_Arm_Front
+    13700036: Skeeto_l_Arm_Middle
+    13700038: Skeeto_l_Eye
+    13700040: Skeeto_l_Wing
+    13700042: Skeeto_Proboscis
+    13700044: Skeeto_r_Antenna
+    13700046: Skeeto_r_Arm_Back
+    13700048: Skeeto_r_Arm_Front
+    13700050: Skeeto_r_Arm_Middle
+    13700052: Skeeto_r_Eye
+    13700054: Skeeto_r_Wing
   externalObjects: {}
   materials:
     importMaterials: 0
