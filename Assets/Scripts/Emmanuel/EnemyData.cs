@@ -13,7 +13,7 @@ namespace Emmanuel
         public override float TakeDamage(float dmgTaken)
         {
             Health -= dmgTaken;
-            return Damage;
+            return dmgTaken;
         }
 
         public EnemyData(string name, float health, float damage) : base(name, health, damage)
