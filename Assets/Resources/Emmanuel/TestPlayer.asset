@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: TestPlayer
   m_EditorClassIdentifier: 
   _health: {fileID: 11400000, guid: 2199b9f630c1dae4bb8eb4821a5bda35, type: 2}
-  _position: {fileID: 0}
+  _damage: {fileID: 11400000, guid: a835cbd7c635dab4d80ce3c19668fbc7, type: 2}
+  _position: {fileID: 11400000, guid: 73365f1bedc59c84982a3e35d50b3321, type: 2}

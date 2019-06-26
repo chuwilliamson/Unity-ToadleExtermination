@@ -4,9 +4,11 @@ namespace Matthew
 {
     public class GameEventListener : MonoBehaviour, IListener
     {
+        [TextArea]
+        public string Notes;
         public GameEvent GameEvent;
         public GameEventResponse Response;
-
+        
         void OnEnable()
         {
             Subscribe();
