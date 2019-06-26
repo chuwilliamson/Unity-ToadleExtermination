@@ -1,11 +1,12 @@
 ﻿using Emmanuel;
+using Emmanuel.ScriptableObjects;
 using UnityEngine;
 
 namespace Steffan
 {
 	public class PlayerDataBehaviour : MonoBehaviour
 	{
-		public Emmanuel.PlayerData pd;
+		public PlayerData pd;
 		
 		// Use this for initialization
 		void Start ()
@@ -14,7 +15,8 @@ namespace Steffan
 		}
 	
 		// Update is called once per frame
-		void Update () {
+		void Update () 
+		{
 		
 		}
 		public void Attack(EnemyDataBehaviour other)
