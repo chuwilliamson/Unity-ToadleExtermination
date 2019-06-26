@@ -67,13 +67,13 @@ Material:
     - _Cutoff: 0.5
     - _Depth: 4.5
     - _DepthMax: 0.427
-    - _DepthMin: 0.251
+    - _DepthMin: 0.359
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FoamMax: 0.779
     - _FoamMin: 0.485
     - _FoamPower: 4
-    - _FoamSpeed: 1
+    - _FoamSpeed: 0.005
     - _Gloss: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -85,11 +85,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tesselation: 2.62
+    - _Tesselation: 4.39
     - _UVSec: 0
     - _WaveCount: 10
-    - _WaveHeight: 0.016
-    - _WaveSpeed: 0.5
+    - _WaveHeight: 0.01
+    - _WaveSpeed: 0.1
     - _WaveSpread: 0.3
     - _WaveWidth: 10
     - _ZWrite: 1
