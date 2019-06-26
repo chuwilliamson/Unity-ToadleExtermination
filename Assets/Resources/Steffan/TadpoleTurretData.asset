@@ -11,9 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b07fbf335c10d469ac7486ba72c392, type: 3}
   m_Name: TadpoleTurretData
   m_EditorClassIdentifier: 
-  _health: {fileID: 0}
-  _damage: {fileID: 0}
-  cost: 0
-  damageValue: 0
+  _health: {fileID: 11400000, guid: ee94951e3d4fa744f9be6e251114ceb8, type: 2}
+  _damage: {fileID: 11400000, guid: bf2b2803a6583154e98cc913c9e6eade, type: 2}
+  cost: 50
   attackRange: 0
   attackRecharge: 0
