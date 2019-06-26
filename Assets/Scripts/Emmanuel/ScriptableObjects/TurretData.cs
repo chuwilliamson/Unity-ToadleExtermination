@@ -1,8 +1,4 @@
-﻿
-using Emmanuel;
-using UnityEngine;
-
-namespace Assets.Scripts.Emmanuel
+﻿namespace Emmanuel.ScriptableObjects
 {
     public class TurretData : Entity
     {

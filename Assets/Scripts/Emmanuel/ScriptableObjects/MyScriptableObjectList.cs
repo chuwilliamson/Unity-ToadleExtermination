@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Emmanuel
+namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu]
     public class ScriptableObjectList : ScriptableObject, IList<MyScriptableObject>

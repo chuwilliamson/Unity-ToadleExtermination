@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Emmanuel
+namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Data/Player")]
     public class PlayerData : Entity

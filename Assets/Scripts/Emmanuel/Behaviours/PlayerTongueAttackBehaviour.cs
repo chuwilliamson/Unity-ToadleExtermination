@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Matthew;
-using UnityEditor.Experimental.UIElements.GraphView;
+﻿using Matthew;
 using UnityEngine;
-using UnityEngine.Experimental.UIElements;
-using UnityEngine.XR.WSA.Input;
 
-namespace Emmanuel
+namespace Emmanuel.Behaviours
 {
 	public class PlayerTongueAttackBehaviour: MonoBehaviour
 	{

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Emmanuel
+namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Variables/string")]
     public class stringVariable : MyScriptableObject

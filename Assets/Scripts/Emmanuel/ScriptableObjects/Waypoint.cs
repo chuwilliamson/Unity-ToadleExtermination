@@ -1,7 +1,6 @@
-using UnityEditorInternal;
 using UnityEngine;
 
-namespace Emmanuel
+namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu]
     public class Waypoint : MyScriptableObject

@@ -1,12 +1,13 @@
-﻿using Assets.Scripts.Emmanuel;
+﻿using Emmanuel.Interfaces;
 using UnityEngine;
 
-namespace Emmanuel
+namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Data/Entity")]
     public class Entity : MyScriptableObject, IAttackable, ITakeDamageable
     {
         [SerializeField] private FloatVar _health;
+        [SerializeField] private FloatVar _damage;
 
         public Entity(string name, float health, float damage)
         {
@@ -16,7 +17,12 @@ namespace Emmanuel
         }
         
         public string Name { get; set; }
-        public float Damage { get; set; }
+
+        public float Damage
+        {
+            get { return _damage.Value;} 
+            set { _damage.Value = value; }
+        }
 
         public float Health
         {

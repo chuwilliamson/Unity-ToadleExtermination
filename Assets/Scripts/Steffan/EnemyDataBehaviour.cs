@@ -1,11 +1,12 @@
 ﻿using Emmanuel;
+using Emmanuel.ScriptableObjects;
 using UnityEngine;
 
 namespace Steffan
 {
 	public class EnemyDataBehaviour : MonoBehaviour
 	{
-		public Emmanuel.EnemyData ed;
+		public EnemyData ed;
 		// Use this for initialization
 		void Start ()
 		{
