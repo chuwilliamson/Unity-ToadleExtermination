@@ -8,12 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30b07fbf335c10d469ac7486ba72c392, type: 3}
-  m_Name: TadpoleTurretData
+  m_Script: {fileID: 11500000, guid: e6d0053d94374dfe97ba525846db4cfe, type: 3}
+  m_Name: TadpoleTurretHealth
   m_EditorClassIdentifier: 
-  _health: {fileID: 0}
-  _damage: {fileID: 0}
-  cost: 0
-  damageValue: 0
-  attackRange: 0
-  attackRecharge: 0
+  value: 0
