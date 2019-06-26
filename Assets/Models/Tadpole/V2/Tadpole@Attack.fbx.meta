@@ -1,0 +1,156 @@
+fileFormatVersion: 2
+guid: eb697056ad065b54f8d90d0cfe85b5cc
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: polySurface1
+    100002: polySurface2
+    100004: polySurface3
+    100006: polySurface4
+    100008: pSphere3
+    100010: //RootNode
+    100012: tadpole_core_AuxSHJnt
+    100014: tadpole_head_JawSHJnt
+    100016: tadpole_head_TopSHJnt
+    100018: tadpole_l_eye_01SHJnt
+    100020: tadpole_l_leg_AnkleSHJnt
+    100022: tadpole_l_leg_BallSHJnt
+    100024: tadpole_l_leg_HipSHJnt
+    100026: tadpole_l_leg_KneeSHJnt
+    100028: tadpole_r_eye_01SHJnt
+    100030: tadpole_r_leg_AnkleSHJnt
+    100032: tadpole_r_leg_BallSHJnt
+    100034: tadpole_r_leg_HipSHJnt
+    100036: tadpole_r_leg_KneeSHJnt
+    100038: tadpole_ROOTSHJnt
+    100040: tadpole_SHJntGrp
+    100042: tadpole_spine1_AuxSHJnt
+    100044: tadpole_tail_01_01SHJnt
+    100046: tadpole_tail_01_02SHJnt
+    100048: tadpole_tail_01_03SHJnt
+    100050: tadpole_tailbase_AuxSHJnt
+    100052: tail:polySurface1
+    400000: polySurface1
+    400002: polySurface2
+    400004: polySurface3
+    400006: polySurface4
+    400008: pSphere3
+    400010: //RootNode
+    400012: tadpole_core_AuxSHJnt
+    400014: tadpole_head_JawSHJnt
+    400016: tadpole_head_TopSHJnt
+    400018: tadpole_l_eye_01SHJnt
+    400020: tadpole_l_leg_AnkleSHJnt
+    400022: tadpole_l_leg_BallSHJnt
+    400024: tadpole_l_leg_HipSHJnt
+    400026: tadpole_l_leg_KneeSHJnt
+    400028: tadpole_r_eye_01SHJnt
+    400030: tadpole_r_leg_AnkleSHJnt
+    400032: tadpole_r_leg_BallSHJnt
+    400034: tadpole_r_leg_HipSHJnt
+    400036: tadpole_r_leg_KneeSHJnt
+    400038: tadpole_ROOTSHJnt
+    400040: tadpole_SHJntGrp
+    400042: tadpole_spine1_AuxSHJnt
+    400044: tadpole_tail_01_01SHJnt
+    400046: tadpole_tail_01_02SHJnt
+    400048: tadpole_tail_01_03SHJnt
+    400050: tadpole_tailbase_AuxSHJnt
+    400052: tail:polySurface1
+    2100000: lambert1
+    4300000: polySurface1
+    4300002: polySurface2
+    4300004: tail:polySurface1
+    4300006: polySurface3
+    4300008: polySurface4
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: polySurface1
+    13700002: polySurface2
+    13700004: polySurface3
+    13700006: polySurface4
+    13700008: tail:polySurface1
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 491878a04dd39204399d51c32f3d5ab8,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

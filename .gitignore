@@ -34,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.idea/.idea.Unity-ToadleExtermination/.idea/contentModel.xml
+.idea/.idea.Unity-ToadleExtermination/.idea/indexLayout.xml
+.idea/.idea.Unity-ToadleExtermination/.idea/modules.xml
+.idea/.idea.Unity-ToadleExtermination/.idea/vcs.xml
+.idea/.idea.Unity-ToadleExtermination/.idea/workspace.xml
+.idea/.idea.Unity-ToadleExtermination/riderModule.iml
+Assets/Cinemachine/CinemachineExamples.unitypackage.meta
