@@ -6,12 +6,12 @@ namespace Matthew
     [CreateAssetMenu(menuName = "GameEvents/GameEvent")]
     public class GameEvent : ScriptableObject, ISubscribeable
     {
-        public List<IListener> Listeners = new List<IListener>();
+        private List<IListener> listeners = new List<IListener>();
 
         public void Raise(Object obj)
         {
-            for (var i = Listeners.Count - 1; i >= 0; i--)
-                Listeners[i].OnEventRaised(obj);
+            for (var i = listeners.Count - 1; i >= 0; i--)
+                listeners[i].OnEventRaised(obj);
         }
         public void Raise()
         {
@@ -19,12 +19,12 @@ namespace Matthew
         }
         public void AddListener(IListener listener)
         {
-            Listeners.Add(listener);
+            listeners.Add(listener);
         }
 
         public void RemoveListener(IListener listener)
         {
-            Listeners.Remove(listener);
+            listeners.Remove(listener);
         }
     }
 }
