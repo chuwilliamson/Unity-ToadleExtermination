@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Steffan
+namespace Steffan.Behaviours
 {
 	public class TeleportBehaviour : MonoBehaviour {
 		[Header("This is the target destination for the teleporting object.")]

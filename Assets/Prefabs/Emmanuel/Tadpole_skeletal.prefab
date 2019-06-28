@@ -143,6 +143,8 @@ GameObject:
   - component: {fileID: 54806834892883012}
   - component: {fileID: 114020810295105252}
   - component: {fileID: 65799580692905842}
+  - component: {fileID: 114859449566762738}
+  - component: {fileID: 114631083743568764}
   m_Layer: 0
   m_Name: Tadpole_skeletal
   m_TagString: enemy
@@ -755,9 +757,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1254703771035336}
-  m_LocalRotation: {x: -0, y: -0.9977897, z: -0, w: 0.06645128}
-  m_LocalPosition: {x: -24.9, y: 2.07, z: 10.1}
-  m_LocalScale: {x: 198.38087, y: 198.38087, z: 198.38087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 59.514263, y: 59.514263, z: 59.514263}
   m_Children:
   - {fileID: 4489088810600126}
   - {fileID: 4560929525842722}
@@ -766,7 +768,7 @@ Transform:
   - {fileID: 4110474239453632}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -172.38, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4560929525842722
 Transform:
   m_ObjectHideFlags: 1
@@ -945,19 +947,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fa66c64e39ae34190dca3de9d7e21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaypointsToFollow:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  WaypointsToFollow: []
   WaypointsPassed: []
   Teleporter: {fileID: 0}
   speed: 50
   movement: 1
   loop: 1
   SavedPath: []
+--- !u!114 &114631083743568764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254703771035336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa9aa95619fbb0458ea68bdce6dd20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CompareTagField: enemy
+--- !u!114 &114859449566762738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254703771035336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2649e31c851834ab343433afb17234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretData: {fileID: 11400000, guid: dbe8840eadc20574cad205622774cb5a, type: 2}
 --- !u!137 &137088142502391662
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

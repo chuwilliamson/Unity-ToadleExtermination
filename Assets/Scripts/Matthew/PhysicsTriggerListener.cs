@@ -8,11 +8,13 @@ namespace Matthew
         [Cinemachine.TagField]
         public string CompareTagField;
 
-        public GameEvent TriggerEnterEvent;
-        public GameEvent TriggerExitEvent;
+        private GameEvent TriggerEnterEvent;
+        private GameEvent TriggerExitEvent;
         private void Start()
         {
             GetComponent<BoxCollider>().isTrigger = true;
+            TriggerEnterEvent = Resources.Load<GameEvent>("OnTriggerEnter");
+            TriggerExitEvent = Resources.Load<GameEvent>("OnTriggerExit");
         }
         private void OnTriggerEnter(Collider other)
         {

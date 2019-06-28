@@ -1,8 +1,7 @@
-﻿using Emmanuel;
-using Emmanuel.ScriptableObjects;
+﻿using Emmanuel.ScriptableObjects;
 using UnityEngine;
 
-namespace Steffan
+namespace Steffan.Behaviours
 {
 	public class PlayerDataBehaviour : MonoBehaviour
 	{
