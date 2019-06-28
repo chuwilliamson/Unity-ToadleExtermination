@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 10120d5a02c861340be728ddbd87a7be
+guid: a3090662b36af8e47a1560508802d93b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -159,7 +159,7 @@ ModelImporter:
     4300018: R_leg_01
     4300020: R_leg_03
     4300022: R_leg_04
-    7400000: Locomotion
+    7400000: Locomotion 1
     9500000: //RootNode
     13700000: glasses_lo
     13700002: L_Eye
@@ -202,7 +202,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Locomotion
+      name: Locomotion 1
       takeName: Take 001
       firstFrame: 1
       lastFrame: 30
@@ -228,7 +228,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -277,7 +277,8 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 141dd862a07a296449c1141165603bb8,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0

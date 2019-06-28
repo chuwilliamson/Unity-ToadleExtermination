@@ -1,7 +1,7 @@
 ﻿using Matthew;
 using UnityEngine;
 
-namespace Steffan
+namespace Steffan.Behaviours
 {
 	public class TakeDamageWhenHitByTongueBehaviour : MonoBehaviour
 	{
