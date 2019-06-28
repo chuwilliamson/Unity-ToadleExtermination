@@ -7,6 +7,7 @@ namespace Emmanuel.Behaviours
 	{
 		[SerializeField]
 		private GameEvent OnTriggerEnterEvent;
+		
 		//use this to reset the scale back
 		private Transform resetTransform;
 
@@ -43,6 +44,7 @@ namespace Emmanuel.Behaviours
 		void  Update()
 		{
 			Move( StateCheck() );
+			 
 		}
 
 		//extends the tongue out
@@ -60,14 +62,16 @@ namespace Emmanuel.Behaviours
 		//controls how the tongue will behave
 		void Move(string state)
 		{
-			
-			if (state == "Extending")
+			switch ( state )
 			{
-				Extend();
-			}
-			else if (state == "Retracting")
-			{
-				Retract();
+				case "Extending":
+					Extend();
+					break;
+				case "Retracting":
+					Retract();
+					break;
+				default:
+					break;
 			}
 		}
 
@@ -104,18 +108,7 @@ namespace Emmanuel.Behaviours
 
 			return motionState;
 		}
-		void OnTriggerEnter(Collider other)
-		{
-			if ( other.gameObject.CompareTag(collisionTargetTag) )
-			{
-				hasHitSomething = true;
-				OnTriggerEnterEvent.Raise(this);
-			}
-				
-			
-			if ( other.gameObject.CompareTag(cursorTag) )
-				hasHitSomething = true;
-		}
+		
 	}
 
 }
