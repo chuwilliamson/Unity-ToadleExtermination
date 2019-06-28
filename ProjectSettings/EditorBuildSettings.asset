@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Testing/Testing.SteffanMouton.1.unity
+    guid: d84d9c9e026308d4ea322a8296cbd094
   m_configObjects: {}
