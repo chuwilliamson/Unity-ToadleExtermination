@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Chuwilliamson.Attributes;
+using UnityEngine;
 
 namespace Matthew
 {
@@ -6,8 +7,11 @@ namespace Matthew
     {
         [TextArea]
         public string Notes;
+        [ScriptVariable(Verbose = true)]
         public GameEvent GameEvent;
         public GameEventResponse Response;
+        
+        public GameObject SenderObject;
         
         void OnEnable()
         {
@@ -23,10 +27,20 @@ namespace Matthew
             GameEvent.RemoveListener(this);
         }
 
-        public void OnEventRaised(Object obj)
-        {
-            Response.Invoke(obj);
-        }
+    public void OnEventRaised(Object obj)
+            {
+                //if it's null we will call it
+                if (SenderObject == null)
+                {
+                    Response.Invoke(obj);
+    
+                }
+                else
+                {
+                    if (SenderObject == obj)
+                        Response.Invoke(obj);
+                }
+            }
 
         public void OnEventRaised()
         {
