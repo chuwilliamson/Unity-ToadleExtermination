@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 4589988644738318}
   - component: {fileID: 95029004543432422}
   m_Layer: 0
-  m_Name: rolypoly_unity
+  m_Name: LUKASANDMRMATTS_SPECIALROLYPOLY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4598,7 +4598,7 @@ Animator:
   m_GameObject: {fileID: 1551915811050038}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 141dd862a07a296449c1141165603bb8, type: 3}
-  m_Controller: {fileID: 9100000, guid: dfc08a13f99f3ef448765e345ca18614, type: 2}
+  m_Controller: {fileID: 9100000, guid: f0a44bf0acfd486499894727bd7f5aba, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
