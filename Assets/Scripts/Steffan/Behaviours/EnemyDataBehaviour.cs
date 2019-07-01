@@ -6,8 +6,9 @@ namespace Steffan.Behaviours
 	public class EnemyDataBehaviour : MonoBehaviour
 	{
 		public EnemyData ed;
+		
 		// Use this for initialization
-		void Start ()
+		void Awake ()
 		{
 			ed = Instantiate(ed);
 		}

@@ -18,7 +18,7 @@ namespace Matthew
         }
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(CompareTagField))
+            if ( other.CompareTag(CompareTagField) )
                 TriggerEnterEvent.Raise(gameObject);
         }
 
