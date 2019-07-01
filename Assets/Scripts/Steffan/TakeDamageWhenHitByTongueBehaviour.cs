@@ -1,26 +1,30 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using Emmanuel;
-using Steffan;
+﻿using Matthew;
 using UnityEngine;
 
-public class TakeDamageWhenHitByTongueBehaviour : MonoBehaviour
+namespace Steffan
 {
-	public string damagerTag = "tongue";
-	public EnemyDataBehaviour ed;
-	private void Start()
+	public class TakeDamageWhenHitByTongueBehaviour : MonoBehaviour
 	{
-		ed = GetComponent<EnemyDataBehaviour>();
-	}
+		public string damagerTag = "tongue";
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (!other.gameObject.CompareTag(damagerTag))
-			return;
+		public GameEvent OnTriggerEnterEvent;
 
-		var damager = other.gameObject.GetComponent<PlayerDataBehaviour>();
-		// damager.Attack();
-		// TODO: This gameobject takes damage when the Tongue enters its collider
+		private EnemyDataBehaviour edBehaviour;
+		private void OnTriggerEnter(Collider other)
+		{
+			if (!other.gameObject.CompareTag(damagerTag))
+				return;
+			//when we enter this trigger
+			//1. get a reference to playerdatabehaviour
+			//2. invoke attack on the enemydatabehaviour reference
+			var damager = other.gameObject.GetComponent<PlayerDataBehaviour>();
+			Debug.Log(damager.pd.Damage.ToString());
+		
+			damager.Attack(edBehaviour);
+		
+		
+			// TODO: This gameobject takes damage when the Tongue enters its collider
+			// 6/25 :- 2:33:: Emmanuel-" Testing now "
+		}
 	}
 }
