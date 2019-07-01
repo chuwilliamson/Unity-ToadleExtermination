@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: db955706f6e8547428c33291a832d619
+guid: c1c85e0c148a63948be8c414fe7f58da
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: StingrayPBS1
+    2100000: lambert2
     2300000: //RootNode
     3300000: //RootNode
     4300000: pPlane1
