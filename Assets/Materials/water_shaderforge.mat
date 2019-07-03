@@ -65,9 +65,9 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Depth: 4.5
-    - _DepthMax: 0.427
-    - _DepthMin: 0.359
+    - _Depth: 2.02
+    - _DepthMax: 1
+    - _DepthMin: 0.19
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _FoamMax: 0.779
@@ -85,10 +85,10 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tesselation: 4.39
+    - _Tesselation: 4.51
     - _UVSec: 0
     - _WaveCount: 10
-    - _WaveHeight: 0
+    - _WaveHeight: 0.001
     - _WaveSpeed: 0.1
     - _WaveSpread: 0.3
     - _WaveWidth: 10

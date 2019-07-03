@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8e23511bf65a52438810d380e8a4218, type: 3}
-  m_Name: PlayerData
+  m_Name: FrogustusPlayerData
   m_EditorClassIdentifier: 
   _health: {fileID: 0}
   _damage: {fileID: 0}
