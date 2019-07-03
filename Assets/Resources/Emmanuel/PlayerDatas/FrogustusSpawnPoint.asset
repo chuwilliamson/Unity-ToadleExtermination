@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cee0c1d54cd4a51bf02fffd25b7d5f5, type: 3}
   m_Name: FrogustusSpawnPoint
   m_EditorClassIdentifier: 
-  _point: {x: 0, y: 0, z: 0}
+  _point: {x: 0, y: 4.4, z: -12.5}

@@ -3,30 +3,35 @@
 namespace Matthew
 {
     [RequireComponent(typeof(BoxCollider))]
-    public class PhysicsTriggerListener : MonoBehaviour
+    public class PhysicsTriggerHandler : MonoBehaviour
     {
         [Cinemachine.TagField]
         public string CompareTagField;
 
+[SerializeField]
         private GameEvent TriggerEnterEvent;
+        [SerializeField]
         private GameEvent TriggerExitEvent;
         private void Start()
         {
             GetComponent<BoxCollider>().isTrigger = true;
-            TriggerEnterEvent = Resources.Load<GameEvent>("OnTriggerEnter");
-            TriggerExitEvent = Resources.Load<GameEvent>("OnTriggerExit");
         }
         private void OnTriggerEnter(Collider other)
         {
-            if ( other.CompareTag(CompareTagField) )
-                TriggerEnterEvent.Raise(gameObject);
+            if (other.CompareTag(CompareTagField))
+            {
+                TriggerEnterEvent.Raise(new[] { gameObject, other.gameObject });
+
+            }
+
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (other.CompareTag(CompareTagField))
             {
-                TriggerExitEvent.Raise(gameObject);
+                TriggerExitEvent.Raise(new[] { gameObject, other.gameObject });
+
             }
         }
     }

@@ -15,7 +15,7 @@ namespace Emmanuel.Behaviours
 		// Update is called once per frame
 		void Update () 
 		{
-			transform.LookAt(thisThing.transform);	
+			transform.LookAt(Camera.main.transform);	
 		}
 	}
 }

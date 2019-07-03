@@ -17,13 +17,24 @@ namespace Steffan.Behaviours
 		{
 			edBehaviour = GetComponent< EnemyDataBehaviour >();
 		}
-		
-		public void TakeTongueAttackDamage(GameObject player)
-		{
-			var playerData = player.GetComponent< PlayerDataBehaviour >();
-			Debug.Log("TakeTongueAttackDamage:: PlayerDamage" + playerData.pd.Damage);
-			playerData.Attack(edBehaviour);
-		}
 
+		public void OnAddedToContactList(UnityEngine.Object[] obj)
+		{
+			var sender = obj[0] as PlayerDataBehaviour;//sent from when the player adds this object to the contact list
+			var defender = obj[1];
+			if ( sender == null ) return;
+			if ( defender == null || defender != gameObject )
+				return;
+			sender.Attack(edBehaviour);
+		}
+		public void TakeTongueAttackDamage(UnityEngine.Object[] obj)
+		{
+			var sender = obj[0] as PlayerDataBehaviour;//sent from when the player adds this object to the contact list
+			var defender = obj[1];
+			if ( sender == null ) return;
+			if ( defender == null || defender != gameObject )
+				return;
+			sender.Attack(edBehaviour);
+		}
 	}
 }
