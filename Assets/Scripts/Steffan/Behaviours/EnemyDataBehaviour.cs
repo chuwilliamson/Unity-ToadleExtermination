@@ -11,6 +11,8 @@ namespace Steffan.Behaviours
 		void Awake ()
 		{
 			ed = Instantiate(ed);
+			ed._health = Instantiate(ed._health);
+			ed._damage = Instantiate(ed._damage);
 		}
 
 		public void Attack(PlayerDataBehaviour other)
@@ -22,7 +24,15 @@ namespace Steffan.Behaviours
 		{
 			TakeDamage(playerData.Damage);
 		}
-
+		public void OnAddedToContactList(UnityEngine.Object[] obj)
+		{
+			var sender = obj[0] as PlayerDataBehaviour;//sent from when the player adds this object to the contact list
+			var defender = obj[1];
+			if ( sender == null ) return;
+			if ( defender == null || defender != gameObject )
+				return;
+			sender.Attack(this);
+		}
 		public void onTriggerEnterEventRaised(Object other)
 		{
 			

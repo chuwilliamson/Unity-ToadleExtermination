@@ -7,13 +7,13 @@ namespace Matthew
     {
         [TextArea]
         public string Notes;
-        [ScriptVariable(Verbose = true)]
+        
         public GameEvent GameEvent;
         public GameEventResponse Response;
-        
+
         public GameObject SenderObject;
-        
-        void OnEnable()
+
+        public void OnEnable()
         {
             Subscribe();
         }
@@ -27,29 +27,32 @@ namespace Matthew
             GameEvent.RemoveListener(this);
         }
 
-    public void OnEventRaised(Object obj)
+        public void OnEventRaised(Object[] args)
+        {
+            var sender = args[0];
+            var other = args[1];
+            //if it's null we will call it
+            if (SenderObject == null)
             {
-                //if it's null we will call it
-                if (SenderObject == null)
-                {
-                    Response.Invoke(obj);
-    
-                }
-                else
-                {
-                    if (SenderObject == obj)
-                        Response.Invoke(obj);
-                }
+                Response.Invoke(args);
+
             }
+            else
+            {
+                if (SenderObject == args[0])
+                    Response.Invoke(args);
+            }
+        }
+
+
+        public void OnDisable()
+        {
+            Unsubscribe();
+        }
 
         public void OnEventRaised()
         {
             OnEventRaised(null);
-        }
-
-        void OnDisable()
-        {
-            Unsubscribe();
         }
     }
 }

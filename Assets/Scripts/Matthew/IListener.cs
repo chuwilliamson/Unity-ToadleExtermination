@@ -6,7 +6,7 @@ namespace Matthew
     {
         void Subscribe();
         void Unsubscribe();
-        void OnEventRaised(Object obj);
+        void OnEventRaised(params Object[] obj);
         void OnEventRaised();
     }
 }

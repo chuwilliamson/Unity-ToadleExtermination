@@ -147,6 +147,7 @@ GameObject:
   - component: {fileID: 114826010260376112}
   - component: {fileID: 114221137379110020}
   - component: {fileID: 114411983796993586}
+  - component: {fileID: 114345099390462542}
   m_Layer: 0
   m_Name: Frogustus
   m_TagString: Untagged
@@ -1781,6 +1782,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 0}
+--- !u!114 &114345099390462542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1197122870672840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 228df5a5595e4054788fbf641c167397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pd: {fileID: 0}
 --- !u!114 &114411983796993586
 MonoBehaviour:
   m_ObjectHideFlags: 1
