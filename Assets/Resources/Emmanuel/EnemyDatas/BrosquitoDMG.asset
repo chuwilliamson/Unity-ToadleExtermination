@@ -9,6 +9,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6d0053d94374dfe97ba525846db4cfe, type: 3}
-  m_Name: New Float Var
+  m_Name: BrosquitoDMG
   m_EditorClassIdentifier: 
   value: 0

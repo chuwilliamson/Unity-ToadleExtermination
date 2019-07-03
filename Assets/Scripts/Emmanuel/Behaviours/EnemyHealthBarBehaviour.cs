@@ -25,7 +25,6 @@ namespace Emmanuel.Behaviours
 
         void Update()
         {
-
             slider.value = CalculateHealth();
 
             if ( health < maxHealth ) { healthBarUI.SetActive(true); }
@@ -40,4 +39,5 @@ namespace Emmanuel.Behaviours
         }
     
     }
+    
 }
