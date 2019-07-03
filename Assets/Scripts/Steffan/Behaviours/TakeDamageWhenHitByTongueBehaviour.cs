@@ -1,4 +1,6 @@
-﻿using Matthew;
+﻿using System;
+using Emmanuel.ScriptableObjects;
+using Matthew;
 using UnityEngine;
 
 namespace Steffan.Behaviours
@@ -8,23 +10,20 @@ namespace Steffan.Behaviours
 		public string damagerTag = "tongue";
 
 		public GameEvent OnTriggerEnterEvent;
-
+		
 		private EnemyDataBehaviour edBehaviour;
-		private void OnTriggerEnter(Collider other)
+
+		public void Start()
 		{
-			if (!other.gameObject.CompareTag(damagerTag))
-				return;
-			//when we enter this trigger
-			//1. get a reference to playerdatabehaviour
-			//2. invoke attack on the enemydatabehaviour reference
-			var damager = other.gameObject.GetComponent<PlayerDataBehaviour>();
-			Debug.Log(damager.pd.Damage.ToString());
-		
-			damager.Attack(edBehaviour);
-		
-		
-			// TODO: This gameobject takes damage when the Tongue enters its collider
-			// 6/25 :- 2:33:: Emmanuel-" Testing now "
+			edBehaviour = GetComponent< EnemyDataBehaviour >();
 		}
+		
+		public void TakeTongueAttackDamage(GameObject player)
+		{
+			var playerData = player.GetComponent< PlayerDataBehaviour >();
+			Debug.Log("TakeTongueAttackDamage:: PlayerDamage" + playerData.pd.Damage);
+			playerData.Attack(edBehaviour);
+		}
+
 	}
 }

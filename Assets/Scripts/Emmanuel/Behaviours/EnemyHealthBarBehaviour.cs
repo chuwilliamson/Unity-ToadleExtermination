@@ -7,16 +7,16 @@ namespace Emmanuel.Behaviours
 {
     public class EnemyHealthBarBehaviour : MonoBehaviour
     {
-        public EnemyDataBehaviour edBehaviour;
+        [SerializeField]
+        private EnemyDataBehaviour edBehaviour;
     
-        public float health;
-        public float maxHealth;
-
-    
+        private float health;
+        private float maxHealth;
+        
         public GameObject healthBarUI;
         public Slider slider;
 
-        void start()
+        void Start()
         {
             maxHealth = edBehaviour.ed.Health;
             health = maxHealth;
@@ -25,16 +25,17 @@ namespace Emmanuel.Behaviours
 
         void Update()
         {
+
             slider.value = CalculateHealth();
 
-            if ( health < maxHealth )
-            {
-                healthBarUI.SetActive(true);
-            }
+            if ( health < maxHealth ) { healthBarUI.SetActive(true); }
+
+            if ( health <= 0 ) { healthBarUI.SetActive(false); }
         }
     
         float CalculateHealth()
         {
+            health = edBehaviour.ed.Health;
             return health / maxHealth;
         }
     
