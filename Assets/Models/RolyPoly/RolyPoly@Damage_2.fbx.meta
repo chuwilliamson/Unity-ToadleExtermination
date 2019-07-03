@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 244b50032012bde4a8ff238cfe2b0c0e
+guid: e23785a28c2db674f938e80bc997b632
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -159,7 +159,7 @@ ModelImporter:
     4300018: R_leg_01
     4300020: R_leg_03
     4300022: R_leg_04
-    7400000: Damage
+    7400000: Take 001
     9500000: //RootNode
     13700000: glasses_lo
     13700002: L_Eye
@@ -200,35 +200,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Damage
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 30
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
