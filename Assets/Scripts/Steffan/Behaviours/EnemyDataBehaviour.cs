@@ -1,5 +1,7 @@
-﻿using Emmanuel.ScriptableObjects;
+﻿using System;
+using Emmanuel.ScriptableObjects;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Steffan.Behaviours
 {
@@ -15,6 +17,11 @@ namespace Steffan.Behaviours
 			ed._damage = Instantiate(ed._damage);
 		}
 
+		public void Update()
+		{
+			
+		}
+		
 		public void Attack(PlayerDataBehaviour other)
 		{
 			other.TakeDamage(ed.Damage);
@@ -46,5 +53,7 @@ namespace Steffan.Behaviours
 		{
 			ed.TakeDamage(dmgTaken);
 		}
+
+		public int Value { get { return ed._value; } }
 	}
 }

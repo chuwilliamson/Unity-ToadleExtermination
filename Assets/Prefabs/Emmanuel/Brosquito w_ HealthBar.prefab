@@ -81,7 +81,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4745645385068556}
-  - component: {fileID: 95193536013206852}
   m_Layer: 0
   m_Name: Skeeto_SkeletalMesh
   m_TagString: Untagged
@@ -888,6 +887,8 @@ GameObject:
   - component: {fileID: 114426806627120946}
   - component: {fileID: 114986561453169210}
   - component: {fileID: 114679628106829774}
+  - component: {fileID: 114197903912492254}
+  - component: {fileID: 95550448190259848}
   m_Layer: 0
   m_Name: Brosquito w_ HealthBar
   m_TagString: enemy
@@ -1391,7 +1392,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720466883184444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.16996098, y: 1.46085, z: 4.505535}
+  m_LocalPosition: {x: -0.16996098, y: 2.94, z: 7.38}
   m_LocalScale: {x: 69.84466, y: 69.84466, z: 69.84466}
   m_Children:
   - {fileID: 4745645385068556}
@@ -2177,17 +2178,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!95 &95193536013206852
+--- !u!95 &95550448190259848
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1040267637714840}
+  m_GameObject: {fileID: 1720466883184444}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d894041d9fc859444b78761cd9850658, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 1
+  m_Controller: {fileID: 9100000, guid: 77e82157db35d3b4499be28919782d0e, type: 2}
+  m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -2243,6 +2244,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114197903912492254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720466883184444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8e7cf6820cdb640afb145f1e03ca4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeathEvent: {fileID: 11400000, guid: 46cda888b91be4f4b8ab57d0b2fe6555, type: 2}
 --- !u!114 &114250303818926158
 MonoBehaviour:
   m_ObjectHideFlags: 1

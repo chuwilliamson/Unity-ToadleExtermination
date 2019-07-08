@@ -27,5 +27,10 @@ namespace Steffan.Behaviours
 		{
 			pd.TakeDamage(dmgTaken);
 		}
+
+		public void GainCurrency(int amount)
+		{
+			pd.GainCurrency(amount);
+		}
 	}
 }
