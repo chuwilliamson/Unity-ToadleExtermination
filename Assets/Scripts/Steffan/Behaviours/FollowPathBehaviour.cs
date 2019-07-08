@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Steffan.Behaviours
 {
@@ -29,6 +30,8 @@ namespace Steffan.Behaviours
 
 		public List<Transform> SavedPath;
 
+		public NavMeshAgent navmeshAgent;
+
 		[Cinemachine.TagField] private string cmTagField;
 
 		public enum MoveMethod 
@@ -41,6 +44,7 @@ namespace Steffan.Behaviours
 		{
 			movement = MoveMethod.TRAVEL;
 			SavedPath = new List<Transform>(WaypointsToFollow);
+			navmeshAgent = GetComponent<NavMeshAgent>();
 		}
 
 		void RestartPath()
@@ -99,7 +103,8 @@ namespace Steffan.Behaviours
 		{
 			if (WaypointsToFollow.Count == 0)
 				return;
-			transform.position = Vector3.MoveTowards(transform.position, WaypointsToFollow[0].position, speed * Time.deltaTime);
+			navmeshAgent.SetDestination(WaypointsToFollow[0].transform.position);
+
 		}
 		public void NextWaypointTeleport()
 		{
