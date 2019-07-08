@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Waypoint
+  - cursor
+  - enemy
+  - tongue
   layers:
   - Default
   - TransparentFX
