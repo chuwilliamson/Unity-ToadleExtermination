@@ -29,7 +29,7 @@ public class GiveCurrencyOnDeathBehaviour : MonoBehaviour
 
 	public void RaiseOnDeathEvent()
 	{
-		onDeathEvent.Raise(this.gameObject);
+		onDeathEvent.Raise(gameObject, edBehaviour);
 	}
 	
 }
