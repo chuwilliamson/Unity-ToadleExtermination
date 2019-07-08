@@ -9,6 +9,7 @@ namespace Steffan.Behaviours
 	{
 		public TurretData turretData;
 		private List<EnemyDataBehaviour> enemiesInRange = new List<EnemyDataBehaviour>();
+		public GameObject turretShot;
 
 		private void Start()
 		{
@@ -16,8 +17,10 @@ namespace Steffan.Behaviours
 		}
 
 		// Update is called once per frame
-		void Update () {
-		
+		void Update ()
+		{
+			AttackMode();
+			turretData.timeSinceLastShot += Time.deltaTime;
 		}
 
 		public void AddToEnemiesInRange(UnityEngine.Object enemy)
@@ -46,13 +49,26 @@ namespace Steffan.Behaviours
 				
 			enemiesInRange.Remove(enemyBehaviour);
 		}
-		public bool AcquireTarget()
+		public void LookAtTarget()
 		{
-			return false;
+			transform.LookAt(enemiesInRange[0].transform);
 		}
-		public bool LookAtTarget()
+
+		public void AttackMode()
 		{
-			return false;
+			LookAtTarget();
+			if (turretData.timeSinceLastShot > turretData.attackRecharge)
+			{
+				Fire();
+				turretData.timeSinceLastShot = 0;
+			}
+			
+		}
+
+		public GameObject Fire()
+		{
+			var thisShot = Instantiate(turretShot);
+			return thisShot;
 		}
 	}
 }
