@@ -10,6 +10,7 @@ namespace Emmanuel.ScriptableObjects
         
         public float attackRange;
         public float attackRecharge;
+        public float timeSinceLastShot;
         public TurretData(string name, float health, float damage) : base(name, health, damage)
         {
             Name = name;
