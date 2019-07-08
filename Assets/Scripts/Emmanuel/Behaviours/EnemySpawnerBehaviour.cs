@@ -20,7 +20,7 @@ public class EnemySpawnerBehaviour : MonoBehaviour
 	public void SpawnEnemy()
 	{
 		var spawnedEnemy = Instantiate(spawnerData.enemiesInThisWave[enemyNumIndex] );
+		spawnedEnemy.gameObject.transform.position = transform.position;
 		enemyNumIndex++;
- 
 	}
 }

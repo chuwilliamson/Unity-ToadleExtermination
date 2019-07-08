@@ -4,7 +4,8 @@ namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Data/Enemy")]
     public class EnemyData : Entity
-    {
+    { 
+        public int _value;
         public override float Attack(Entity other)
         {
             return other.TakeDamage(Damage);

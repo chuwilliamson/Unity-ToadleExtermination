@@ -400,7 +400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: -139.70094, y: 97.61991, z: 1253.777}
+  m_FollowOffset: {x: -137.18098, y: 98.81992, z: 1255.7566}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -549,8 +549,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 210193215}
-  m_LocalRotation: {x: 0.2717703, y: 0.56274116, z: -0.20287047, w: 0.7538613}
-  m_LocalPosition: {x: -13.42, y: 11.6, z: -3.98}
+  m_LocalRotation: {x: 0.3228204, y: 0.57503504, z: -0.2636903, w: 0.703981}
+  m_LocalPosition: {x: -10.8, y: 12.8, z: -2.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -607,12 +607,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222837722}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.14584, y: 2.4419274, z: 8.125146}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233808457
 GameObject:
@@ -814,7 +814,7 @@ GameObject:
   m_Layer: 0
   m_Name: Brosquito Spawner
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -837,11 +837,15 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 271844612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.22, y: 2.4419274, z: -2.82}
+  m_LocalPosition: {x: -0.22, y: 2.88, z: 24.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1653031584}
+  - {fileID: 1940164475}
+  - {fileID: 762503035}
+  - {fileID: 409381950}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &294246625
 GameObject:
@@ -997,7 +1001,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -475, y: 279.4}
+  m_AnchoredPosition: {x: -398.2, y: 199.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379778569
@@ -1151,6 +1155,57 @@ Transform:
   m_Father: {fileID: 1701606318}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &409381949
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 271844614}
+    m_Modifications:
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -30.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668236533176052, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_Name
+      value: Brosquito WP (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &409381950 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 409381949}
 --- !u!1 &411924610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1416,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &419147774
 GameObject:
@@ -1386,7 +1441,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419147774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.123493515, z: -0.2553729}
+  m_LocalPosition: {x: 0, y: 0.123493515, z: -0.2489}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 233808458}
@@ -1884,8 +1939,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 675065492}
-  m_LocalRotation: {x: 0.2717703, y: 0.56274116, z: -0.20287047, w: 0.7538613}
-  m_LocalPosition: {x: -13.42, y: 11.6, z: -3.98}
+  m_LocalRotation: {x: 0.3228204, y: 0.57503504, z: -0.2636903, w: 0.703981}
+  m_LocalPosition: {x: -10.8, y: 12.8, z: -2.2}
   m_LocalScale: {x: 0.81979, y: 0.81979, z: 0.81979}
   m_Children:
   - {fileID: 153056374}
@@ -1965,6 +2020,57 @@ Transform:
   m_Father: {fileID: 26565967}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &762503034
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 271844614}
+    m_Modifications:
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -24.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668236533176052, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_Name
+      value: Brosquito WP (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &762503035 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 762503034}
 --- !u!1 &813075935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2493,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1181780159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1181780161}
+  - component: {fileID: 1181780160}
+  m_Layer: 0
+  m_Name: Listener - OnEnemyDeath
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1181780160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1181780159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: 
+  GameEvent: {fileID: 11400000, guid: 46cda888b91be4f4b8ab57d0b2fe6555, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 910542615}
+        m_MethodName: GainCurrency
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Matthew.GameEventResponse, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  SenderObject: {fileID: 0}
+--- !u!4 &1181780161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1181780159}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -20.657187, y: 363.8, z: 4.192294}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1191652233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2797,6 +2962,57 @@ Transform:
   m_Father: {fileID: 1810886087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1653031583
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 271844614}
+    m_Modifications:
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -6.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668236533176052, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_Name
+      value: Brosquito WP (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1653031584 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1653031583}
 --- !u!1 &1701606317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3159,7 +3375,7 @@ Transform:
   m_GameObject: {fileID: 1871135743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 22.318573, y: 2.9217, z: 27.559813}
+  m_LocalScale: {x: 162.73141, y: 2.9217, z: 165.21281}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -3299,6 +3515,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1923318185}
   m_Mesh: {fileID: 4300006, guid: ce7c236c29a794b48bfa0f8899eabcf4, type: 3}
+--- !u!1001 &1940164474
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 271844614}
+    m_Modifications:
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -14.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1668236533176052, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+      propertyPath: m_Name
+      value: Brosquito WP (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4745c27fd491414e8e26907b8dcbdb8, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!4 &1940164475 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4223680465157310, guid: d4745c27fd491414e8e26907b8dcbdb8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1940164474}
 --- !u!1 &1945604315
 GameObject:
   m_ObjectHideFlags: 0
