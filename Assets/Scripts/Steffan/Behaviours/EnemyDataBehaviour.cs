@@ -16,8 +16,8 @@ namespace Steffan.Behaviours
         private void Awake()
         {
             ed = Instantiate(ed);
-            ed._health = Instantiate(ed._health);
-            ed._damage = Instantiate(ed._damage);
+            ed.health = Instantiate(ed._health);
+            ed.damage = Instantiate(ed._damage);
         }
 
         public void Attack(PlayerDataBehaviour other)
