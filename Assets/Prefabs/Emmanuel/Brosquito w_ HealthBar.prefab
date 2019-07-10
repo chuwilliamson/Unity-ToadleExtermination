@@ -882,13 +882,13 @@ GameObject:
   - component: {fileID: 4287571442279780}
   - component: {fileID: 135547076281822248}
   - component: {fileID: 54042169039012676}
-  - component: {fileID: 114632670858199952}
   - component: {fileID: 114665910632202876}
   - component: {fileID: 114426806627120946}
   - component: {fileID: 114986561453169210}
   - component: {fileID: 114679628106829774}
   - component: {fileID: 114197903912492254}
   - component: {fileID: 95550448190259848}
+  - component: {fileID: 114486976497740706}
   - component: {fileID: 195131255100054164}
   - component: {fileID: 114442766901102470}
   m_Layer: 0
@@ -2269,7 +2269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cbc0ed234dc76f4b88b238ebbd1e524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisThing: {fileID: 0}
 --- !u!114 &114278816226406986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2314,14 +2313,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fa66c64e39ae34190dca3de9d7e21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaypointsToFollow: []
-  WaypointsPassed: []
-  Teleporter: {fileID: 0}
-  speed: 5
-  movement: 1
   loop: 0
-  SavedPath: []
+  movement: 1
   navmeshAgent: {fileID: 0}
+  savedPath: []
+  speed: 5
+  teleporter: {fileID: 0}
+  waypointsPassed: []
+  waypointsToFollow: []
+--- !u!114 &114486976497740706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720466883184444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f8e7cf6820cdb640afb145f1e03ca4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onDeathEvent: {fileID: 11400000, guid: 46cda888b91be4f4b8ab57d0b2fe6555, type: 2}
 --- !u!114 &114512308559659916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2349,18 +2360,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114632670858199952
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1720466883184444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b00f968a8820ac4db29ff139cadfa5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 1c0019176bc202e4fa714dbb964a6b3c, type: 2}
 --- !u!114 &114645842154419694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2389,7 +2388,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damagerTag: tongue
-  OnTriggerEnterEvent: {fileID: 11400000, guid: 1c0019176bc202e4fa714dbb964a6b3c,
+  onTriggerEnterEvent: {fileID: 11400000, guid: 1c0019176bc202e4fa714dbb964a6b3c,
     type: 2}
 --- !u!114 &114679628106829774
 MonoBehaviour:

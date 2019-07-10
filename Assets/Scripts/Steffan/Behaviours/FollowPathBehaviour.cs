@@ -25,7 +25,7 @@ namespace Steffan.Behaviours
 
         public NavMeshAgent navmeshAgent;
 
-        [FormerlySerializedAs("SavedPath")] public WaypointList savedPath;
+        [FormerlySerializedAs("SavedPath")] private WaypointList _savedPath;
 
         [SerializeField] private float speed = 5f;
 
@@ -53,13 +53,13 @@ namespace Steffan.Behaviours
         private void Start()
         {
             movement = MoveMethod.Travel;
-            savedPath = new WaypointList(waypointsToFollow);
+            _savedPath = new WaypointList(waypointsToFollow);
             navmeshAgent = GetComponent<NavMeshAgent>();
         }
 
         private void RestartPath()
         {
-            waypointsToFollow = new WaypointList(savedPath);
+            waypointsToFollow = new WaypointList(_savedPath);
             transform.position = waypointsToFollow.waypoints[0].Point;
         }
 
