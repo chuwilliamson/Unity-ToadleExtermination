@@ -2,6 +2,7 @@
 using Emmanuel.ScriptableObjects;
 using UnityEngine;
 
+[CreateAssetMenu(menuName = "Waypoint List")]
 public class WaypointList : ScriptableObject
 {
     public WaypointList(WaypointList wpList)

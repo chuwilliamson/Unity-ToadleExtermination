@@ -890,7 +890,6 @@ GameObject:
   - component: {fileID: 95550448190259848}
   - component: {fileID: 114486976497740706}
   - component: {fileID: 195131255100054164}
-  - component: {fileID: 114442766901102470}
   m_Layer: 0
   m_Name: Brosquito w_ HealthBar
   m_TagString: enemy
@@ -2302,25 +2301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ed: {fileID: 11400000, guid: 04d6b56359b22b7409b614dd2bcf6f06, type: 2}
---- !u!114 &114442766901102470
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1720466883184444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0fa66c64e39ae34190dca3de9d7e21c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loop: 0
-  movement: 1
-  navmeshAgent: {fileID: 0}
-  savedPath: []
-  speed: 5
-  teleporter: {fileID: 0}
-  waypointsPassed: []
-  waypointsToFollow: []
 --- !u!114 &114486976497740706
 MonoBehaviour:
   m_ObjectHideFlags: 1
