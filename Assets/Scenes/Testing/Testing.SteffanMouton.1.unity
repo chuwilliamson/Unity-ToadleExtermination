@@ -246,8 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44110a6a39b50b3419eb2efec0a89ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {fileID: 0}
   sourceObject: {fileID: 0}
+  targetPosition: {fileID: 0}
 --- !u!1001 &64046847
 Prefab:
   m_ObjectHideFlags: 0
@@ -1889,7 +1889,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0fa66c64e39ae34190dca3de9d7e21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaypointsToFollow:
+  loop: 0
+  movement: 1
+  navmeshAgent: {fileID: 0}
+  savedPath: []
+  speed: 5
+  teleporter: {fileID: 1880950607}
+  waypointsPassed: []
+  waypointsToFollow:
   - {fileID: 1584655384}
   - {fileID: 271046550}
   - {fileID: 1272198451}
@@ -1897,13 +1904,6 @@ MonoBehaviour:
   - {fileID: 1622230461}
   - {fileID: 1262436724}
   - {fileID: 1551678168}
-  WaypointsPassed: []
-  Teleporter: {fileID: 1880950607}
-  speed: 5
-  movement: 1
-  loop: 0
-  SavedPath: []
-  navmeshAgent: {fileID: 0}
 --- !u!54 &508299759
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -6542,6 +6542,10 @@ Prefab:
       propertyPath: m_WalkableMask
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
   m_IsPrefabAsset: 0
@@ -6715,8 +6719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44110a6a39b50b3419eb2efec0a89ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetPosition: {fileID: 0}
   sourceObject: {fileID: 0}
+  targetPosition: {fileID: 0}
 --- !u!1001 &1902084935
 Prefab:
   m_ObjectHideFlags: 0
