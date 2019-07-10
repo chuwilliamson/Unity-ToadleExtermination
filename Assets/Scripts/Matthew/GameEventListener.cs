@@ -35,7 +35,6 @@ namespace Matthew
             if (SenderObject == null)
             {
                 Response.Invoke(args);
-
             }
             else
             {
