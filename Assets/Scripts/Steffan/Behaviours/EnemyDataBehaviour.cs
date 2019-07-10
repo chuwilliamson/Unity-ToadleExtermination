@@ -1,21 +1,11 @@
-﻿using System;
-using Emmanuel.ScriptableObjects;
+﻿using Emmanuel.ScriptableObjects;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Steffan.Behaviours
 {
     public class EnemyDataBehaviour : MonoBehaviour
     {
         public EnemyData ed;
-
-        private void Update()
-        {
-            if (!(ed.health.Value <= 0))
-                return;
-
-            Destroy(gameObject);
-        }
 
         public int Value
         {
