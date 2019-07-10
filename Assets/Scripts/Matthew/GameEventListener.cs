@@ -26,7 +26,7 @@ namespace Matthew
         {
             GameEvent.RemoveListener(this);
         }
-
+                   
         public void OnEventRaised(Object[] args)
         {
             var sender = args[0];

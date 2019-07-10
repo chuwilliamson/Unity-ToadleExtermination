@@ -13,13 +13,8 @@ namespace Steffan.Behaviours
 		void Awake ()
 		{
 			ed = Instantiate(ed);
-			ed._health = Instantiate(ed._health);
-			ed._damage = Instantiate(ed._damage);
-		}
-
-		public void Update()
-		{
-			
+			ed.health = Instantiate(ed.health);
+			ed.damage = Instantiate(ed.damage);
 		}
 		
 		public void Attack(PlayerDataBehaviour other)
@@ -54,6 +49,6 @@ namespace Steffan.Behaviours
 			ed.TakeDamage(dmgTaken);
 		}
 
-		public int Value { get { return ed._value; } }
+		public int Value { get { return ed.value; } }
 	}
 }

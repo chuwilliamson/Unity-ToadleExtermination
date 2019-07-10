@@ -1,21 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
+public class PlayerInputBehaviour : MonoBehaviour
+{
+    // Use this for initialization
+    [FormerlySerializedAs("OnLeftMouseButtonDown")] [SerializeField] private UnityEvent onLeftMouseButtonDown;
 
-public class PlayerInputBehaviour : MonoBehaviour 
- {
- 
- 	// Use this for initialization
- 	[SerializeField]
- 	private UnityEngine.Events.UnityEvent OnLeftMouseButtonDown;
- 	// Update is called once per frame
- 	void Update () 
- 	{
- 		if ( Input.GetMouseButtonDown(0) )
- 		{
- 			OnLeftMouseButtonDown.Invoke();
- 		}
- 	}
- }
+    // Update is called once per frame
+    private void Update()
+    {
+        if ( Input.GetMouseButtonDown(0) ) onLeftMouseButtonDown.Invoke();
+    }
+}

@@ -7,8 +7,8 @@ namespace Emmanuel.ScriptableObjects
     [CreateAssetMenu(menuName = "Data/Entity")]
     public class Entity : MyScriptableObject, IAttackable, ITakeDamageable
     {
-        [SerializeField] public FloatVar _health;
-        [SerializeField] public FloatVar _damage;
+        public FloatVar damage;
+        public FloatVar health;
 
         public Entity(string name, float health, float damage)
         {
@@ -17,30 +17,20 @@ namespace Emmanuel.ScriptableObjects
             Damage = damage;
         }
 
+        public string Name { get { return name; } set { ; } }
 
+        public float Damage { get { return damage.Value; } protected set { damage.Value = value; } }
 
-        public string Name { get; set; }
+        public float Health { get { return health.Value; } set { health.Value = value; } }
 
-        public float Damage
+        public virtual float Attack(Entity other)
         {
-            get { return _damage.Value;} 
-            set { _damage.Value = value; }
-        }
-
-        public float Health
-        {
-            get { return _health.Value; }
-            set { _health.Value = value; }
+            throw new NotImplementedException();
         }
 
         public virtual float TakeDamage(float dmg)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public virtual float Attack(Entity other)
-        {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

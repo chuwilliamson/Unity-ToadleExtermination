@@ -1,23 +1,18 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu]
-    public class ScriptableObjectList : ScriptableObject, IList<MyScriptableObject>
+    public class ScriptableObjectList : ScriptableObject, IList< MyScriptableObject >
     {
-        private List<ScriptableObject> _list;
+        public List< ScriptableObject > List { get; set; }
 
-        public List<ScriptableObject> List
+        public IEnumerator< MyScriptableObject > GetEnumerator()
         {
-            get { return _list; }
-            set { _list = value; }
-        }
-
-        public IEnumerator<MyScriptableObject> GetEnumerator()
-        {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -27,52 +22,52 @@ namespace Emmanuel.ScriptableObjects
 
         public void Add(MyScriptableObject item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Clear()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool Contains(MyScriptableObject item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void CopyTo(MyScriptableObject[] array, int arrayIndex)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public bool Remove(MyScriptableObject item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public int Count { get; private set; }
-        
+
         public bool IsReadOnly { get; private set; }
-        
+
         public int IndexOf(MyScriptableObject item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Insert(int index, MyScriptableObject item)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void RemoveAt(int index)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public MyScriptableObject this[int index]
         {
-            get { throw new System.NotImplementedException(); }
-            set { throw new System.NotImplementedException(); }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
     }
 }

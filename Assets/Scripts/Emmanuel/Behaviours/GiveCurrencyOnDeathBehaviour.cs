@@ -1,35 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Matthew;
+﻿using Matthew;
 using Steffan.Behaviours;
 using UnityEngine;
 
-public class GiveCurrencyOnDeathBehaviour : MonoBehaviour
+namespace Emmanuel.Behaviours
 {
+    public class GiveCurrencyOnDeathBehaviour : MonoBehaviour
+    {
+        private EnemyDataBehaviour _edBehaviour;
 
-	private EnemyDataBehaviour edBehaviour;
+        public GameEvent onDeathEvent;
 
-	public GameEvent onDeathEvent;
-	
-	// Use this for initialization
-	void Start ()
-	{
-		edBehaviour = GetComponent< EnemyDataBehaviour >();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
-		if ( edBehaviour.ed.Health <= 0 )
-		{
-			RaiseOnDeathEvent();
-			Destroy(gameObject);
-		}
-	}
+        // Use this for initialization
+        private void Start()
+        {
+            _edBehaviour = GetComponent< EnemyDataBehaviour >();
+        }
 
-	public void RaiseOnDeathEvent()
-	{
-		onDeathEvent.Raise(gameObject, edBehaviour);
-	}
-	
+        // Update is called once per frame
+        private void Update()
+        {
+            if ( !(_edBehaviour.ed.Health <= 0) ) return;
+
+            onDeathEvent.Raise();
+            Destroy(gameObject);
+        }
+    }
 }

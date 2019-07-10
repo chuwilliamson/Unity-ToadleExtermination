@@ -1,10 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/Enemy Spawner")]
-public class EnemySpawnerData : ScriptableObject
+namespace Emmanuel.ScriptableObjects
 {
-	public int waveNumber;
-	public List< GameObject > enemiesInThisWave;
+    [CreateAssetMenu(menuName = "Data/Enemy Spawner")]
+    public class EnemySpawnerData : ScriptableObject
+    {
+        public List< GameObject > enemiesInThisWave;
+        public int waveNumber;
+    }
 }

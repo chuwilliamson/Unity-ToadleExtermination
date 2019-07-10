@@ -1,26 +1,25 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Matthew;
-using Steffan.Behaviours;
+﻿using Emmanuel.ScriptableObjects;
 using UnityEngine;
 
-public class EnemySpawnerBehaviour : MonoBehaviour
+namespace Emmanuel.Behaviours
 {
-	[SerializeField] private EnemySpawnerData spawnerData;
+    public class EnemySpawnerBehaviour : MonoBehaviour
+    {
+        private int _enemyNumIndex;
 
-	private int enemyNumIndex;
-	// Use this for initialization
-	void Start ()
-	{
-		enemyNumIndex = 0;
-	}
+        [SerializeField] private EnemySpawnerData spawnerData;
 
-	public void SpawnEnemy()
-	{
-		var spawnedEnemy = Instantiate(spawnerData.enemiesInThisWave[enemyNumIndex] );
-		spawnedEnemy.gameObject.transform.position = transform.position;
-		enemyNumIndex++;
-	}
+        // Use this for initialization
+        private void Start()
+        {
+            _enemyNumIndex = 0;
+        }
+
+        public void SpawnEnemy()
+        {
+            var spawnedEnemy = Instantiate(spawnerData.enemiesInThisWave[_enemyNumIndex]);
+            spawnedEnemy.gameObject.transform.position = transform.position;
+            _enemyNumIndex++;
+        }
+    }
 }

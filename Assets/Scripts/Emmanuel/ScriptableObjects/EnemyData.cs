@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Data/Enemy")]
     public class EnemyData : Entity
-    { 
-        public int _value;
+    {
+        [FormerlySerializedAs("_value")] public int value;
+
+        public EnemyData(string name, float health, float damage) : base(name, health, damage)
+        {
+            Name = name;
+            Health = health;
+            Damage = damage;
+        }
+
         public override float Attack(Entity other)
         {
             return other.TakeDamage(Damage);
@@ -16,15 +25,5 @@ namespace Emmanuel.ScriptableObjects
             Health -= dmgTaken;
             return dmgTaken;
         }
-
-        public EnemyData(string name, float health, float damage) : base(name, health, damage)
-        {
-            Name = name;
-            Health = health;
-            Damage = damage;
-        }
     }
-
-   
 }
-
