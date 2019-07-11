@@ -12,7 +12,6 @@ namespace Emmanuel.ScriptableObjects
         {
             point = tf.position;
         }
-        
         public Vector3 Point { get { return point; } set { point = value; } }
     }
 }
