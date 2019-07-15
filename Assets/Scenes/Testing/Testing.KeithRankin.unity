@@ -113,6 +113,76 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &61535571
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 13700002, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 59689ec3ed3a3a44fa2c9323caea3e3c, type: 2}
+    - target: {fileID: 13700000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ad8e7dbc405eb7a46bee335e634e885c, type: 2}
+    - target: {fileID: 13700006, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8c0d86af694faf42a1c07f107e86092, type: 2}
+    - target: {fileID: 13700004, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f8c0d86af694faf42a1c07f107e86092, type: 2}
+    - target: {fileID: 13700010, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f07888d83325e64e926980f5aae127d, type: 2}
+    - target: {fileID: 13700008, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6f07888d83325e64e926980f5aae127d, type: 2}
+    - target: {fileID: 100000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+      propertyPath: m_Name
+      value: Crawfish
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ad3aba5657e5f04284ee833d74fe1bd, type: 3}
+  m_IsPrefabAsset: 0
 --- !u!1 &210193215
 GameObject:
   m_ObjectHideFlags: 0
