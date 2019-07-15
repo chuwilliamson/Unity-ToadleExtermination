@@ -13,3 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turretDisplaydatas:
   - {fileID: 11400000, guid: 5f412d04b7bee7c499b58a9e3a3aa88d, type: 2}
+  - {fileID: 11400000, guid: 5107caef1e7e77c4eb570787da8fd925, type: 2}

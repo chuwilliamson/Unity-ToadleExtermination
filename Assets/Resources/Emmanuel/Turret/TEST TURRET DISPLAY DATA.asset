@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: TEST TURRET DISPLAY DATA
   m_EditorClassIdentifier: 
   td: {fileID: 11400000, guid: 9122f09f71334754a8d81b02e30f226c, type: 2}
-  turretIcon: {fileID: 21300000, guid: 7a3fab44b38f79f4b976b00b6cef6520, type: 3}
+  turretIcon: {fileID: 21300000, guid: 66ea10d7d11e3f748a74381846bbe1ce, type: 3}
