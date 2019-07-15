@@ -52,6 +52,8 @@ namespace Steffan.Behaviours
 
         private void LookAtTarget()
         {
+            if (_enemiesInRange.Count < 1)
+                return;
             transform.LookAt(_enemiesInRange[0].transform);
         }
 
