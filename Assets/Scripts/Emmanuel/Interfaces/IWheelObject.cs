@@ -6,5 +6,7 @@ namespace Emmanuel.Interfaces
     {
         void Up();
         void Down();
+        
+        int Current { get; }
     }
 }
