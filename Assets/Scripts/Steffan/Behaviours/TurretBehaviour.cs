@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.Remoting.Messaging;
 using Emmanuel.ScriptableObjects;
+using Matthew;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Steffan.Behaviours
 {
@@ -13,11 +17,24 @@ namespace Steffan.Behaviours
         private void Start()
         {
             turretData = Instantiate(turretData);
+            var hitbox = GetComponent< SphereCollider >();
+
+            hitbox.radius = turretData.attackRange;
+        }
+
+        public Transform currentTarget;
+        public Vector3 lastPosition;
+        private void OnDrawGizmos()
+        {
+            Gizmos.DrawSphere(lastPosition, 2);
         }
 
         // Update is called once per frame
         private void Update()
         {
+            if (_enemiesInRange.Count < 1)
+                return;
+            
             AttackMode();
             turretData.timeSinceLastShot += Time.deltaTime;
         }
@@ -50,11 +67,22 @@ namespace Steffan.Behaviours
             _enemiesInRange.Remove(enemyBehaviour);
         }
 
+        
         private void LookAtTarget()
         {
-            if (_enemiesInRange.Count < 1)
+            _enemiesInRange.Sort((x, y) =>
+            {
+                var pos = transform.position;
+                var distance1 = Vector3.Distance(pos, x.transform.position);
+                var distance2 = Vector3.Distance(pos, y.transform.position);
+              return  distance1.CompareTo(distance2);
+            });
+            var current = _enemiesInRange[0];
+            
+            if ( current == null )
                 return;
-            transform.LookAt(_enemiesInRange[0].transform);
+            lastPosition = current.transform.position;
+            transform.LookAt(current.transform);
         }
 
         private void AttackMode()
@@ -67,7 +95,42 @@ namespace Steffan.Behaviours
 
         private void Fire()
         {
-            Instantiate(turretShot);
+
+            if ( !(_enemiesInRange[0].ed.health.Value > turretData.damage.Value ))
+            {
+                _enemiesInRange[0].TakeDamage(turretData.Damage);
+                return;
+            }
+            
+            _enemiesInRange[0].TakeDamage(turretData.Damage);
+            Destroy(_enemiesInRange[0].gameObject);  
+            _enemiesInRange.RemoveAt(0);
+            
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("enemy")) return;
+            
+            AddToEnemiesInRange(other.gameObject);
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if (!other.gameObject.CompareTag("enemy")) return;
+            RemoveFromEnemiesInRange(other.gameObject);
+        }
+
+        public void OnEnemyDeathEvent(Object[] objs)
+        {
+            var enemyGameObject = objs[0] as GameObject;
+            var edBehaviour = objs[1] as EnemyDataBehaviour;
+
+            if ( _enemiesInRange.Contains(edBehaviour) )
+            {
+                _enemiesInRange.Remove(edBehaviour);
+                Destroy(enemyGameObject);
+            }
         }
     }
 }

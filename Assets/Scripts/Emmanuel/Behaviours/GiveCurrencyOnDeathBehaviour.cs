@@ -17,12 +17,12 @@ namespace Emmanuel.Behaviours
         }
 
         // Update is called once per frame
-        private void Update()
+        [ContextMenu("doit")]
+        private void doit()
         {
             if ( _edBehaviour.ed.Health <= 0 )
             {
-                onDeathEvent.Raise(gameObject, _edBehaviour.ed);
-                Destroy(gameObject);  
+                onDeathEvent.Raise(gameObject, _edBehaviour);
             }
         }
     }
