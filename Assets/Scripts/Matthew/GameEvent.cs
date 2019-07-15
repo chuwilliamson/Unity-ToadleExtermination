@@ -8,14 +8,12 @@ namespace Matthew
     {
         private List<IListener> listeners = new List<IListener>();
 
-        public void Raise(Object obj)
+        public void Raise(params Object[] obj)
         {
             for (var i = listeners.Count - 1; i >= 0; i--)
+            {
                 listeners[i].OnEventRaised(obj);
-        }
-        public void Raise()
-        {
-            Raise(null);
+            }
         }
         public void AddListener(IListener listener)
         {
@@ -25,6 +23,16 @@ namespace Matthew
         public void RemoveListener(IListener listener)
         {
             listeners.Remove(listener);
+        }
+
+        public void Raise(Object obj)
+        {
+            Raise(new[] { obj });
+        }
+
+        public void Raise()
+        {           
+            Raise(new Object[0]);
         }
     }
 }

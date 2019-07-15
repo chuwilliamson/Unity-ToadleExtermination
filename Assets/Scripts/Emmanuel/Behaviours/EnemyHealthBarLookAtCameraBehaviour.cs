@@ -2,20 +2,12 @@
 
 namespace Emmanuel.Behaviours
 {
-	public class EnemyHealthBarLookAtCameraBehaviour : MonoBehaviour
-	{
-
-		[SerializeField] private GameObject thisThing;
-		// Use this for initialization
-		void Start () 
-		{
-
-		}
-	
-		// Update is called once per frame
-		void Update () 
-		{
-			transform.LookAt(thisThing.transform);	
-		}
-	}
+    public class EnemyHealthBarLookAtCameraBehaviour : MonoBehaviour
+    {
+        // Update is called once per frame
+        private void Update()
+        {
+            if ( Camera.main != null ) transform.LookAt(Camera.main.transform);
+        }
+    }
 }

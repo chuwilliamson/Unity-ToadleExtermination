@@ -1,114 +1,114 @@
 ﻿using System;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 namespace Steffan.Behaviours
 {
-	[RequireComponent(typeof(Rigidbody))]
-	[RequireComponent(typeof(Collider))]
-	public class FollowPathBehaviour : MonoBehaviour
-	{
-		[Space(10)]
-		[Header("[Readme] This causes the object to follow the given path of waypoints.")]
-		[Space(10)]
-		[Header("Assign gameobjects(Waypoints) to the list to have the object approach them in that order.")]
-		public List<Transform> WaypointsToFollow;
+    [RequireComponent(typeof(Rigidbody))]
+    [RequireComponent(typeof(Collider))]
+    public class FollowPathBehaviour : MonoBehaviour
+    {
+        public enum MoveMethod
+        {
+            Idle,
+            Travel
+        }
 
-		[Header("This is a list of gameobjects(Waypoints) that has been passed by the object.")]
-		public List<Transform> WaypointsPassed;
-		[Header("This is the teleport controller. " +
-		        "Recommend creating a Teleporter game object with the TeleportBehaviour script")]
-	
-		public TeleportBehaviour Teleporter;
+        [TagField] private string _cmTagField;
 
-		public float speed = 5f;
+        public bool loop;
 
-		public MoveMethod movement;
+        public MoveMethod movement;
 
-		public bool loop;
+        public NavMeshAgent navmeshAgent;
 
-		public List<Transform> SavedPath;
+        [FormerlySerializedAs("SavedPath")] private WaypointList _savedPath;
 
-		[Cinemachine.TagField] private string cmTagField;
+        [SerializeField] private float speed = 5f;
 
-		public enum MoveMethod 
-		{
-			IDLE,
-			TRAVEL
-		}
+        [FormerlySerializedAs("Teleporter")]
+        [Header("This is the teleport controller. " +
+                "Recommend creating a Teleporter game object with the TeleportBehaviour script")]
+        public TeleportBehaviour teleporter;
 
-		private void Start()
-		{
-			movement = MoveMethod.TRAVEL;
-			SavedPath = new List<Transform>(WaypointsToFollow);
-		}
+        [FormerlySerializedAs("WaypointsPassed")] [Header("This is a list of gameobjects(Waypoints) that has been passed by the object.")]
+        public WaypointList waypointsPassed;
 
-		void RestartPath()
-		{
-			WaypointsToFollow = new List<Transform>(SavedPath);
-			transform.position = WaypointsToFollow[0].transform.position;
-		}
-		// Update is called once per frame
-		void Update ()
-		{
-			if (WaypointsToFollow.Count < 1)
-			{
-				if (loop)
-				{
-					RestartPath();
-				}
-				return;
-			}
+        [FormerlySerializedAs("WaypointsToFollow")]
+        [Space(10)]
+        [Header("[Readme] This causes the object to follow the given path of waypoints.")]
+        [Space(10)]
+        [Header("Assign gameobjects(Waypoints) to the list to have the object approach them in that order.")]
+        public WaypointList waypointsToFollow;
 
-			switch (movement)
-			{
-				case MoveMethod.TRAVEL:
-					WaypointTravel();
-					break;
-				case MoveMethod.IDLE:
-					break;
-				default:
-					throw new ArgumentOutOfRangeException();
-			}
-		}
-	
-		public void AddWaypointToFollow(Transform go)
-		{
-			WaypointsToFollow.Add(go);
-		}
-	
-		private void AddWaypointPassed(Transform go)
-		{
-			WaypointsPassed.Insert(0, go);
-		}
-	
-		private void OnTriggerEnter(Collider other)
-		{
-			if (!other.gameObject.CompareTag("Waypoint"))
-				return;
-			if (WaypointsToFollow.Count < 1)
-			{
-				return;
-			}
+        public float Speed
+        {
+            get { return speed; }
+            set { speed = value; }
+        }
 
-			WaypointsToFollow.Remove(other.gameObject.transform);
-			AddWaypointPassed(other.gameObject.transform);
-		}
+        private void Start()
+        {
+            movement = MoveMethod.Travel;
+            _savedPath = new WaypointList(waypointsToFollow);
+            navmeshAgent = GetComponent<NavMeshAgent>();
+        }
 
-		public void WaypointTravel()
-		{
-			if (WaypointsToFollow.Count == 0)
-				return;
-			transform.position = Vector3.MoveTowards(transform.position, WaypointsToFollow[0].position, speed * Time.deltaTime);
-		}
-		public void NextWaypointTeleport()
-		{
-			Teleporter.Teleport(WaypointsToFollow[0]);
-		}
+        private void RestartPath()
+        {
+            waypointsToFollow = new WaypointList(_savedPath);
+            transform.position = waypointsToFollow.waypoints[0].Point;
+        }
 
-		public void ChangeMoveMethod(int val)
-		{
-			movement = (MoveMethod) val;
-		}
-	}
+        // Update is called once per frame
+        private void Update()
+        {
+            if (waypointsToFollow.waypoints.Count < 1)
+            {
+                if (loop) RestartPath();
+
+                return;
+            }
+
+            switch (movement)
+            {
+                case MoveMethod.Travel:
+                    WaypointTravel();
+                    break;
+                case MoveMethod.Idle:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (!other.gameObject.CompareTag("Waypoint"))
+                return;
+            if (waypointsToFollow.waypoints.Count < 1) return;
+
+            waypointsToFollow.Remove(other.gameObject.transform);
+        }
+
+        private void WaypointTravel()
+        {
+            if (waypointsToFollow.waypoints.Count == 0)
+                return;
+            navmeshAgent.SetDestination(waypointsToFollow.waypoints[0].Point);
+        }
+
+        public void NextWaypointTeleport()
+        {
+            teleporter.Teleport(waypointsToFollow.waypoints[0].Point);
+        }
+
+        public void ChangeMoveMethod(int val)
+        {
+            movement = (MoveMethod) val;
+        }
+    }
 }

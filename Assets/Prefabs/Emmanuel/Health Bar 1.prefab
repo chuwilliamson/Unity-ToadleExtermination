@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 224295625657233850}
   - component: {fileID: 114384845576749578}
   m_Layer: 0
-  m_Name: Slider
+  m_Name: Slider - Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,13 +102,14 @@ GameObject:
   - component: {fileID: 223302716774799942}
   - component: {fileID: 114285838926215298}
   - component: {fileID: 114977509495406986}
+  - component: {fileID: 114840280518383518}
   m_Layer: 0
   m_Name: Health Bar 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &114285838926215298
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -232,6 +233,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114840280518383518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1967774054236952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbc0ed234dc76f4b88b238ebbd1e524, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thisThing: {fileID: 0}
 --- !u!114 &114977509495406986
 MonoBehaviour:
   m_ObjectHideFlags: 1

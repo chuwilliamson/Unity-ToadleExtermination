@@ -2,16 +2,11 @@
 
 namespace Emmanuel.ScriptableObjects
 {
-	[CreateAssetMenu(menuName = "Variables/int")]
-	public class intVariable : MyScriptableObject
-	{
+    [CreateAssetMenu(menuName = "Variables/int")]
+    public class IntVariable : MyScriptableObject
+    {
+        [SerializeField] private int value;
 
-		[SerializeField] private int value;
-
-		public int Value
-		{
-			get { return value; }
-			set { this.value = value; }
-		}
-	}
+        public int Value { get { return value; } set { this.value = value; } }
+    }
 }
