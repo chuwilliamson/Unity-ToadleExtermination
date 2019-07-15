@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿ 
+using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace Emmanuel.ScriptableObjects
@@ -7,7 +8,7 @@ namespace Emmanuel.ScriptableObjects
     public class EnemyData : Entity
     {
         [FormerlySerializedAs("_value")] public int value;
-
+ 
         public EnemyData(string name, float health, float damage) : base(name, health, damage)
         {
             Name = name;
@@ -20,10 +21,12 @@ namespace Emmanuel.ScriptableObjects
             return other.TakeDamage(Damage);
         }
 
+ 
         public override float TakeDamage(float dmgTaken)
         {
             Health -= dmgTaken;
-            return dmgTaken;
+
+            return Health;
         }
     }
 }

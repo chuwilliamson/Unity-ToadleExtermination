@@ -1,4 +1,6 @@
-﻿using Emmanuel.ScriptableObjects;
+﻿using System.Collections.Generic;
+using Emmanuel.ScriptableObjects;
+
 using UnityEngine;
 
 namespace Emmanuel.Behaviours
@@ -6,7 +8,7 @@ namespace Emmanuel.Behaviours
     public class EnemySpawnerBehaviour : MonoBehaviour
     {
         private int _enemyNumIndex;
-
+        public List< GameObject > spawnedEnemies;
         [SerializeField] private EnemySpawnerData spawnerData;
 
         // Use this for initialization
@@ -15,11 +17,24 @@ namespace Emmanuel.Behaviours
             _enemyNumIndex = 0;
         }
 
+        
+
         public void SpawnEnemy()
         {
-            var spawnedEnemy = Instantiate(spawnerData.enemiesInThisWave[_enemyNumIndex]);
-            spawnedEnemy.gameObject.transform.position = transform.position;
-            _enemyNumIndex++;
+            var spawnedEnemy = Instantiate(spawnerData.GetEnemy(random: randomEnemySelection), transform.position, Quaternion.identity);
+            spawnedEnemies.Add(spawnedEnemy);
+        }
+
+        private bool randomEnemySelection = true;
+        public int deathcount = 0;
+        public void OnEnemyDied(Object[] objects)
+        {
+            var sender = objects[0];
+            if ( spawnedEnemies.Contains(sender as GameObject) )
+            {
+                Destroy(sender as GameObject);
+                deathcount++;
+            }
         }
     }
 }
