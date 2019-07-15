@@ -2,22 +2,51 @@
 using System.Collections.Generic;
 using Emmanuel.Interfaces;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class TurretPlacementBehaviour : MonoBehaviour
+namespace Steffan.Behaviours
 {
-	private IWheelObject _w;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public class TestWheelObject : IWheelObject
+	{
+		public void Up()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public void Down()
+		{
+			throw new System.NotImplementedException();
+		}
+
+		public Object Current
+		{
+			get { return GameObject.CreatePrimitive(PrimitiveType.Cube); }
+		}
 	}
 
-	private void PlaceTurret()
+	public class TurretPlacementBehaviour : MonoBehaviour
 	{
-		var turret = 
+		[SerializeField]
+		private IWheelObject w;
+		// Use this for initialization
+		void Start () {
+			// For testing
+		w = new TestWheelObject();
+		}
+	
+		// Update is called once per frame
+		public void Update () {
+		
+		}
+
+		private void PlaceTurret()
+		{
+			var pos = EventSystem.current.transform.position;
+			var t = Instantiate(w.Current, pos, Quaternion.identity) as GameObject;
+			
+
+		}
+	
+	
 	}
 }
