@@ -7,6 +7,6 @@ namespace Emmanuel.Interfaces
         void Up();
         void Down();
         
-        int Current { get; }
+        Object Current { get; }
     }
 }
