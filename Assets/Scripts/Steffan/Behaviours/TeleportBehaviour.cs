@@ -15,9 +15,9 @@ namespace Steffan.Behaviours
             sourceObject.position = targetPosition.position;
         }
 
-        public void Teleport(Transform target)
+        public void Teleport(Vector3 target)
         {
-            sourceObject = target;
+            sourceObject.position = target;
         }
     }
 }
