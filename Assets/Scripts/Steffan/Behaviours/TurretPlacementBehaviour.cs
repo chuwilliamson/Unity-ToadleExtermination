@@ -45,7 +45,7 @@ namespace Steffan.Behaviours
             {
                 
                 Turrets = new List<GameObject>();
-                var results = Resources.LoadAll("Prefabs", typeof(GameObject));
+                var results = Resources.LoadAll("Prefabs/TestTurrets", typeof(GameObject));
                 //casting a collection as another collection does not work..
                 foreach (var res in results) Turrets.Add(res as GameObject);
             }
