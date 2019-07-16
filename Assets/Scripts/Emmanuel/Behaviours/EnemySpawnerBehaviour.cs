@@ -2,6 +2,7 @@
 using Emmanuel.ScriptableObjects;
 
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Emmanuel.Behaviours
 {
@@ -9,19 +10,21 @@ namespace Emmanuel.Behaviours
     {
         private int _enemyNumIndex;
         public List< GameObject > spawnedEnemies;
-        [SerializeField] private EnemySpawnerData spawnerData;
+        [FormerlySerializedAs("spawnerData")] [SerializeField] private EnemyWaveData waveData;
+
+        private WaveController waveController;
 
         // Use this for initialization
         private void Start()
         {
             _enemyNumIndex = 0;
-        }
 
-        
+            waveController = Resources.Load< WaveController >("Emmanuel/ScriptableObjects");
+        }
 
         public void SpawnEnemy()
         {
-            var spawnedEnemy = Instantiate(spawnerData.GetEnemy(random: randomEnemySelection), transform.position, Quaternion.identity);
+            var spawnedEnemy = Instantiate(waveData.GetEnemy(random: randomEnemySelection), transform.position, Quaternion.identity);
             spawnedEnemies.Add(spawnedEnemy);
         }
 
