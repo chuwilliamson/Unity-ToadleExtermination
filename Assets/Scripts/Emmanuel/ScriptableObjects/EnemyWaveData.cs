@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
@@ -20,5 +21,8 @@ namespace Emmanuel.ScriptableObjects
             result = enemiesInThisWave[newindex];
             return result;
         }
+
+        public int EnemyCount { get { return enemiesInThisWave.Count; } }
+
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 public class WaveController : ScriptableObject
 {
     [SerializeField] private int totalWaves;
-    [SerializeField] float enemySpawnFrequency;
+    [SerializeField] private float enemySpawnFrequency;
 
     public float Timer { get; set; }
 
@@ -16,23 +16,24 @@ public class WaveController : ScriptableObject
 
     [SerializeField] private List< EnemyWaveData > listOfWaves;
 
-    public void InitializeAllWaves()
+    public void Initialize()
     {
         if (listOfWaves == null)
             listOfWaves = new List< EnemyWaveData >();
-        
-        //TODO:: Load each list of waves from the resources folder
+
+        totalWaves = listOfWaves.Count;
     }
     
     
-
     public EnemyWaveData GetNextWave
     {
         get
         {
-            if ( (currentWave > totalWaves) ) return listOfWaves[totalWaves - 1];
+            currentWave++;
             
-            return listOfWaves[currentWave++];
+            if ( (currentWave >= totalWaves) ) return listOfWaves[0];
+
+            return listOfWaves[currentWave];
         }
     }
     
