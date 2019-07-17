@@ -9,6 +9,8 @@ public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 	public Color defaultColor;
 	public MeshRenderer meshRenderer;
 
+	private bool _hasTurret;
+
 	public void Start()
 	{
 		meshRenderer = GetComponent<MeshRenderer>();
@@ -17,19 +19,16 @@ public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
 	public void OnPointerClick(PointerEventData eventData)
 	{
-		
-			EventSystem.current.SetSelectedGameObject(gameObject);
+		EventSystem.current.SetSelectedGameObject(gameObject);
 	}
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		
-			meshRenderer.material.color = Color.green;
+		meshRenderer.material.color = Color.green;
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		
-			meshRenderer.material.color = defaultColor;
+		meshRenderer.material.color = defaultColor;
 	}
 }
