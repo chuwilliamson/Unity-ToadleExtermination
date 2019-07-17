@@ -68,7 +68,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 	{
 		Debug.Log("State:: Sequence Commenced");
 		state = "Active";
-		currentWaveData = Instantiate(dualShock4.GetNextWave);
+		NextWave();
 	}
 
 	public void ConcludeSpawnSequence()
