@@ -11,7 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b39571bd2ec1844874b84afb41e604, type: 3}
   m_Name: Main Wave Controller
   m_EditorClassIdentifier: 
-  totalWaves: 0
-  enemySpawnFrequency: 0
+  totalWaves: 1
+  enemySpawnFrequency: 1
   listOfWaves:
+  - {fileID: 11400000, guid: ce6494370601a804384b9a7d47742079, type: 2}
   - {fileID: 11400000, guid: ce6494370601a804384b9a7d47742079, type: 2}
