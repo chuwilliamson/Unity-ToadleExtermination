@@ -2,26 +2,21 @@
 
 namespace Emmanuel.Behaviours
 {
-	public class LookAtCursorBehaviour : MonoBehaviour
-	{
-		[SerializeField] private GameObject cursor;
-		// Use this for initialization
-		void Start () 
-		{
-		
-		}
-	
-		// Update is called once per frame
-		void Update ()
-		{
-			rotateTowards(cursor.transform.position);
-		}
+    public class LookAtCursorBehaviour : MonoBehaviour
+    {
+        [SerializeField] private GameObject cursor;
 
-		void rotateTowards(Vector3 to)
-		{
-			Quaternion _lookRotation = Quaternion.LookRotation((to - transform.position).normalized);
-		
-			transform.rotation = _lookRotation;
-		}
-	}
+        // Update is called once per frame
+        private void Update()
+        {
+            RotateTowards(cursor.transform.position);
+        }
+
+        private void RotateTowards(Vector3 to)
+        {
+            var lookRotation = Quaternion.LookRotation((to - transform.position).normalized);
+
+            transform.rotation = lookRotation;
+        }
+    }
 }

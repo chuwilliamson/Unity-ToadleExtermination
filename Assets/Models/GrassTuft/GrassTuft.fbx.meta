@@ -4,11 +4,44 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: GrassTuft_Mesh
+    100004: GrassTuft_Mesh_03
+    100006: polySurface1
+    100008: polySurface2
+    100010: polySurface2 1
+    100012: polySurface3
+    100014: polySurface4
+    100016: polySurface5
+    100018: transform1
+    100020: transform2
+    100022: transform3
+    100024: transform4
+    100026: transform5
+    100028: transform6
+    100030: transform7
     400000: //RootNode
+    400002: GrassTuft_Mesh
+    400004: GrassTuft_Mesh_03
+    400006: polySurface1
+    400008: polySurface2
+    400010: polySurface2 1
+    400012: polySurface3
+    400014: polySurface4
+    400016: polySurface5
+    400018: transform1
+    400020: transform2
+    400022: transform3
+    400024: transform4
+    400026: transform5
+    400028: transform6
+    400030: transform7
     2100000: Grass_Tuft_Texture
     2300000: //RootNode
+    2300002: GrassTuft_Mesh_03
     3300000: //RootNode
+    3300002: GrassTuft_Mesh_03
     4300000: GrassTuft_Mesh
+    4300002: GrassTuft_Mesh_03
   externalObjects: {}
   materials:
     importMaterials: 1

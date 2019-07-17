@@ -1,4 +1,4 @@
-﻿using Steffan;
+﻿using Steffan.Behaviours;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,36 +6,34 @@ namespace Emmanuel.Behaviours
 {
     public class EnemyHealthBarBehaviour : MonoBehaviour
     {
-        public EnemyDataBehaviour edBehaviour;
-    
-        public float health;
-        public float maxHealth;
+        private float _health;
+        private float _maxHealth;
 
-    
+        [SerializeField] private EnemyDataBehaviour edBehaviour;
+
         public GameObject healthBarUI;
         public Slider slider;
 
-        void start()
+        private void Start()
         {
-            maxHealth = edBehaviour.ed.Health;
-            health = maxHealth;
+            _maxHealth = edBehaviour.ed.Health;
+            _health = _maxHealth;
             slider.value = CalculateHealth();
         }
 
-        void Update()
+        private void Update()
         {
             slider.value = CalculateHealth();
 
-            if ( health < maxHealth )
-            {
-                healthBarUI.SetActive(true);
-            }
+            if ( _health < _maxHealth ) healthBarUI.SetActive(true);
+
+            if ( _health <= 0 ) healthBarUI.SetActive(false);
         }
-    
-        float CalculateHealth()
+
+        private float CalculateHealth()
         {
-            return health / maxHealth;
+            _health = edBehaviour.ed.Health;
+            return _health / _maxHealth;
         }
-    
     }
 }

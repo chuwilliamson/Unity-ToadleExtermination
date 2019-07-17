@@ -1,18 +1,28 @@
-﻿using UnityEngine;
+﻿using Matthew;
+using UnityEditor;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu(menuName = "Data/Player")]
     public class PlayerData : Entity
     {
-        private int _currency = 0;
-        [SerializeField] private Waypoint _position;
-        public int Currency
+        [SerializeField] private GameEvent playerDied;
+
+        [FormerlySerializedAs("_position")] [SerializeField]
+        private Waypoint position;
+
+        public PlayerData(string name, float health, float damage) : base(name, health, damage)
         {
-            get { return _currency; }
-            set { _currency = value; }
+            Currency = 0;
+            Name = name;
+            Health = health;
+            Damage = damage;
         }
-        
+
+        public int Currency { get; private set; }
+
         public override float Attack(Entity other)
         {
             return other.TakeDamage(Damage);
@@ -21,6 +31,8 @@ namespace Emmanuel.ScriptableObjects
         public override float TakeDamage(float dmgTaken)
         {
             Health -= dmgTaken;
+            if ( Health <= 0 )
+                playerDied.Raise();
             return dmgTaken;
         }
 
@@ -32,16 +44,21 @@ namespace Emmanuel.ScriptableObjects
 
         public int SpendCurrency(int amountSpent)
         {
-            amountSpent = (amountSpent <= Currency) ? amountSpent : 0;
+            amountSpent = amountSpent <= Currency ? amountSpent : 0;
             Currency -= amountSpent;
             return amountSpent;
         }
-        
-        public PlayerData(string name, float health, float damage) : base(name, health, damage)
+    }
+
+    [CustomEditor(typeof( PlayerData ))]
+    public class PlayerDataEditor : Editor
+    {
+        public override void OnInspectorGUI()
         {
-            Name = name;
-            Health = health;
-            Damage = damage;
+            base.OnInspectorGUI();
+            if ( !GUILayout.Button("TakeDamage") ) return;
+            var mt = target as PlayerData;
+            if ( mt != null ) mt.TakeDamage(25);
         }
     }
 }

@@ -1,16 +1,17 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Emmanuel.ScriptableObjects
 {
     [CreateAssetMenu]
     public class Waypoint : MyScriptableObject
     {
-        [SerializeField] private Vector3 _point;
+        [FormerlySerializedAs("_point")] [SerializeField] private Vector3 point;
 
-        public Vector3 Point
+        public Waypoint(Transform tf)
         {
-            get { return _point; }
-            set { _point = value; }
+            point = tf.position;
         }
+        public Vector3 Point { get { return point; } set { point = value; } }
     }
 }
