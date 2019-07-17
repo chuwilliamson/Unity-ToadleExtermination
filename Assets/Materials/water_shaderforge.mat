@@ -65,16 +65,16 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
-    - _Depth: 10.53
-    - _DepthMax: 0.768
-    - _DepthMin: 0.415
+    - _Depth: 4.5
+    - _DepthMax: 0.427
+    - _DepthMin: 0.359
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FoamMax: 0.814
-    - _FoamMin: 0.485
+    - _FoamMax: 0.542
+    - _FoamMin: 0.252
     - _FoamPower: 4
     - _FoamSpeed: 0.005
-    - _Gloss: 0
+    - _Gloss: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -85,16 +85,16 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tesselation: 6.48
+    - _Tesselation: 4.39
     - _UVSec: 0
     - _WaveCount: 10
-    - _WaveHeight: 0.002
+    - _WaveHeight: 0
     - _WaveSpeed: 0.1
     - _WaveSpread: 0.3
     - _WaveWidth: 10
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorA: {r: 0.39815202, g: 0.5660378, b: 0.34442863, a: 1}
-    - _ColorB: {r: 0.14529957, g: 0.18867922, b: 0.038269844, a: 1}
+    - _ColorA: {r: 0.30588236, g: 0.56078434, b: 0.69411767, a: 1}
+    - _ColorB: {r: 0.18039216, g: 0.14117648, b: 0.0627451, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
