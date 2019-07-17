@@ -23,6 +23,7 @@ ExportedObj/
 *.svd
 *.pdb
 *.opendb
+*.dotsettings
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -41,3 +42,4 @@ sysinfo.txt
 .idea/.idea.Unity-ToadleExtermination/.idea/workspace.xml
 .idea/.idea.Unity-ToadleExtermination/riderModule.iml
 Assets/Cinemachine/CinemachineExamples.unitypackage.meta
+/.idea
