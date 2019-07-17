@@ -1,6 +1,4 @@
-﻿using Matthew;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
 {
@@ -23,14 +21,9 @@ namespace Emmanuel.ScriptableObjects
         public override float TakeDamage(float dmgTaken)
         {
             Health -= dmgTaken;
-            if(Health <= 0)
-                playerDied.Raise();
             return dmgTaken;
         }
 
- 
-[SerializeField]
-        private GameEvent playerDied;
         public int GainCurrency(int amountGained)
         {
             Currency += amountGained;
@@ -49,20 +42,6 @@ namespace Emmanuel.ScriptableObjects
             Name = name;
             Health = health;
             Damage = damage;
-        }
-    }
-
-    [CustomEditor(typeof(PlayerData))]
-    public class PlayerDataEditor : Editor
-    {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-            if ( GUILayout.Button("TakeDamage") )
-            {
-                var mt = target as PlayerData;
-                mt.TakeDamage(25);
-            }
         }
     }
 }

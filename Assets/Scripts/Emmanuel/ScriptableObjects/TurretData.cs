@@ -1,15 +1,9 @@
-﻿using UnityEngine;
-
-namespace Emmanuel.ScriptableObjects
+﻿namespace Emmanuel.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "Data/Turret")]
     public class TurretData : Entity
     {
-        [SerializeField]
         private float cost;
         
-        public float attackRange;
-        public float attackRecharge;
         public TurretData(string name, float health, float damage) : base(name, health, damage)
         {
             Name = name;
@@ -21,5 +15,6 @@ namespace Emmanuel.ScriptableObjects
         {
             
         }
+        
     }
 }
