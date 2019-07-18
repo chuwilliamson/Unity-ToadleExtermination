@@ -12,25 +12,8 @@ MonoBehaviour:
   m_Name: Wave 1 Data
   m_EditorClassIdentifier: 
   enemiesInThisWave:
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1151353610991702, guid: c82f4deff3961a842b30bcd72f3f1b90, type: 2}
+  - {fileID: 1151353610991702, guid: c82f4deff3961a842b30bcd72f3f1b90, type: 2}
+  - {fileID: 1151353610991702, guid: c82f4deff3961a842b30bcd72f3f1b90, type: 2}
+  - {fileID: 1151353610991702, guid: c82f4deff3961a842b30bcd72f3f1b90, type: 2}
   waveNumber: 1
