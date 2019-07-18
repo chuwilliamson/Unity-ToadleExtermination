@@ -765,7 +765,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1551480319020392
 GameObject:
   m_ObjectHideFlags: 1
@@ -888,7 +888,6 @@ GameObject:
   - component: {fileID: 114679628106829774}
   - component: {fileID: 114197903912492254}
   - component: {fileID: 95550448190259848}
-  - component: {fileID: 114486976497740706}
   - component: {fileID: 195131255100054164}
   - component: {fileID: 114514868095181904}
   m_Layer: 0
@@ -1395,7 +1394,7 @@ Transform:
   m_GameObject: {fileID: 1720466883184444}
   m_LocalRotation: {x: -0, y: 0.697311, z: -0, w: 0.71676874}
   m_LocalPosition: {x: 46.335453, y: 1.2005129, z: 29.51552}
-  m_LocalScale: {x: 27.937864, y: 27.937864, z: 27.937864}
+  m_LocalScale: {x: 12, y: 12, z: 12}
   m_Children:
   - {fileID: 4745645385068556}
   - {fileID: 224730625994323762}
@@ -2302,18 +2301,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ed: {fileID: 11400000, guid: 04d6b56359b22b7409b614dd2bcf6f06, type: 2}
---- !u!114 &114486976497740706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1720466883184444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f8e7cf6820cdb640afb145f1e03ca4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onDeathEvent: {fileID: 11400000, guid: 46cda888b91be4f4b8ab57d0b2fe6555, type: 2}
 --- !u!114 &114512308559659916
 MonoBehaviour:
   m_ObjectHideFlags: 1

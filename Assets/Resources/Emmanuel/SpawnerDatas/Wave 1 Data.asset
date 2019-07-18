@@ -11,10 +11,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee2d57f7493428b4abd9ff6bb16533b6, type: 3}
   m_Name: Wave 1 Data
   m_EditorClassIdentifier: 
-  waveNumber: 1
   enemiesInThisWave:
   - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
   - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
   - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
   - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
   - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  waveNumber: 1

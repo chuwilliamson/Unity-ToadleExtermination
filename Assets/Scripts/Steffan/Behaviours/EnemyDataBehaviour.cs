@@ -80,7 +80,7 @@ namespace Steffan.Behaviours
             var mt = target as EnemyDataBehaviour;
             if ( GUILayout.Button("die") )
             {
-                mt.TakeDamage(25);
+                mt.TakeDamage(0);
             }
         }
     }

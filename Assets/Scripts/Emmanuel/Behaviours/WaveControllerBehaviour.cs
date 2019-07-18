@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using Cinemachine;
 using Emmanuel.ScriptableObjects;
+using Steffan.Behaviours;
 using UnityEngine;
 
 public class WaveControllerBehaviour : MonoBehaviour
@@ -11,6 +12,8 @@ public class WaveControllerBehaviour : MonoBehaviour
 
 	private EnemyWaveData currentWaveData;
 
+	[SerializeField] private Transform pathTarget;
+	
 	private int enemiesInThisWave;
 	private int enemiesSpawnedSoFar;
 	private float enemySpawnTimer;
@@ -33,7 +36,6 @@ public class WaveControllerBehaviour : MonoBehaviour
 	{
 		StatusCheck();
 		
-		
 		switch ( state )
 		{
 			case "Active":
@@ -44,6 +46,10 @@ public class WaveControllerBehaviour : MonoBehaviour
 					enemySpawnTimer = 0;
 					var enemy = Instantiate(currentWaveData.GetEnemy());
 					enemy.transform.position = transform.position;
+
+					var pathToFollow = enemy.GetComponent< FollowPathBehaviour >();
+					pathToFollow.waypointsToFollow = new WaypointList(pathTarget);
+
 					enemiesSpawnedSoFar += 1;
 				}
 				break;
@@ -66,14 +72,12 @@ public class WaveControllerBehaviour : MonoBehaviour
 
 	public void CommenceSpawnSequence()
 	{
-		Debug.Log("State:: Sequence Commenced");
 		state = "Active";
 		NextWave();
 	}
 
 	public void ConcludeSpawnSequence()
 	{
-		Debug.Log("State:: Sequence Concluded");
 		state = "Inactive";
 		enemiesSpawnedSoFar = 0;
 	}
