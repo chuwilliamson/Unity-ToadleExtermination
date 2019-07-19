@@ -12,7 +12,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 
 	private EnemyWaveData currentWaveData;
 
-	[SerializeField] private Transform pathTarget;
+	[SerializeField] private WaypointList wpLIst;
 	
 	private int enemiesInThisWave;
 	private int enemiesSpawnedSoFar;
@@ -48,7 +48,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 					enemy.transform.position = transform.position;
 
 					var pathToFollow = enemy.GetComponent< FollowPathBehaviour >();
-					pathToFollow.waypointsToFollow = new WaypointList(pathTarget);
+					pathToFollow.waypointsToFollow = new WaypointList(wpLIst);
 
 					enemiesSpawnedSoFar += 1;
 				}
