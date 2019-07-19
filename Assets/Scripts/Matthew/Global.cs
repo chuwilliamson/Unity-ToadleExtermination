@@ -19,6 +19,6 @@ public class Global : ScriptableObject
 
     public void PrintState(string value)
     {
-        Debug.Log(WaveStateStatic.IsWavePhase.ToString());
+        Debug.Log(WaveState.IsBuildPhase.ToString());
     }
 }
