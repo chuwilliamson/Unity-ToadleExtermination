@@ -1,5 +1,8 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using Emmanuel.ScriptableObjects;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Waypoint List")]
@@ -26,28 +29,22 @@ public class WaypointList : ScriptableObject
 
     public void Add(Transform tf)
     {
-        waypoints.Add(new Waypoint(tf));
+        waypoints.Add(Waypoint.CreateInstance(tf));
     }
 
     public void Remove(Transform tf)
     {
-        int indexToRemove = 0;
-        foreach ( var waypoint in waypoints )
-        {
-            if ( waypoint.Point == tf.position )
-            {
-                break;
-            }
-            indexToRemove++;
-        }
-
-        if ( waypoints[indexToRemove] == null ) { return; }
-        waypoints.RemoveAt(indexToRemove);
+        var wp = waypoints.Find(w => w.Point == tf.position);
+        
+        if ( wp == null )
+            return;
+        
+        waypoints.Remove(wp);
     }
 
     public void Insert(int index, Transform tf)
     {
-        waypoints.Insert(index, new Waypoint(tf));
+        waypoints.Insert(index, Waypoint.CreateInstance(tf));
     }
     
     
