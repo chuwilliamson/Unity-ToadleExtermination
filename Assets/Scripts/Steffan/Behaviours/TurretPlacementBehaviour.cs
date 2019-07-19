@@ -2,6 +2,7 @@
 using Emmanuel.Interfaces;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Tilemaps;
 
 namespace Steffan.Behaviours
 {
@@ -22,8 +23,17 @@ namespace Steffan.Behaviours
         {
             if (EventSystem.current.currentSelectedGameObject == null)
                 return;
-            var pos = EventSystem.current.currentSelectedGameObject.transform.position;
+            
+            var tileClicked = EventSystem.current.currentSelectedGameObject;
+            var tileBehaviour = tileClicked.GetComponent<TileBehaviour>();
+
+            if (tileBehaviour.HasTurret)
+                return;
+            
+            var pos = tileClicked.transform.position;
+            
             placedObjects.Add(Instantiate(w.Current, pos, Quaternion.identity) as GameObject);
+            tileBehaviour.HasTurret = true;
         }
 
         private void Update()

@@ -11,6 +11,13 @@ public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
 	private bool _hasTurret;
 
+	public bool HasTurret
+	{
+		get { return _hasTurret; }
+		set { _hasTurret = value; }
+	}
+
+
 	public void Start()
 	{
 		meshRenderer = GetComponent<MeshRenderer>();
