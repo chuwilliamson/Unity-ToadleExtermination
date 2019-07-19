@@ -26,34 +26,34 @@ namespace Matthew
 
         private void Awake()
         {
-            _awakeEvent.Raise(gameObject);
+            _awakeEvent?.Raise(gameObject);
         }
 
 
         private void Start()
         {
-            _startEvent.Raise(gameObject);
+            _startEvent?.Raise(gameObject);
         }
 
         private void OnEnable()
         {
-            _onEnableEvent.Raise(gameObject);
+            _onEnableEvent?.Raise(gameObject);
         }
 
         private void OnDisable()
         {
-            _onDisableEvent.Raise(gameObject);
+            _onDisableEvent?.Raise(gameObject);
         }
 
 
         private void Update()
         {
-            _updateEvent.Raise(gameObject);
+            _updateEvent?.Raise(gameObject);
         }
 
         private void OnDestroy()
         {
-            _onDestroyEvent.Raise(gameObject);
+            _onDestroyEvent?.Raise(gameObject);
         }
     }
 }
