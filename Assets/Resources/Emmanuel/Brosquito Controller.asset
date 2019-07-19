@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50b39571bd2ec1844874b84afb41e604, type: 3}
-  m_Name: Main Wave Controller
+  m_Name: Brosquito Controller
   m_EditorClassIdentifier: 
   totalWaves: 4
   enemySpawnFrequency: 1
