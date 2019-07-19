@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Emmanuel.Interfaces;
+using Emmanuel.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -11,16 +12,26 @@ namespace Steffan.Behaviours
         public List<GameObject> placedObjects;
 
         private IWheelObject w;
+        [SerializeField] private int turretCost;
+        [SerializeField] private PlayerData pd;
 
         // Use this for initialization
         private void Start()
         {
-            // For testing
             w = new TurretWheelObject();
+            pd = Resources.Load("Emmanuel/PlayerDatas/FrogustusPlayerData") as PlayerData;
+        }
+
+        public bool BuyTurret()
+        {
+            if (pd.Currency > turretCost
         }
 
         public void PlaceTurret()
         {
+            if (!WaveState.IsBuildPhase)
+                return;
+            
             if (EventSystem.current.currentSelectedGameObject == null)
                 return;
             
