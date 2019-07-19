@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bc63c8fcbaeeee64cb0dde89056f0b0b
+guid: 32cddbdfdb615744ca75dd7ff6de02b6
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -109,13 +109,15 @@ ModelImporter:
     4300000: FrogustusBodyMesh
     4300002: r_FrogustusEyeMesh1
     4300004: r_FrogustusEyeMesh2
-    4300006: FrogustusHatMesh
-    7400000: Idle
+    4300006: FrogustusTongueMesh
+    4300008: FrogustusHatMesh
+    7400000: Take 001
     9500000: //RootNode
     13700000: FrogustusBodyMesh
     13700002: FrogustusHatMesh
-    13700004: r_FrogustusEyeMesh1
-    13700006: r_FrogustusEyeMesh2
+    13700004: FrogustusTongueMesh
+    13700006: r_FrogustusEyeMesh1
+    13700008: r_FrogustusEyeMesh2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -143,35 +145,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Idle
-      takeName: Take 001
-      firstFrame: 1
-      lastFrame: 260
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -183,7 +157,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

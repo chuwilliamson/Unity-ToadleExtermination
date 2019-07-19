@@ -1,42 +1,42 @@
 fileFormatVersion: 2
-guid: 5e0a0746586a7344d8a1c6d969f00099
+guid: cf2484ac0790c524eb96905a413eebe1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Frogustus_Hat_AuxSHJnt
-    100002: Frogustus_Head_JawEndSHJnt
-    100004: Frogustus_Head_JawSHJnt
-    100006: Frogustus_Head_TopSHJnt
-    100008: Frogustus_l_Clavicle_AuxSHJnt
-    100010: Frogustus_l_Eye_01SHJnt
-    100012: Frogustus_l_FrontLeg_AnkleSHJnt
-    100014: Frogustus_l_FrontLeg_BallSHJnt
-    100016: Frogustus_l_FrontLeg_HipSHJnt
-    100018: Frogustus_l_FrontLeg_KneeSHJnt
-    100020: Frogustus_l_FrontLeg_ToeSHJnt
-    100022: Frogustus_l_L_Back_Leg_AnkleSHJnt
-    100024: Frogustus_l_L_Back_Leg_BallSHJnt
-    100026: Frogustus_l_L_Back_Leg_HipSHJnt
-    100028: Frogustus_l_L_Back_Leg_KneeSHJnt
-    100030: Frogustus_l_L_Back_Leg_ToeSHJnt
-    100032: Frogustus_Neck_01SHJnt
-    100034: Frogustus_Neck_02SHJnt
-    100036: Frogustus_Neck_TopSHJnt
-    100038: Frogustus_r_Clavicle_AuxSHJnt
-    100040: Frogustus_r_Eye_01SHJnt
-    100042: Frogustus_r_FrontLeg_AnkleSHJnt
-    100044: Frogustus_r_FrontLeg_BallSHJnt
-    100046: Frogustus_r_FrontLeg_HipSHJnt
-    100048: Frogustus_r_FrontLeg_KneeSHJnt
-    100050: Frogustus_r_FrontLeg_ToeSHJnt
-    100052: Frogustus_r_L_Back_Leg_AnkleSHJnt
-    100054: Frogustus_r_L_Back_Leg_BallSHJnt
-    100056: Frogustus_r_L_Back_Leg_HipSHJnt
-    100058: Frogustus_r_L_Back_Leg_KneeSHJnt
-    100060: Frogustus_r_L_Back_Leg_ToeSHJnt
-    100062: Frogustus_ROOTSHJnt
-    100064: Frogustus_SHJntGrp
-    100066: //RootNode
+    100000: //RootNode
+    100002: Frogustus_Hat_AuxSHJnt
+    100004: Frogustus_Head_JawEndSHJnt
+    100006: Frogustus_Head_JawSHJnt
+    100008: Frogustus_Head_TopSHJnt
+    100010: Frogustus_l_Clavicle_AuxSHJnt
+    100012: Frogustus_l_Eye_01SHJnt
+    100014: Frogustus_l_FrontLeg_AnkleSHJnt
+    100016: Frogustus_l_FrontLeg_BallSHJnt
+    100018: Frogustus_l_FrontLeg_HipSHJnt
+    100020: Frogustus_l_FrontLeg_KneeSHJnt
+    100022: Frogustus_l_FrontLeg_ToeSHJnt
+    100024: Frogustus_l_L_Back_Leg_AnkleSHJnt
+    100026: Frogustus_l_L_Back_Leg_BallSHJnt
+    100028: Frogustus_l_L_Back_Leg_HipSHJnt
+    100030: Frogustus_l_L_Back_Leg_KneeSHJnt
+    100032: Frogustus_l_L_Back_Leg_ToeSHJnt
+    100034: Frogustus_Neck_01SHJnt
+    100036: Frogustus_Neck_02SHJnt
+    100038: Frogustus_Neck_TopSHJnt
+    100040: Frogustus_r_Clavicle_AuxSHJnt
+    100042: Frogustus_r_Eye_01SHJnt
+    100044: Frogustus_r_FrontLeg_AnkleSHJnt
+    100046: Frogustus_r_FrontLeg_BallSHJnt
+    100048: Frogustus_r_FrontLeg_HipSHJnt
+    100050: Frogustus_r_FrontLeg_KneeSHJnt
+    100052: Frogustus_r_FrontLeg_ToeSHJnt
+    100054: Frogustus_r_L_Back_Leg_AnkleSHJnt
+    100056: Frogustus_r_L_Back_Leg_BallSHJnt
+    100058: Frogustus_r_L_Back_Leg_HipSHJnt
+    100060: Frogustus_r_L_Back_Leg_KneeSHJnt
+    100062: Frogustus_r_L_Back_Leg_ToeSHJnt
+    100064: Frogustus_ROOTSHJnt
+    100066: Frogustus_SHJntGrp
     100068: Frogustus_Spine_01SHJnt
     100070: Frogustus_Spine_02SHJnt
     100072: Frogustus_Spine_03SHJnt
@@ -54,40 +54,40 @@ ModelImporter:
     100096: r_FrogustusEyeMesh1
     100098: r_FrogustusEyeMesh2
     100100: transform12
-    400000: Frogustus_Hat_AuxSHJnt
-    400002: Frogustus_Head_JawEndSHJnt
-    400004: Frogustus_Head_JawSHJnt
-    400006: Frogustus_Head_TopSHJnt
-    400008: Frogustus_l_Clavicle_AuxSHJnt
-    400010: Frogustus_l_Eye_01SHJnt
-    400012: Frogustus_l_FrontLeg_AnkleSHJnt
-    400014: Frogustus_l_FrontLeg_BallSHJnt
-    400016: Frogustus_l_FrontLeg_HipSHJnt
-    400018: Frogustus_l_FrontLeg_KneeSHJnt
-    400020: Frogustus_l_FrontLeg_ToeSHJnt
-    400022: Frogustus_l_L_Back_Leg_AnkleSHJnt
-    400024: Frogustus_l_L_Back_Leg_BallSHJnt
-    400026: Frogustus_l_L_Back_Leg_HipSHJnt
-    400028: Frogustus_l_L_Back_Leg_KneeSHJnt
-    400030: Frogustus_l_L_Back_Leg_ToeSHJnt
-    400032: Frogustus_Neck_01SHJnt
-    400034: Frogustus_Neck_02SHJnt
-    400036: Frogustus_Neck_TopSHJnt
-    400038: Frogustus_r_Clavicle_AuxSHJnt
-    400040: Frogustus_r_Eye_01SHJnt
-    400042: Frogustus_r_FrontLeg_AnkleSHJnt
-    400044: Frogustus_r_FrontLeg_BallSHJnt
-    400046: Frogustus_r_FrontLeg_HipSHJnt
-    400048: Frogustus_r_FrontLeg_KneeSHJnt
-    400050: Frogustus_r_FrontLeg_ToeSHJnt
-    400052: Frogustus_r_L_Back_Leg_AnkleSHJnt
-    400054: Frogustus_r_L_Back_Leg_BallSHJnt
-    400056: Frogustus_r_L_Back_Leg_HipSHJnt
-    400058: Frogustus_r_L_Back_Leg_KneeSHJnt
-    400060: Frogustus_r_L_Back_Leg_ToeSHJnt
-    400062: Frogustus_ROOTSHJnt
-    400064: Frogustus_SHJntGrp
-    400066: //RootNode
+    400000: //RootNode
+    400002: Frogustus_Hat_AuxSHJnt
+    400004: Frogustus_Head_JawEndSHJnt
+    400006: Frogustus_Head_JawSHJnt
+    400008: Frogustus_Head_TopSHJnt
+    400010: Frogustus_l_Clavicle_AuxSHJnt
+    400012: Frogustus_l_Eye_01SHJnt
+    400014: Frogustus_l_FrontLeg_AnkleSHJnt
+    400016: Frogustus_l_FrontLeg_BallSHJnt
+    400018: Frogustus_l_FrontLeg_HipSHJnt
+    400020: Frogustus_l_FrontLeg_KneeSHJnt
+    400022: Frogustus_l_FrontLeg_ToeSHJnt
+    400024: Frogustus_l_L_Back_Leg_AnkleSHJnt
+    400026: Frogustus_l_L_Back_Leg_BallSHJnt
+    400028: Frogustus_l_L_Back_Leg_HipSHJnt
+    400030: Frogustus_l_L_Back_Leg_KneeSHJnt
+    400032: Frogustus_l_L_Back_Leg_ToeSHJnt
+    400034: Frogustus_Neck_01SHJnt
+    400036: Frogustus_Neck_02SHJnt
+    400038: Frogustus_Neck_TopSHJnt
+    400040: Frogustus_r_Clavicle_AuxSHJnt
+    400042: Frogustus_r_Eye_01SHJnt
+    400044: Frogustus_r_FrontLeg_AnkleSHJnt
+    400046: Frogustus_r_FrontLeg_BallSHJnt
+    400048: Frogustus_r_FrontLeg_HipSHJnt
+    400050: Frogustus_r_FrontLeg_KneeSHJnt
+    400052: Frogustus_r_FrontLeg_ToeSHJnt
+    400054: Frogustus_r_L_Back_Leg_AnkleSHJnt
+    400056: Frogustus_r_L_Back_Leg_BallSHJnt
+    400058: Frogustus_r_L_Back_Leg_HipSHJnt
+    400060: Frogustus_r_L_Back_Leg_KneeSHJnt
+    400062: Frogustus_r_L_Back_Leg_ToeSHJnt
+    400064: Frogustus_ROOTSHJnt
+    400066: Frogustus_SHJntGrp
     400068: Frogustus_Spine_01SHJnt
     400070: Frogustus_Spine_02SHJnt
     400072: Frogustus_Spine_03SHJnt
@@ -111,6 +111,7 @@ ModelImporter:
     4300004: r_FrogustusEyeMesh2
     4300006: FrogustusTongueMesh
     4300008: FrogustusHatMesh
+    7400000: Take 001
     9500000: //RootNode
     13700000: FrogustusBodyMesh
     13700002: FrogustusHatMesh
@@ -168,7 +169,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 17
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
@@ -176,7 +177,7 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     serializedVersion: 2
     human: []
@@ -191,9 +192,10 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ce7c236c29a794b48bfa0f8899eabcf4,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
