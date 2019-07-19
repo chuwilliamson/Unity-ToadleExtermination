@@ -7,7 +7,8 @@ namespace Matthew
     {
         [TextArea]
         public string Notes;
-        
+
+        [ScriptVariable(Verbose = true)]
         public GameEvent GameEvent;
         public GameEventResponse Response;
 
