@@ -30,8 +30,6 @@ namespace Matthew
                    
         public void OnEventRaised(Object[] args)
         {
-            var sender = args[0];
-            var other = args[1];
             //if it's null we will call it
             if (SenderObject == null)
             {
