@@ -10,6 +10,12 @@ public class WaypointList : ScriptableObject
         waypoints = new List< Waypoint >();
         foreach ( var waypoint in wpList.waypoints ) { waypoints.Add(waypoint); }
     }
+
+    public WaypointList(Transform tf)
+    {
+        waypoints = new List< Waypoint >();
+        waypoints.Add(new Waypoint(tf));
+    }
     
     public List< Waypoint > waypoints;
 

@@ -24,10 +24,6 @@ namespace Steffan.Behaviours
 
         public Transform currentTarget;
         public Vector3 lastPosition;
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawSphere(lastPosition, 2);
-        }
 
         // Update is called once per frame
         private void Update()
@@ -103,7 +99,7 @@ namespace Steffan.Behaviours
             }
             
             _enemiesInRange[0].TakeDamage(turretData.Damage);
-            Destroy(_enemiesInRange[0].gameObject);  
+            //Destroy(_enemiesInRange[0].gameObject);  
             _enemiesInRange.RemoveAt(0);
             
         }

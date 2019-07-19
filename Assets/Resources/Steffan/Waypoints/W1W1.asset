@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cee0c1d54cd4a51bf02fffd25b7d5f5, type: 3}
   m_Name: W1W1
   m_EditorClassIdentifier: 
-  point: {x: 0, y: 0, z: 0}
+  point: {x: 4.51, y: -0.68, z: 3.149}
