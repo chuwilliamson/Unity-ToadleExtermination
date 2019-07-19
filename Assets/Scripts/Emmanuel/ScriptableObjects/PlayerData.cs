@@ -50,6 +50,7 @@ namespace Emmanuel.ScriptableObjects
         }
     }
 
+    #if UNITY_EDITOR
     [CustomEditor(typeof( PlayerData ))]
     public class PlayerDataEditor : Editor
     {
@@ -61,4 +62,5 @@ namespace Emmanuel.ScriptableObjects
             if ( mt != null ) mt.TakeDamage(25);
         }
     }
+    #endif
 }
