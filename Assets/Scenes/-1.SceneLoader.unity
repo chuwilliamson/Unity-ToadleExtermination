@@ -113,6 +113,76 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1708489483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1708489485}
+  - component: {fileID: 1708489484}
+  m_Layer: 0
+  m_Name: GameEventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1708489484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708489483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: listen to GameObjectBehaviour and load the scenes on start
+  GameEvent: {fileID: 11400000, guid: a01d1fb005338f34eaa1ce47f914c8d0, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 69927086d883731499bb7b6d0ac081cc, type: 2}
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 69927086d883731499bb7b6d0ac081cc, type: 2}
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Matthew.GameEventResponse, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  SenderObject: {fileID: 2076912176}
+--- !u!4 &1708489485
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1708489483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 32.160408, y: -0.97271156, z: 22.730564}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076912176
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +193,7 @@ GameObject:
   - component: {fileID: 2076912178}
   - component: {fileID: 2076912177}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GameObjectBehaviour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,28 +207,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 2076912176}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 142e7b53bd5018d43a040f74e59c5faf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notes: 
-  GameEvent: {fileID: 0}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11400000, guid: 69927086d883731499bb7b6d0ac081cc, type: 2}
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: Matthew.GameEventResponse, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  SenderObject: {fileID: 0}
+  _awakeEvent: {fileID: 11400000, guid: a01d1fb005338f34eaa1ce47f914c8d0, type: 2}
+  _onDestroyEvent: {fileID: 11400000, guid: a9da96a0fa9e7e041b9ff7fc0e3cd3ba, type: 2}
+  _onDisableEvent: {fileID: 11400000, guid: c0c085d052612414fbbf0d78be299a96, type: 2}
+  _onEnableEvent: {fileID: 11400000, guid: a29457444961ed24db962f1850494125, type: 2}
+  _startEvent: {fileID: 11400000, guid: b8f3400267dee03449088df4ed78196f, type: 2}
+  _updateEvent: {fileID: 11400000, guid: 491c82fcf4418284781fd36c9ef82ea7, type: 2}
 --- !u!4 &2076912178
 Transform:
   m_ObjectHideFlags: 0
