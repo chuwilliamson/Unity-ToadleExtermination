@@ -11,6 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b39571bd2ec1844874b84afb41e604, type: 3}
   m_Name: RolyPoly Controller
   m_EditorClassIdentifier: 
-  totalWaves: 0
-  enemySpawnFrequency: 0
-  listOfWaves: []
+  totalWaves: 1
+  enemySpawnFrequency: 1
+  listOfWaves:
+  - {fileID: 11400000, guid: a0189528d19671240831b38d497f93fa, type: 2}
+  - {fileID: 11400000, guid: a0189528d19671240831b38d497f93fa, type: 2}
+  - {fileID: 11400000, guid: a0189528d19671240831b38d497f93fa, type: 2}
