@@ -34733,10 +34733,10 @@ Transform:
   - {fileID: 936334628}
   - {fileID: 2079891850}
   - {fileID: 351726600}
-  - {fileID: 478834954}
   - {fileID: 1613415119}
   - {fileID: 1095831619}
   - {fileID: 1052206513}
+  - {fileID: 478834954}
   m_Father: {fileID: 325691988}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -38374,7 +38374,7 @@ Transform:
   m_LocalScale: {x: 0.7317375, y: 0.7317375, z: 0.7317375}
   m_Children: []
   m_Father: {fileID: 1451953405}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1613415120
 MeshRenderer:
@@ -41591,15 +41591,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4299266398115552, guid: 6faf2c9e2ba93e44883442bd6db419e2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -13.953569
+      value: -14.009
       objectReference: {fileID: 0}
     - target: {fileID: 4299266398115552, guid: 6faf2c9e2ba93e44883442bd6db419e2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.3438754
+      value: -0.33
       objectReference: {fileID: 0}
     - target: {fileID: 4299266398115552, guid: 6faf2c9e2ba93e44883442bd6db419e2, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 10.50697
+      value: 10.522
       objectReference: {fileID: 0}
     - target: {fileID: 4299266398115552, guid: 6faf2c9e2ba93e44883442bd6db419e2, type: 2}
       propertyPath: m_LocalRotation.x
