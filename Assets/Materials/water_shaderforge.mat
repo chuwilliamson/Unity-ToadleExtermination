@@ -56,24 +56,24 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _WaveDistortion:
         m_Texture: {fileID: 2800000, guid: ce95613732f0edc498a0cae8db5a031c, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     - _WaveTexture:
         m_Texture: {fileID: 2800000, guid: ea7d5b053194d674b812f53ee17cf0b8, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 4, y: 4}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _Depth: 4.5
-    - _DepthMax: 0.427
-    - _DepthMin: 0.359
+    - _DepthMax: 0.601
+    - _DepthMin: 0.936
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FoamMax: 0.542
-    - _FoamMin: 0.252
+    - _FoamMax: 0.555
+    - _FoamMin: 0.006
     - _FoamPower: 4
-    - _FoamSpeed: 0.005
+    - _FoamSpeed: 0.001
     - _Gloss: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -85,11 +85,11 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tesselation: 4.39
+    - _Tesselation: 4.98
     - _UVSec: 0
     - _WaveCount: 10
     - _WaveHeight: 0
-    - _WaveSpeed: 0.1
+    - _WaveSpeed: 0.01
     - _WaveSpread: 0.3
     - _WaveWidth: 10
     - _ZWrite: 1

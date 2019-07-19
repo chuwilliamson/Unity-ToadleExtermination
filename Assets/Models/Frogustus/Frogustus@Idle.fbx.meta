@@ -195,7 +195,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
+    previousCalculatedGlobalScale: 17
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
@@ -218,9 +218,9 @@ ModelImporter:
     rootMotionBoneName: 
     rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: eb1a03410ee8ccf4bb38876db4fa9c56,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: ce7c236c29a794b48bfa0f8899eabcf4,
     type: 3}
   animationType: 2
   humanoidOversampling: 1
