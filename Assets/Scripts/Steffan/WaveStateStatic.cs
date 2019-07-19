@@ -1,18 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public static class WaveStateStatic
+﻿namespace Steffan
 {
-	private static bool isWavePhase;
-	public static bool IsWavePhase
+	public static class WaveStateStatic
 	{
-		get { return isWavePhase; }
-	}
+		private static bool isWavePhase;
+		public static bool IsWavePhase
+		{
+			get { return isWavePhase; }
+		}
 
-	public static void ChangePhase()
-	{
-		isWavePhase = !isWavePhase;
-	}
+		public static void ChangePhase()
+		{
+			isWavePhase = !isWavePhase;
+		}
 	
+	}
 }
