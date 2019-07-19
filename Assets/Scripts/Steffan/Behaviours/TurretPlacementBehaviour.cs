@@ -15,7 +15,7 @@ namespace Steffan.Behaviours
         private void Start()
         {
             // For testing
-            w = new TestWheelObject();
+            w = new TurretWheelObject();
         }
 
         public void PlaceTurret()
@@ -34,18 +34,18 @@ namespace Steffan.Behaviours
                 w.Down();
         }
 
-
-        public class TestWheelObject : IWheelObject
+        public class TurretWheelObject : IWheelObject
         {
+
             [SerializeField] private int currentIndex;
 
             private readonly List<GameObject> Turrets;
 
-            public TestWheelObject()
+            public TurretWheelObject()
             {
-                
+
                 Turrets = new List<GameObject>();
-                var results = Resources.LoadAll("Prefabs/TestTurrets", typeof(GameObject));
+                var results = Resources.LoadAll("Prefabs/TurretList", typeof(GameObject));
                 //casting a collection as another collection does not work..
                 foreach (var res in results) Turrets.Add(res as GameObject);
             }
@@ -53,7 +53,7 @@ namespace Steffan.Behaviours
             public void Up()
             {
                 var newindex = currentIndex + 1;
-                currentIndex = newindex > Turrets.Count-1 ? 0 : newindex;
+                currentIndex = newindex > Turrets.Count - 1 ? 0 : newindex;
                 Debug.Log(currentIndex);
             }
 
@@ -67,6 +67,41 @@ namespace Steffan.Behaviours
             public Object Current
             {
                 get { return Turrets[currentIndex]; }
+            }
+
+            public class TestWheelObject : IWheelObject
+            {
+                [SerializeField] private int currentIndex;
+
+                private readonly List<GameObject> Turrets;
+
+                public TestWheelObject()
+                {
+
+                    Turrets = new List<GameObject>();
+                    var results = Resources.LoadAll("Prefabs/TestTurrets", typeof(GameObject));
+                    //casting a collection as another collection does not work..
+                    foreach (var res in results) Turrets.Add(res as GameObject);
+                }
+
+                public void Up()
+                {
+                    var newindex = currentIndex + 1;
+                    currentIndex = newindex > Turrets.Count - 1 ? 0 : newindex;
+                    Debug.Log(currentIndex);
+                }
+
+                public void Down()
+                {
+                    var newindex = currentIndex - 1;
+                    currentIndex = newindex < 0 ? Turrets.Count - 1 : newindex;
+                    Debug.Log(currentIndex);
+                }
+
+                public Object Current
+                {
+                    get { return Turrets[currentIndex]; }
+                }
             }
         }
     }
