@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class WaveControllerBehaviour : MonoBehaviour
 {
+	//Changed to continuous wave
 	[SerializeField] private WaveController dualShock4;
 
 	private EnemyWaveData currentWaveData;
