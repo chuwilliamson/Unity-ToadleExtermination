@@ -12299,7 +12299,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.99999994, b: 0.6862745, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -22327,7 +22327,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_RootOrder
-      value: 34
+      value: 33
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_LocalScale.x
@@ -30402,7 +30402,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_RootOrder
-      value: 35
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_LocalScale.x
@@ -33294,7 +33294,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_RootOrder
-      value: 36
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4196780055559492, guid: 8a2d3a6f632efdc4da177f398ac56dc2, type: 2}
       propertyPath: m_LocalScale.x
