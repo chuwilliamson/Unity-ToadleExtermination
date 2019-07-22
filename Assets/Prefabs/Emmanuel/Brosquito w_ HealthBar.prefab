@@ -890,6 +890,8 @@ GameObject:
   - component: {fileID: 95550448190259848}
   - component: {fileID: 195131255100054164}
   - component: {fileID: 114514868095181904}
+  - component: {fileID: 114681814369599426}
+  - component: {fileID: 114516597300545982}
   m_Layer: 0
   m_Name: Brosquito w_ HealthBar
   m_TagString: enemy
@@ -2346,6 +2348,23 @@ MonoBehaviour:
   teleporter: {fileID: 0}
   waypointsPassed: {fileID: 0}
   waypointsToFollow: {fileID: 0}
+--- !u!114 &114516597300545982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720466883184444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142e7b53bd5018d43a040f74e59c5faf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _awakeEvent: {fileID: 0}
+  _onDestroyEvent: {fileID: 11400000, guid: a9da96a0fa9e7e041b9ff7fc0e3cd3ba, type: 2}
+  _onDisableEvent: {fileID: 0}
+  _onEnableEvent: {fileID: 0}
+  _startEvent: {fileID: 0}
+  _updateEvent: {fileID: 0}
 --- !u!114 &114645842154419694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2387,7 +2406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Notes: 
+  Notes: On added to enemy contact
   GameEvent: {fileID: 11400000, guid: c44dd254c1bc83c40bafc5d459bc9a97, type: 2}
   Response:
     m_PersistentCalls:
@@ -2399,6 +2418,36 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: Matthew.GameEventResponse, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  SenderObject: {fileID: 0}
+--- !u!114 &114681814369599426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1720466883184444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Notes: On death, add to PlayerCurrency(Value)
+  GameEvent: {fileID: 11400000, guid: a9da96a0fa9e7e041b9ff7fc0e3cd3ba, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 73944cb87323f6c428ae831f88abe16f, type: 2}
+        m_MethodName: Modify
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
