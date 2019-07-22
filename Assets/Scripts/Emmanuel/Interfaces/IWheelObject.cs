@@ -8,5 +8,7 @@ namespace Emmanuel.Interfaces
         void Down();
         
         Object Current { get; }
+        
+        int Index { get; }
     }
 }

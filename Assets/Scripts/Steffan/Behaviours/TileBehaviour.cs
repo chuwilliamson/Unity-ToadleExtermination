@@ -6,8 +6,9 @@ using UnityEngine.EventSystems;
 
 public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IPointerExitHandler
 {
-	public Color defaultColor;
+	public Material defaultMaterial;
 	public MeshRenderer meshRenderer;
+	public Material greenHighlight;
 
 	private bool _hasTurret;
 
@@ -21,7 +22,7 @@ public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 	public void Start()
 	{
 		meshRenderer = GetComponent<MeshRenderer>();
-		defaultColor = meshRenderer.material.color;
+		defaultMaterial = meshRenderer.material;
 	}
 
 	public void OnPointerClick(PointerEventData eventData)
@@ -31,11 +32,11 @@ public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterH
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		meshRenderer.material.color = Color.green;
+		meshRenderer.material = greenHighlight;
 	}
 
 	public void OnPointerExit(PointerEventData eventData)
 	{
-		meshRenderer.material.color = defaultColor;
+		meshRenderer.material = defaultMaterial;
 	}
 }

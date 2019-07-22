@@ -13,9 +13,12 @@ namespace Steffan.Behaviours
         public List<GameObject> placedObjects;
         public GameEvent OnTurretSummon;
         private IWheelObject w;
+        public IWheelObject W => w;
+
         public IntVariable PlayerCurrency;
         [SerializeField] private int startingCurrency;
         [SerializeField] private int TurretCost;
+        public IntVariable CurrentTurretIndex;
 
         // Use this for initialization
         private void Start()
@@ -54,12 +57,18 @@ namespace Steffan.Behaviours
                 w.Up();
             if (Input.mouseScrollDelta.y < 0)
                 w.Down();
+            CurrentTurretIndex.Value = w.Index;
         }
 
         public class TurretWheelObject : IWheelObject
         {
 
-            [SerializeField] private int currentIndex;
+            private int currentIndex;
+
+            public int ReturnCurrentIndex()
+            {
+                return currentIndex;
+            }
 
             private readonly List<GameObject> Turrets;
 
@@ -91,39 +100,9 @@ namespace Steffan.Behaviours
                 get { return Turrets[currentIndex]; }
             }
 
-            public class TestWheelObject : IWheelObject
+            public int Index
             {
-                [SerializeField] private int currentIndex;
-
-                private readonly List<GameObject> Turrets;
-
-                public TestWheelObject()
-                {
-
-                    Turrets = new List<GameObject>();
-                    var results = Resources.LoadAll("Prefabs/TestTurrets", typeof(GameObject));
-                    //casting a collection as another collection does not work..
-                    foreach (var res in results) Turrets.Add(res as GameObject);
-                }
-
-                public void Up()
-                {
-                    var newindex = currentIndex + 1;
-                    currentIndex = newindex > Turrets.Count - 1 ? 0 : newindex;
-                    Debug.Log(currentIndex);
-                }
-
-                public void Down()
-                {
-                    var newindex = currentIndex - 1;
-                    currentIndex = newindex < 0 ? Turrets.Count - 1 : newindex;
-                    Debug.Log(currentIndex);
-                }
-
-                public Object Current
-                {
-                    get { return Turrets[currentIndex]; }
-                }
+                get { return currentIndex; }
             }
         }
     }
