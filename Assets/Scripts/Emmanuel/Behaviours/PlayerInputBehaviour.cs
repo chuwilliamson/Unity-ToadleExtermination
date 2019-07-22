@@ -5,9 +5,11 @@ using UnityEngine.Serialization;
 public class PlayerInputBehaviour : MonoBehaviour
 {
     [FormerlySerializedAs("OnLeftMouseButtonDown")] [SerializeField] private UnityEvent onLeftMouseButtonDown;
+    [SerializeField] private UnityEvent onMouseRightButtonDown;
     [SerializeField] private UnityEvent onMouseScrollUp;
     [SerializeField] private UnityEvent onMouseScrollDown;
     [SerializeField] private UnityEvent onSpacePressed;
+    
 
     private float previousMouseScrollValue;
 
@@ -20,9 +22,8 @@ public class PlayerInputBehaviour : MonoBehaviour
     private void Update()
     {
         if ( Input.GetMouseButtonDown(0) ) onLeftMouseButtonDown.Invoke();
+        if (Input.GetMouseButtonDown(1) ) onMouseRightButtonDown.Invoke();
 
-
-        
         if ( Input.mouseScrollDelta.y > previousMouseScrollValue )
         {
             onMouseScrollUp.Invoke();

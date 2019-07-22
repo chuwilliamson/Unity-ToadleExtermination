@@ -12,8 +12,5 @@ MonoBehaviour:
   m_Name: Wave 1 Data
   m_EditorClassIdentifier: 
   enemiesInThisWave:
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
-  - {fileID: 1720466883184444, guid: c6eb87f54ef674b469d9c2fffe3f7d09, type: 2}
+  - {fileID: 1737061721246280, guid: 4bd5588e3fee88c4d9b1fe3ccea86daf, type: 2}
   waveNumber: 1

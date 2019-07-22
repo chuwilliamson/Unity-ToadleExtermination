@@ -192,7 +192,6 @@ GameObject:
   - component: {fileID: 4597279471169534}
   - component: {fileID: 114918133022467666}
   - component: {fileID: 135170190181515616}
-  - component: {fileID: 114728855891158260}
   m_Layer: 2
   m_Name: 0.TadpoleTurret
   m_TagString: Untagged
@@ -1009,36 +1008,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114728855891158260
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1391167601002522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c61a8f58bfdc924d9e3a7363acb54fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Notes: 
-  GameEvent: {fileID: 11400000, guid: 46cda888b91be4f4b8ab57d0b2fe6555, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 114918133022467666}
-        m_MethodName: OnEnemyDeathEvent
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: Matthew.GameEventResponse, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-      PublicKeyToken=null
-  SenderObject: {fileID: 0}
 --- !u!114 &114918133022467666
 MonoBehaviour:
   m_ObjectHideFlags: 1

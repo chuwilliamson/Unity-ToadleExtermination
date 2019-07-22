@@ -12,6 +12,7 @@ public class SendTriggerToAnimatorBehaviour : MonoBehaviour
 /// <param name="triggerValue">trigger condition of the transition</param>
 	public void SendValueToAnimator(string triggerValue)
 	{
+		animator.StopPlayback();
 		animator.SetTrigger(triggerValue);
 	}
 }

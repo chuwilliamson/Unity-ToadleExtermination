@@ -8,6 +8,7 @@ TagManager:
   - cursor
   - enemy
   - tongue
+  - frog
   layers:
   - Default
   - TransparentFX
