@@ -16363,6 +16363,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   placedObjects: []
+  PlayerCurrency: {fileID: 11400000, guid: 73944cb87323f6c428ae831f88abe16f, type: 2}
+  TurretCost: 50
 --- !u!1 &1152585416
 GameObject:
   m_ObjectHideFlags: 0
