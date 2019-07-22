@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: {fileID: 11400000, guid: b9bfaa07ea9ac174386aa83baea0ba95, type: 2}
   health: {fileID: 11400000, guid: 539f5df6090dbe34fbdfe9c7dadeada9, type: 2}
-  attackRange: 2
+  attackRange: 2.5
   attackRecharge: 0.1
   cost: 50
   timeSinceLastShot: 0
