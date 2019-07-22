@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b07fbf335c10d469ac7486ba72c392, type: 3}
+  m_Name: CrawfishTurretData
+  m_EditorClassIdentifier: 
+  damage: {fileID: 11400000, guid: b9bfaa07ea9ac174386aa83baea0ba95, type: 2}
+  health: {fileID: 11400000, guid: 539f5df6090dbe34fbdfe9c7dadeada9, type: 2}
+  attackRange: 2
+  attackRecharge: 0.1
+  cost: 50
+  timeSinceLastShot: 0
