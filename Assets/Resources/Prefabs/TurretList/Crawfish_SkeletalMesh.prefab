@@ -50,6 +50,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4469166681898606}
   - component: {fileID: 95841156830929844}
+  - component: {fileID: 114580460005991748}
   m_Layer: 0
   m_Name: Crawfish_SkeletalMesh
   m_TagString: Untagged
@@ -1496,6 +1497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4768511924901128}
+  - component: {fileID: 114990298852427148}
   m_Layer: 0
   m_Name: HOLE_AND_ONE_2:HOLE_AND_ONE_2:full_body_crawfish
   m_TagString: Untagged
@@ -1994,7 +1996,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1023732100713786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.168, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4652504290835304}
@@ -2897,7 +2899,7 @@ Animator:
   m_GameObject: {fileID: 1023732100713786}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3ad53cbdaba13bb4e88855b300210f82, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5d17d70c95e6ce24982648627ea77fb0, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2906,6 +2908,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114580460005991748
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1023732100713786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2649e31c851834ab343433afb17234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretData: {fileID: 11400000, guid: d19861369a38b5248a0d5965fc46ab83, type: 2}
+  turretShot: {fileID: 0}
+  currentTarget: {fileID: 0}
+  lastPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114990298852427148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1989776184308150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a2649e31c851834ab343433afb17234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turretData: {fileID: 0}
+  turretShot: {fileID: 0}
+  currentTarget: {fileID: 0}
+  lastPosition: {x: 0, y: 0, z: 0}
 --- !u!137 &137073794266553886
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
