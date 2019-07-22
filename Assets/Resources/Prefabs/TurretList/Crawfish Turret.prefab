@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 114580460005991748}
   - component: {fileID: 135907595353483584}
   m_Layer: 2
-  m_Name: Crawfish_SkeletalMesh
+  m_Name: Crawfish Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1498,7 +1498,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4768511924901128}
-  - component: {fileID: 114990298852427148}
   m_Layer: 2
   m_Name: HOLE_AND_ONE_2:HOLE_AND_ONE_2:full_body_crawfish
   m_TagString: Untagged
@@ -2921,21 +2920,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turretData: {fileID: 11400000, guid: d19861369a38b5248a0d5965fc46ab83, type: 2}
-  turretShot: {fileID: 0}
-  currentTarget: {fileID: 0}
-  lastPosition: {x: 0, y: 0, z: 0}
---- !u!114 &114990298852427148
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1989776184308150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2649e31c851834ab343433afb17234, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turretData: {fileID: 0}
   turretShot: {fileID: 0}
   currentTarget: {fileID: 0}
   lastPosition: {x: 0, y: 0, z: 0}

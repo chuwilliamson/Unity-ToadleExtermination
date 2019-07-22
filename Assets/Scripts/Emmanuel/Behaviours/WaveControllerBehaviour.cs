@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using Cinemachine;
@@ -13,11 +14,17 @@ public class WaveControllerBehaviour : MonoBehaviour
 	private EnemyWaveData currentWaveData;
 
 	[SerializeField] private WaypointList wpList;
+
+	private GameObject enemyType;
+
+	private float enemySpawnTimer;
+	
+
+	private int numberOfEnemiesToSpawn;
 	
 	private int enemiesInThisWave;
 	private int enemiesSpawnedSoFar;
-	private float enemySpawnTimer;
-
+	
 	private string state;
 
 	// Use this for initialization
@@ -25,14 +32,33 @@ public class WaveControllerBehaviour : MonoBehaviour
 	{
 		dualShock4 = Instantiate(dualShock4);
 		currentWaveData = Instantiate(dualShock4.GetNextWave);
-		enemiesInThisWave = currentWaveData.EnemyCount;
+		
 		enemySpawnTimer = 0f;
+		numberOfEnemiesToSpawn = 0;
 
-		state = "Active";
+		enemyType = currentWaveData.GetEnemy();
+
+
+		//state = "Active";
+		//enemiesInThisWave = currentWaveData.EnemyCount;
 	}
 
 	// Update is called once per frame
 	void Update()
+	{
+		enemySpawnTimer += Time.deltaTime;
+		if ( enemySpawnTimer >= dualShock4.EnemySpawnFrequency )
+		{
+			enemySpawnTimer = 0;
+			var enemy = Instantiate(enemyType);
+			enemy.transform.position = transform.position;
+
+			var pathToFollow = enemy.GetComponent< FollowPathBehaviour >();
+			pathToFollow.waypointsToFollow = new WaypointList(wpList);
+		}
+	}
+
+	private void OldUpdate()
 	{
 		StatusCheck();
 		

@@ -25,6 +25,8 @@ public class EmemyDeathBehaviour : MonoBehaviour
 		if ( edBehaviour.ed.health.Value <= 0 && !hasStartedDying ) { hasStartedDying = true; }
 		if ( hasStartedDying )
 		{
+			OnEnemyDeath.Raise();
+
 			//ToDo:: EnemyDeathAnimation for when there is time
 			//dyingAnimationStarted = true;
 			//animator.SetTrigger("death");
