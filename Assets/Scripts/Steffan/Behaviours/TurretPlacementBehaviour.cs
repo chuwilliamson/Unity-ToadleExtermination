@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Emmanuel.Interfaces;
 using Emmanuel.ScriptableObjects;
+using Matthew;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
@@ -10,9 +11,10 @@ namespace Steffan.Behaviours
     public class TurretPlacementBehaviour : MonoBehaviour
     {
         public List<GameObject> placedObjects;
-
+        public GameEvent OnTurretSummon;
         private IWheelObject w;
         public IntVariable PlayerCurrency;
+        [SerializeField] private int startingCurrency;
         [SerializeField] private int TurretCost;
 
         // Use this for initialization
@@ -20,6 +22,8 @@ namespace Steffan.Behaviours
         {
             // For testing
             w = new TurretWheelObject();
+
+            PlayerCurrency.Value = startingCurrency;
         }
 
         public void PlaceTurret()
@@ -41,6 +45,7 @@ namespace Steffan.Behaviours
             placedObjects.Add(Instantiate(w.Current, pos, Quaternion.identity) as GameObject);
             tileBehaviour.HasTurret = true;
             PlayerCurrency.Modify(-TurretCost);
+            OnTurretSummon.Raise();
         }
 
         private void Update()
