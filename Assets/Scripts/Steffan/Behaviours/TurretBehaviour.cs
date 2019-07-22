@@ -92,7 +92,7 @@ namespace Steffan.Behaviours
         private void Fire()
         {
 
-            if ( !(_enemiesInRange[0].ed.health.Value > turretData.damage.Value ))
+            if ( _enemiesInRange[0].ed.health.Value > turretData.damage.Value )
             {
                 _enemiesInRange[0].TakeDamage(turretData.Damage);
                 return;
@@ -101,7 +101,6 @@ namespace Steffan.Behaviours
             _enemiesInRange[0].TakeDamage(turretData.Damage);
             //Destroy(_enemiesInRange[0].gameObject);  
             _enemiesInRange.RemoveAt(0);
-            
         }
 
         private void OnTriggerEnter(Collider other)

@@ -68,6 +68,11 @@ namespace Steffan.Behaviours
                 isDead = true;
             }
         }
+
+        public void DestroyMe()
+        {
+            Destroy(gameObject);
+        }
     }
 
     #if UNITY_EDITOR
