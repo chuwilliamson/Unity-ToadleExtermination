@@ -232,6 +232,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4669593988477396}
+  - component: {fileID: 135483506571119414}
+  - component: {fileID: 95735914857377830}
+  - component: {fileID: 114956552342753684}
   m_Layer: 0
   m_Name: 1.CrawfishTurret
   m_TagString: Untagged
@@ -442,9 +445,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4552552532649522}
-  - component: {fileID: 95819227603906550}
-  - component: {fileID: 114935633593723138}
-  - component: {fileID: 135366827310288974}
   m_Layer: 2
   m_Name: Crawfish_SkeletalMesh
   m_TagString: Untagged
@@ -2551,7 +2551,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175839275154820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 25.666756, y: 0.5940174, z: 23.871891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4552552532649522}
@@ -2920,13 +2920,13 @@ Transform:
   m_Father: {fileID: 4335527244588688}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &95819227603906550
+--- !u!95 &95735914857377830
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1302909358706210}
+  m_GameObject: {fileID: 1175839275154820}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 3ad53cbdaba13bb4e88855b300210f82, type: 3}
   m_Controller: {fileID: 9100000, guid: 5d17d70c95e6ce24982648627ea77fb0, type: 2}
@@ -2953,12 +2953,12 @@ MonoBehaviour:
   turretShot: {fileID: 0}
   currentTarget: {fileID: 0}
   lastPosition: {x: 0, y: 0, z: 0}
---- !u!114 &114935633593723138
+--- !u!114 &114956552342753684
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1302909358706210}
+  m_GameObject: {fileID: 1175839275154820}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a2649e31c851834ab343433afb17234, type: 3}
@@ -2968,12 +2968,12 @@ MonoBehaviour:
   turretShot: {fileID: 0}
   currentTarget: {fileID: 0}
   lastPosition: {x: 0, y: 0, z: 0}
---- !u!135 &135366827310288974
+--- !u!135 &135483506571119414
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1302909358706210}
+  m_GameObject: {fileID: 1175839275154820}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
