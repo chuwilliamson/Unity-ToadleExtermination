@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using Emmanuel.ScriptableObjects;
+using JetBrains.Annotations;
 using Matthew;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -66,13 +68,20 @@ namespace Steffan.Behaviours
         
         private void LookAtTarget()
         {
+            if (!_enemiesInRange.Any())
+                return;
+            
+            // This is used to sort by NEAREST enemy. But also does some weird things and breaks the turret
+            // Leave out for now.
+            /*
             _enemiesInRange.Sort((x, y) =>
             {
                 var pos = transform.position;
                 var distance1 = Vector3.Distance(pos, x.transform.position);
                 var distance2 = Vector3.Distance(pos, y.transform.position);
               return  distance1.CompareTo(distance2);
-            });
+            });*/
+            
             var current = _enemiesInRange[0];
             
             if ( current == null )
@@ -99,7 +108,6 @@ namespace Steffan.Behaviours
             }
             
             _enemiesInRange[0].TakeDamage(turretData.Damage);
-            //Destroy(_enemiesInRange[0].gameObject);  
             _enemiesInRange.RemoveAt(0);
         }
 
@@ -124,7 +132,6 @@ namespace Steffan.Behaviours
             if ( _enemiesInRange.Contains(edBehaviour) )
             {
                 _enemiesInRange.Remove(edBehaviour);
-                Destroy(enemyGameObject);
             }
         }
     }
