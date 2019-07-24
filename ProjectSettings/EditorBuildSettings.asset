@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testing/Testing.EmmanuelRoberson2.unity
     guid: c8f37cfe5e0ef88449a0a883b482fc7c
+  - enabled: 1
+    path: Assets/Scenes/4.death.unity
+    guid: c3b1de194db9e5049b51476f4a8e515f
   m_configObjects: {}
