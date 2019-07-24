@@ -28,7 +28,6 @@ public class UITextHandler : MonoBehaviour
 	void Update ()
 	{
 		CurrencyText.text = PlayerCurrency.Value.ToString();
-		//ScoreText.text = Score.Value.ToString();
 		hp = (int) PlayerHP.Value;
 		print("");
 		PlayerHPText.text = hp.ToString();

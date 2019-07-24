@@ -4,6 +4,9 @@ using UnityEngine.Serialization;
 
 namespace Steffan.Behaviours
 {
+    /// <summary>
+    /// Handles the logic for sending damage to the target on a tongue attack.
+    /// </summary>
     public class TakeDamageWhenHitByTongueBehaviour : MonoBehaviour
     {
         public string damagerTag = "tongue";

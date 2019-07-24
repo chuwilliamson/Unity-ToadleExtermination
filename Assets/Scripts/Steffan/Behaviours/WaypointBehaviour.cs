@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace Steffan.Behaviours
 {
+	/// <summary>
+	/// This behaviours sets the game object position to a given waypoint scriptable object
+	/// </summary>
 	public class WaypointBehaviour : MonoBehaviour
 	{
 

@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/// <summary>
+/// This is purely to keep track of whether or not a given tile already has a turret.
+/// Also determines the current material of the tile, changing on hover
+/// </summary>
 public class TileBehaviour : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler,IPointerExitHandler
 {
 	public Material defaultMaterial;

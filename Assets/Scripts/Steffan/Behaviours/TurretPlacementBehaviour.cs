@@ -8,18 +8,54 @@ using UnityEngine.Tilemaps;
 
 namespace Steffan.Behaviours
 {
+    /// <summary>
+    /// This is the meat of what makes turrets placeable.
+    /// It has reference to the player's current amount of currency via a Scriptable Object.
+    /// It has a turret cost value.
+    /// It also has an implementation of the IWheelObject interface, so as to control the current turret using the
+    /// scroll wheel.
+    /// Give this to a single Handler object in the scene.
+    /// </summary>
     public class TurretPlacementBehaviour : MonoBehaviour
     {
+        /// <summary>
+        /// List of all placed objects through this Behaviour.
+        /// </summary>
         public List<GameObject> placedObjects;
+        
+        /// <summary>
+        /// Raise an Event on summoning a turret
+        /// </summary>
         public GameEvent OnTurretSummon;
-        private IWheelObject w;
-        public IWheelObject W => w;
-
+        
+        /// <summary>
+        /// Implementation of an interface to allow for selecting a turret.
+        /// </summary>
+        private IWheelObject w; 
+       
+        /// <summary>
+        /// Reference to SO containing Player Currency
+        /// </summary>
         public IntVariable PlayerCurrency;
+        
+        /// <summary>
+        /// The amount of currency that is assigned to the player at the start of the game
+        /// </summary>
         [SerializeField] private int startingCurrency;
+        
+        /// <summary>
+        /// How much currency a turret costs to place
+        /// </summary>
         [SerializeField] private int TurretCost;
+        
+        /// <summary>
+        /// Reference to the index of the currently selected turret through the IWheelObject
+        /// </summary>
         public IntVariable CurrentTurretIndex;
-
+        
+        /// <summary>
+        /// Instantiates the IWheelObject and sets the PlayerCurrency SO to the startingCurrency field value
+        /// </summary>
         // Use this for initialization
         private void Start()
         {
@@ -28,7 +64,11 @@ namespace Steffan.Behaviours
 
             PlayerCurrency.Value = startingCurrency;
         }
-
+        
+        /// <summary>
+        /// Does some checks to see if player is clicking on a tile. If so, spawn current turret.
+        /// Else, return.
+        /// </summary>
         public void PlaceTurret()
         {
             if (PlayerCurrency.Value < TurretCost)
@@ -51,6 +91,9 @@ namespace Steffan.Behaviours
             OnTurretSummon.Raise();
         }
 
+        /// <summary>
+        /// Control the current index of the turret selector. Scrolling mouse wheel changes it.
+        /// </summary>
         private void Update()
         {
             if (Input.mouseScrollDelta.y > 0)
@@ -59,7 +102,10 @@ namespace Steffan.Behaviours
                 w.Down();
             CurrentTurretIndex.Value = w.Index;
         }
-
+        
+        /// <summary>
+        /// Implementation of IWheelObject for this class to use.
+        /// </summary>
         public class TurretWheelObject : IWheelObject
         {
 

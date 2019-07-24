@@ -10,12 +10,24 @@ using Object = UnityEngine.Object;
 
 namespace Steffan.Behaviours
 {
+    /// <summary>
+    /// Turret Behaviour class. Handles attacking and target acquisition for the attached object.
+    /// </summary>
     public class TurretBehaviour : MonoBehaviour
     {
+        /// <summary>
+        /// List of enemies in range of this turret
+        /// </summary>
         private readonly List<EnemyDataBehaviour> _enemiesInRange = new List<EnemyDataBehaviour>();
+        
+        /// <summary>
+        /// Reference to a turretData SO, containing all the HP and DMG values
+        /// </summary>
         public TurretData turretData;
-        public GameObject turretShot;
 
+        /// <summary>
+        /// Instantiate an SO for turretData. Target acquisition is set to the turretdata range.
+        /// </summary>
         private void Start()
         {
             turretData = Instantiate(turretData);
@@ -23,11 +35,14 @@ namespace Steffan.Behaviours
 
             hitbox.radius = turretData.attackRange;
         }
-
+        
         public Transform currentTarget;
         public Vector3 lastPosition;
 
         // Update is called once per frame
+        /// <summary>
+        /// Puts turret into attack mode if there are any enemies in range.
+        /// </summary>
         private void Update()
         {
             if (_enemiesInRange.Count < 1)
@@ -36,7 +51,11 @@ namespace Steffan.Behaviours
             AttackMode();
             turretData.timeSinceLastShot += Time.deltaTime;
         }
-
+        
+        /// <summary>
+        /// When enemy comes in range, it is added to the list of enemies in range
+        /// </summary>
+        /// <param name="enemy"> takes in the enemy that crossed the trigger </param>
         public void AddToEnemiesInRange(Object enemy)
         {
             var sender = enemy as GameObject;
@@ -49,7 +68,11 @@ namespace Steffan.Behaviours
 
             _enemiesInRange.Add(enemyBehaviour);
         }
-
+        
+        /// <summary>
+        /// Removes an enemy from the list of nearby enemies when it leaves the range of turret
+        /// </summary>
+        /// <param name="enemy"> enemy that crossed the trigger </param>
         public void RemoveFromEnemiesInRange(Object enemy)
         {
             var sender = enemy as GameObject;
@@ -65,7 +88,9 @@ namespace Steffan.Behaviours
             _enemiesInRange.Remove(enemyBehaviour);
         }
 
-        
+        /// <summary>
+        /// Makes the turret always face its current target.
+        /// </summary>
         private void LookAtTarget()
         {
             if (!_enemiesInRange.Any())
@@ -89,7 +114,10 @@ namespace Steffan.Behaviours
             lastPosition = current.transform.position;
             transform.LookAt(current.transform);
         }
-
+        
+        /// <summary>
+        /// Looks at the target and calls the Fire function on it
+        /// </summary>
         private void AttackMode()
         {
             LookAtTarget();
@@ -97,9 +125,12 @@ namespace Steffan.Behaviours
             Fire();
             turretData.timeSinceLastShot = 0;
         }
-
+        
+        /// <summary>
+        /// Attacks the target.
+        /// </summary>
         private void Fire()
-        {
+        { 
 
             if ( _enemiesInRange[0].ed.health.Value > turretData.damage.Value )
             {
@@ -110,20 +141,32 @@ namespace Steffan.Behaviours
             _enemiesInRange[0].TakeDamage(turretData.Damage);
             _enemiesInRange.RemoveAt(0);
         }
-
+        
+        /// <summary>
+        /// If other is an enemy, add it to enemiesinrange list
+        /// </summary>
+        /// <param name="other"></param>
         private void OnTriggerEnter(Collider other)
         {
             if (!other.gameObject.CompareTag("enemy")) return;
             
             AddToEnemiesInRange(other.gameObject);
         }
-
+        
+        /// <summary>
+        /// if other is an enemy, remove it from the enemiesinrange list
+        /// </summary>
+        /// <param name="other"></param>
         private void OnTriggerExit(Collider other)
         {
             if (!other.gameObject.CompareTag("enemy")) return;
             RemoveFromEnemiesInRange(other.gameObject);
         }
-
+        
+        /// <summary>
+        /// On enemy death, remove it from the enemiesinrange list
+        /// </summary>
+        /// <param name="objs"></param>
         public void OnEnemyDeathEvent(Object[] objs)
         {
             var enemyGameObject = objs[0] as GameObject;

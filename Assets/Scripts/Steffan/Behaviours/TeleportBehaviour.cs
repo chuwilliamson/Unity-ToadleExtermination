@@ -2,6 +2,9 @@
 
 namespace Steffan.Behaviours
 {
+    /// <summary>
+    /// This class handles teleportation of objects inside a scene.
+    /// </summary>
     public class TeleportBehaviour : MonoBehaviour
     {
         [Header("This is the object that will be teleported to the destination.")]
