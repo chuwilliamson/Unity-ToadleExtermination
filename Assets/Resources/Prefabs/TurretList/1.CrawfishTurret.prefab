@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 135483506571119414}
   - component: {fileID: 95735914857377830}
   - component: {fileID: 114956552342753684}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: 1.CrawfishTurret
   m_TagString: Untagged
   m_Icon: {fileID: 0}

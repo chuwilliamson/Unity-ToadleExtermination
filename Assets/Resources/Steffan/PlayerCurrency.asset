@@ -11,4 +11,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc847f6cdcc80740ba9a935ffd5f010, type: 3}
   m_Name: PlayerCurrency
   m_EditorClassIdentifier: Assembly-CSharp:Emmanuel.ScriptableObjects:IntVariable
-  value: 219350
+  value: 0
