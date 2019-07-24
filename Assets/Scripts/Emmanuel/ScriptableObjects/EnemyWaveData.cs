@@ -7,10 +7,12 @@ namespace Emmanuel.ScriptableObjects
     public class EnemyWaveData : ScriptableObject
     {
         public List< GameObject > enemiesInThisWave;
-        public int waveNumber;
+        private int enemyIndex = 0;
 
         public GameObject GetEnemy(int index = 0, bool random = false)
         {
+            if ( enemyIndex == 0 ) enemyIndex++;
+            /*
             GameObject result;
             if ( random )
             {
@@ -19,6 +21,9 @@ namespace Emmanuel.ScriptableObjects
             var newindex = index > enemiesInThisWave.Count - 1 ? 0 : index;
             result = enemiesInThisWave[newindex];
             return result;
+            */
+
+            return enemiesInThisWave[enemyIndex];
         }
 
         public int EnemyCount { get { return enemiesInThisWave.Count; } }

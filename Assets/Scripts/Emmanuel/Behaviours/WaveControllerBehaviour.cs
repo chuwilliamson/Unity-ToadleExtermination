@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Cinemachine;
-using Emmanuel.ScriptableObjects;
+﻿using Emmanuel.ScriptableObjects;
 using Steffan.Behaviours;
 using UnityEngine;
 
@@ -17,6 +12,9 @@ public class WaveControllerBehaviour : MonoBehaviour
 	[SerializeField] private WaypointList wpList;
 
 	private GameObject enemyType;
+	private GameObject enemyType2;
+
+	private float enemyType2Timer;
 
 	private float enemySpawnTimer;
 	
@@ -37,7 +35,10 @@ public class WaveControllerBehaviour : MonoBehaviour
 		enemySpawnTimer = 0f;
 		numberOfEnemiesToSpawn = 0;
 
+		enemyType2Timer = 0;
+
 		enemyType = currentWaveData.GetEnemy();
+		enemyType2 = currentWaveData.GetEnemy();
 
 
 		//state = "Active";
@@ -51,6 +52,19 @@ public class WaveControllerBehaviour : MonoBehaviour
 		if ( enemySpawnTimer >= dualShock4.EnemySpawnFrequency )
 		{
 			enemySpawnTimer = 0;
+			var enemy = Instantiate(enemyType);
+			enemy.transform.position = transform.position;
+
+			var pathToFollow = enemy.GetComponent< FollowPathBehaviour >();
+			pathToFollow.waypointsToFollow = new WaypointList(wpList);
+
+			enemyType2Timer += 1;
+		}
+
+		if ( enemyType2Timer >= 10 )
+		{
+			enemyType2Timer = 0;
+
 			var enemy = Instantiate(enemyType);
 			enemy.transform.position = transform.position;
 
