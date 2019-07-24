@@ -13,7 +13,7 @@ namespace Emmanuel.ScriptableObjects
         [FormerlySerializedAs("_position")] [SerializeField]
         private Waypoint position;
 
-        public PlayerData(string name, float health, float damage) : base(name, health, damage)
+        public PlayerData(string name, int health, int damage) : base(name, health, damage)
         {
             Currency = 0;
             Name = name;

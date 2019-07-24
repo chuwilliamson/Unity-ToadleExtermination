@@ -12,6 +12,10 @@ public class Global : ScriptableObject
     {
         SceneManager.LoadScene(index, LoadSceneMode.Additive);
     }
+    public void UnLoadScene(int index)
+    {
+        SceneManager.UnloadSceneAsync(index);
+    }
     public void Print(string value)
     {
         Debug.Log(value);
