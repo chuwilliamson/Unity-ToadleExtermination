@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "Data/Enemy Spawner")]
+    [CreateAssetMenu(menuName = "Data/Enemy Wave")]
     public class EnemyWaveData : ScriptableObject
     {
         public List< GameObject > enemiesInThisWave;

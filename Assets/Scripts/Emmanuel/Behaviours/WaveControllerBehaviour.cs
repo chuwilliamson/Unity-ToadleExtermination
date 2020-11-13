@@ -6,11 +6,13 @@ using Cinemachine;
 using Emmanuel.ScriptableObjects;
 using Steffan.Behaviours;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WaveControllerBehaviour : MonoBehaviour
 {
-	//Changed to continuous wave
-	[SerializeField] private WaveController dualShock4;
+	
+	[FormerlySerializedAs("dualShock4")] 
+	[SerializeField] private WaveController waveController;
 
 	private EnemyWaveData currentWaveData;
 
@@ -31,8 +33,8 @@ public class WaveControllerBehaviour : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		dualShock4 = Instantiate(dualShock4);
-		currentWaveData = Instantiate(dualShock4.GetNextWave);
+		waveController = Instantiate(waveController);
+		currentWaveData = Instantiate(waveController.GetNextWave);
 		
 		enemySpawnTimer = 0f;
 		numberOfEnemiesToSpawn = 0;
@@ -48,7 +50,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 	void Update()
 	{
 		enemySpawnTimer += Time.deltaTime;
-		if ( enemySpawnTimer >= dualShock4.EnemySpawnFrequency )
+		if ( enemySpawnTimer >= waveController.EnemySpawnFrequency )
 		{
 			enemySpawnTimer = 0;
 			var enemy = Instantiate(enemyType);
@@ -68,7 +70,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 			case "Active":
 			{
 				enemySpawnTimer += Time.deltaTime;
-				if ( enemySpawnTimer >= dualShock4.EnemySpawnFrequency )
+				if ( enemySpawnTimer >= waveController.EnemySpawnFrequency )
 				{
 					enemySpawnTimer = 0;
 					var enemy = Instantiate(currentWaveData.GetEnemy());
@@ -94,7 +96,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 
 	public void NextWave()
 	{
-		currentWaveData = Instantiate(dualShock4.GetNextWave);
+		currentWaveData = Instantiate(waveController.GetNextWave);
 	}
 
 	public void CommenceSpawnSequence()
