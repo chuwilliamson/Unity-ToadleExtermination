@@ -1,43 +1,84 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Emmanuel.ScriptableObjects;
+using Matthew;
+using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Wave Controller")]
-public class WaveController : ScriptableObject
+public class WaveController : MyScriptableObject
 {
-    [SerializeField] private int totalWaves;
-    [SerializeField] private float enemySpawnFrequency;
+    //total amount of waves until the game is won
+    [SerializeField] private IntVariable totalWaves;
+    
+    //current amount of waves that have passed
+    [SerializeField] private IntVariable wavesPassed;
+    
+    //the base time between each enemy spawning in a wave
+    [SerializeField] private FloatVar enemySpawnFrequency;
 
-    public float Timer { get; set; }
+    //countdown timer between the start of each waver
+    [SerializeField] private FloatVar countdownTimer;
 
-    private int currentWave;
+    //list of possible enemies for each wave
+    [SerializeField] private ScriptableObjectList possibleEnemies;
 
-    [SerializeField] private List< EnemyWaveData > listOfWaves;
+    //index of possibleEnemies
+    [SerializeField] private IntVariable possibleEnemiesIndex;
+
+    //Game event that signals the end of the game by passing all the waves
+    [SerializeField] private GameEvent gameWinEvent;
 
     public void Initialize()
     {
-        if (listOfWaves == null)
-            listOfWaves = new List< EnemyWaveData >();
+        //"resets" the index value 
+        possibleEnemiesIndex.RuntimeValue = possibleEnemiesIndex.Value;
+        
+        //"resets the amount of waves that have passes
+        wavesPassed.RuntimeValue = wavesPassed.Value;
 
-        totalWaves = listOfWaves.Count;
+        //"resets" the countdown timer
+        countdownTimer.RuntimeValue = countdownTimer.Value;
+        
+        //"resets" the total amount of waves
+        totalWaves.RuntimeValue = totalWaves.Value;
+
+        //"resets" the enemy spawn frequency
+        enemySpawnFrequency.RuntimeValue = enemySpawnFrequency.Value;
     }
     
     
-    public EnemyWaveData GetNextWave
+    //Returns the EnemyWaveData that contains the enemies for the next wave
+    public EnemyWaveData GetNextWave()
     {
-        get
+        /*GetNextWave() gets called immediately after each wave, 
+         so after completing the last wave the game should end*/
+        if ((wavesPassed.RuntimeValue >= totalWaves.RuntimeValue))
         {
-            currentWave++;
-            
-            if ( (currentWave >= totalWaves) ) return listOfWaves[0];
-
-            return listOfWaves[currentWave];
+            gameWinEvent.Raise();
+            return null;
         }
+
+        //instantiate the list that enemy wave data will use to initialize
+        List<GameObject> nextWaveEnemies = new List<GameObject>();
+
+        //adds all possible enemies in possibleEnemies to possibleWaveEnemies
+        for (int i = 0; i <= possibleEnemiesIndex.RuntimeValue; i++)
+        {
+            //casts the possible enemy as a game object container, the assignment should be done in the editor
+            GameObjectContainer enemyContainer = possibleEnemies[i] as GameObjectContainer;
+            
+            //checks to see if the cast is null, if so then the problem is the reference from the editor
+            if (enemyContainer != null) nextWaveEnemies.Add(enemyContainer.ContainedObject);
+        }
+
+        wavesPassed.RuntimeValue++;
+        
+        EnemyWaveData enemyWaveData = CreateInstance<EnemyWaveData>();
+        enemyWaveData.Initialize(nextWaveEnemies);
+        return enemyWaveData;
     }
-    
-    public float EnemySpawnFrequency { get { return enemySpawnFrequency; } }
-    public int TotalWaves { get { return totalWaves; } }
-    
+
+    public float EnemySpawnFrequency => enemySpawnFrequency.RuntimeValue;
+    public int TotalWaves => totalWaves.RuntimeValue;
+
 }

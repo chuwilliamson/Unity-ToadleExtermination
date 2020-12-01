@@ -62,7 +62,7 @@ namespace Steffan.Behaviours
             // For testing
             w = new TurretWheelObject();
 
-            PlayerCurrency.Value = startingCurrency;
+            PlayerCurrency.RuntimeValue = startingCurrency;
         }
         
         /// <summary>
@@ -77,8 +77,8 @@ namespace Steffan.Behaviours
             if (EventSystem.current.currentSelectedGameObject == null)
                 return;
             
-            var tileClicked = EventSystem.current.currentSelectedGameObject;
-            var tileBehaviour = tileClicked.GetComponent<TileBehaviour>();
+            GameObject tileClicked = EventSystem.current.currentSelectedGameObject;
+            TileBehaviour tileBehaviour = tileClicked.GetComponent<TileBehaviour>();
 
             if (tileBehaviour.HasTurret)
                 return;
@@ -100,7 +100,7 @@ namespace Steffan.Behaviours
                 w.Up();
             if (Input.mouseScrollDelta.y < 0)
                 w.Down();
-            CurrentTurretIndex.Value = w.Index;
+            CurrentTurretIndex.RuntimeValue = w.Index;
         }
         
         /// <summary>

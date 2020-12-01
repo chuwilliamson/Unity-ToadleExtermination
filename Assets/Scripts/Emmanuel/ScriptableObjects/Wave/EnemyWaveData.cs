@@ -3,25 +3,36 @@ using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
 {
+    /// <summary>
+    /// This class is meant to:
+    /// - be instantiated by the WaveController class
+    /// - be made in the editor for pre-made waves
+    /// </summary>
     [CreateAssetMenu(menuName = "Data/Enemy Wave")]
-    public class EnemyWaveData : ScriptableObject
+    public class EnemyWaveData : MyScriptableObject
     {
+        //returns enemies in this wave
         public List< GameObject > enemiesInThisWave;
-        public int waveNumber;
 
-        public GameObject GetEnemy(int index = 0, bool random = false)
+        /// <summary>
+        /// Adds 
+        /// </summary>
+        /// <param name="waveEnemies"></param>
+        public void Initialize(List<GameObject> waveEnemies)
+        {
+            enemiesInThisWave = waveEnemies;
+        }
+        
+        //returns a random enemy in the wave
+        public GameObject GetEnemy()
         {
             GameObject result;
-            if ( random )
-            {
-                result = enemiesInThisWave[Random.Range(0, enemiesInThisWave.Count)];
-            }
-            var newindex = index > enemiesInThisWave.Count - 1 ? 0 : index;
-            result = enemiesInThisWave[newindex];
+            int enemyIndex = Random.Range(0, enemiesInThisWave.Count);
+            result = enemiesInThisWave[enemyIndex];
             return result;
         }
 
+        //returns the number of possible enemies in the wave
         public int EnemyCount { get { return enemiesInThisWave.Count; } }
-
     }
 }
