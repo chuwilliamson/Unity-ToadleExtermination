@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Emmanuel.ScriptableObjects;
 using Matthew;
-using UnityEditor;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Wave Controller")]
@@ -16,7 +15,7 @@ public class WaveController : MyScriptableObject
     //the base time between each enemy spawning in a wave
     [SerializeField] private FloatVar enemySpawnFrequency;
 
-    //countdown timer between the start of each waver
+    //countdown timer between the start of each wave
     [SerializeField] private FloatVar countdownTimer;
 
     //list of possible enemies for each wave

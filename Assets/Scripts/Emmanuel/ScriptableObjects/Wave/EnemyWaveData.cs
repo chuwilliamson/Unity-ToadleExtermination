@@ -15,7 +15,7 @@ namespace Emmanuel.ScriptableObjects
         public List< GameObject > enemiesInThisWave;
 
         /// <summary>
-        /// Adds 
+        /// takes the argument and initializes the list without a constructor
         /// </summary>
         /// <param name="waveEnemies"></param>
         public void Initialize(List<GameObject> waveEnemies)

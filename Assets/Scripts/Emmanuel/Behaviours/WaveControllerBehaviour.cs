@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
-using Cinemachine;
-using Emmanuel.ScriptableObjects;
+﻿using Emmanuel.ScriptableObjects;
 using Steffan.Behaviours;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class WaveControllerBehaviour : MonoBehaviour
 {
-	
+	 
 	[FormerlySerializedAs("dualShock4")] 
 	[SerializeField] private WaveController waveController;
 
@@ -33,8 +28,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		waveController = Instantiate(waveController);
-		currentWaveData = Instantiate(waveController.GetNextWave);
+		currentWaveData = waveController.GetNextWave();
 		
 		enemySpawnTimer = 0f;
 		numberOfEnemiesToSpawn = 0;
@@ -96,7 +90,7 @@ public class WaveControllerBehaviour : MonoBehaviour
 
 	public void NextWave()
 	{
-		currentWaveData = Instantiate(waveController.GetNextWave);
+		currentWaveData = waveController.GetNextWave();
 	}
 
 	public void CommenceSpawnSequence()
