@@ -12,19 +12,17 @@ namespace Emmanuel.Behaviours
         public List< GameObject > spawnedEnemies;
         [FormerlySerializedAs("spawnerData")] [SerializeField] private EnemyWaveData waveData;
 
-        private WaveController waveController;
+        [SerializeField] private WaveController waveController;
 
         // Use this for initialization
         private void Start()
         {
             _enemyNumIndex = 0;
-
-            waveController = Resources.Load< WaveController >("Emmanuel/ScriptableObjects");
         }
 
         public void SpawnEnemy()
         {
-            var spawnedEnemy = Instantiate(waveData.GetEnemy(random: randomEnemySelection), transform.position, Quaternion.identity);
+            var spawnedEnemy = Instantiate(waveData.GetEnemy(), transform.position, Quaternion.identity);
             spawnedEnemies.Add(spawnedEnemy);
         }
 

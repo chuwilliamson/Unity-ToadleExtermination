@@ -27,8 +27,8 @@ public class UITextHandler : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		CurrencyText.text = PlayerCurrency.Value.ToString();
-		hp = (int) PlayerHP.Value;
+		CurrencyText.text = PlayerCurrency.RuntimeValue.ToString();
+		hp = (int) PlayerHP.RuntimeValue;
 		PlayerHPText.text = hp.ToString();
 	}
 }
