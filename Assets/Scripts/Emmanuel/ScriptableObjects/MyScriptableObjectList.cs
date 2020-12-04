@@ -5,7 +5,6 @@ using UnityEngine;
 
 namespace Emmanuel.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "Lists/Scriptable Object List")]
     public class ScriptableObjectList : MyScriptableObject, IList< MyScriptableObject >
     {
         public List< ScriptableObject > List { get; set; }

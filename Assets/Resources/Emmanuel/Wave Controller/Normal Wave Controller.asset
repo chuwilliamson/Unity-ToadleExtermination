@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50b39571bd2ec1844874b84afb41e604, type: 3}
   m_Name: Normal Wave Controller
   m_EditorClassIdentifier: 
-  totalWaves: {fileID: 0}
-  wavesPassed: {fileID: 0}
-  enemySpawnFrequency: {fileID: 0}
-  countdownTimer: {fileID: 0}
-  possibleEnemies: {fileID: 0}
-  possibleEnemiesIndex: {fileID: 0}
-  gameWinEvent: {fileID: 0}
+  totalWaves: {fileID: 11400000, guid: 9e4c35cf23673ab4bae9969f8ea173de, type: 2}
+  wavesPassed: {fileID: 11400000, guid: 81550fd5f788a7544af4fbcd8b43b9c8, type: 2}
+  enemySpawnFrequency: {fileID: 11400000, guid: d9022d4317d46364ba2a5c966d2ca45b,
+    type: 2}
+  countdownTimer: {fileID: 11400000, guid: c6e30aabdcf545a4bab512a645b5429a, type: 2}
+  possibleEnemies: {fileID: 11400000, guid: 954ffdce922357a4c8d41a68a14c4689, type: 2}
+  possibleEnemiesIndex: {fileID: 11400000, guid: 2d883ba5f8cb3c3429f03f5ee4624bb2,
+    type: 2}
+  gameWinEvent: {fileID: 11400000, guid: 223d7acd39760bf43b4b0dd3fb35322e, type: 2}
