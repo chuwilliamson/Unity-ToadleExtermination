@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Emmanuel.ScriptableObjects;
-
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -8,34 +7,22 @@ namespace Emmanuel.Behaviours
 {
     public class EnemySpawnerBehaviour : MonoBehaviour
     {
-        private int _enemyNumIndex;
-        public List< GameObject > spawnedEnemies;
-        [FormerlySerializedAs("spawnerData")] [SerializeField] private EnemyWaveData waveData;
+        //the amount of enemies that will spawn in each wave
+        public int EnemiesEachWave;
 
-        [SerializeField] private WaveController waveController;
+        //how often an enemy will spawn during the wave
+        private float enemySpawnFrequency;
 
-        // Use this for initialization
-        private void Start()
+        //WaveController, drag in from asset folder, provides all the data to spawn enemies
+        public WaveController WaveController;
+
+        //Possible enemies in a wave
+        private EnemyWaveData enemyWaveData;
+
+
+        void Update()
         {
-            _enemyNumIndex = 0;
-        }
 
-        public void SpawnEnemy()
-        {
-            var spawnedEnemy = Instantiate(waveData.GetEnemy(), transform.position, Quaternion.identity);
-            spawnedEnemies.Add(spawnedEnemy);
-        }
-
-        private bool randomEnemySelection = true;
-        public int deathcount = 0;
-        public void OnEnemyDied(Object[] objects)
-        {
-            var sender = objects[0];
-            if ( spawnedEnemies.Contains(sender as GameObject) )
-            {
-                Destroy(sender as GameObject);
-                deathcount++;
-            }
         }
     }
 }

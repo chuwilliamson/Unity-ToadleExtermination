@@ -72,6 +72,11 @@ public class WaveController : MyScriptableObject
 
         wavesPassed.RuntimeValue++;
         
+        if (possibleEnemiesIndex.RuntimeValue < possibleEnemies.Count - 1)
+        {
+            possibleEnemiesIndex.RuntimeValue++;
+        }
+
         EnemyWaveData enemyWaveData = CreateInstance<EnemyWaveData>();
         enemyWaveData.Initialize(nextWaveEnemies);
         return enemyWaveData;
