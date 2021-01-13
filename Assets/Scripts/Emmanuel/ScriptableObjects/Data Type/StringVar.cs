@@ -7,17 +7,12 @@ namespace Emmanuel.ScriptableObjects
     {
         [SerializeField] private readonly string value;
 
-        private string runtimeValue;
+        [ReadOnly]
+        public string RuntimeValue;
 
         public string Value
         {
             get { return value; }
-        }
-
-        public string RuntimeValue
-        {
-            get => runtimeValue;
-            set => runtimeValue = value;
         }
     }
 }

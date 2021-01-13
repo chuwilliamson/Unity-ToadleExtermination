@@ -7,15 +7,10 @@ namespace Emmanuel.ScriptableObjects
     {
         [SerializeField] private float value;
 
-        private float runtimeValue;
+        [ReadOnly]
+        public float RuntimeValue;
 
         // Use this for initialization
         public float Value { get { return value; } set { this.value = value; } }
-
-        public float RuntimeValue
-        {
-            get => runtimeValue;
-            set => runtimeValue = value;
-        }
     }
 }
